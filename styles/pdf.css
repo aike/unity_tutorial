@@ -1,0 +1,39 @@
+h1{
+padding: 0.8em;/*文字周りの余白*/
+color: #2d2d2d;/*文字色*/
+background: #fff0d9;/*背景色*/
+border-bottom: solid 3px orange;/*下線*/
+}
+
+h2 {
+padding: 0.2em;/*文字周りの余白*/
+color: #2d2d2d;/*文字色*/
+background: #fff0d9;/*背景色*/
+border-bottom: solid 3px orange;/*下線*/
+}
+
+h3{
+position: relative;
+padding: 0.25em 0;
+}
+h3:after {
+content: "";
+display: block;
+height: 4px;
+background: -moz-linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+background: -webkit-linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+background: linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+}
+
+.book-summary ul.summary li a,
+.book-summary ul.summary li span {
+padding: 3px 15px;
+}
+
+.markdown-section > p > img {
+max-width: 70%;
+}
+
+.markdown-section > pre > code.lang-cs {
+line-height: 0%;
+}
