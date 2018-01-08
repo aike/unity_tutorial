@@ -1,0 +1,16 @@
+{
+  "name": "unity_scene_tutorial",
+  "version": "1.0.0",
+  "description": "Unity tutorial",
+  "dependencies": {
+    "textlint": "^10.1.1",
+    "textlint-rule-preset-ja-technical-writing": "^2.0.0"
+  },
+  "scripts": {
+    "test": "textlint ../*.md ../doc/*.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aike/unity_scene_tutorial.git"
+  }
+}

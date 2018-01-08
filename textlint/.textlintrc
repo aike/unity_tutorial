@@ -1,0 +1,15 @@
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+	    "sentence-length": {
+	        max: 100
+	    }
+	},
+    "prh": {
+        "rulePaths": [
+            "./rules/techbooster.yml",
+            "./rules/WEB+DB_PRESS.yml"
+        ]
+    }
+  }
+}

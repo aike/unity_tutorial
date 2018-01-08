@@ -1,0 +1,3 @@
+[submodule "textlint"]
+	path = textlint
+	url = https://github.com/aike/my_textlint_setting.git
