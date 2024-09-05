@@ -1,979 +1,574 @@
-
-<!DOCTYPE HTML>
-<html lang="" >
-    <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>チュートリアル１「Planet」 · GitBook</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
-        
-        
-        
-    
-    <link rel="stylesheet" href="../gitbook/style.css">
-
-    
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
-                
-            
-        
-
-    
-
-    
-        
-        <link rel="stylesheet" href="../styles/website.css">
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-        
-    
-    
-    <meta name="HandheldFriendly" content="true"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
-
-    
-    <link rel="next" href="2_planet.html" />
-    
-    
-    <link rel="prev" href="1_general.html" />
-    
-
-    </head>
-    <body>
-        
-<div class="book">
-    <div class="book-summary">
-        
-            
-<div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
-</div>
-
-            
-                <nav role="navigation">
-                
-
-
-<ul class="summary">
-    
-    
-
-    
-
-    
-        
-        
-    
-        <li class="chapter " data-level="1.1" data-path="../">
-            
-                <a href="../">
-            
-                    
-                    非プログラマー向けUnity入門
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="divider"></li>
-        
-        
-    
-        <li class="chapter " data-level="2.1" data-path="1_general.html">
-            
-                <a href="1_general.html">
-            
-                    
-                    はじめに
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="2.1.1" data-path="1_general.html">
-            
-                <a href="1_general.html#このチュートリアルの目的">
-            
-                    
-                    このチュートリアルの目的
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.1.2" data-path="1_general.html">
-            
-                <a href="1_general.html#ここでは学ばないこと">
-            
-                    
-                    ここでは学ばないこと
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.1.3" data-path="1_general.html">
-            
-                <a href="1_general.html#unityについて">
-            
-                    
-                    Unityについて
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.1.4" data-path="1_general.html">
-            
-                <a href="1_general.html#開発言語">
-            
-                    
-                    開発言語
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.1.5" data-path="1_general.html">
-            
-                <a href="1_general.html#テキストエディタ">
-            
-                    
-                    テキストエディタ
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-
-    
-        
-        <li class="divider"></li>
-        
-        
-    
-        <li class="chapter " data-level="3.1" data-path="2_planet.html">
-            
-                <a href="2_planet.html#チュートリアル１「Planet」">
-            
-                    
-                    チュートリアル１「Planet」
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="3.1.1" data-path="2_planet.html">
-            
-                <a href="2_planet.html#このチュートリアルについて">
-            
-                    
-                    このチュートリアルについて
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.1.2" data-path="2_planet.html">
-            
-                <a href="2_planet.html#オブジェクトの基本操作">
-            
-                    
-                    オブジェクトの基本操作
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.1.3" data-path="2_planet.html">
-            
-                <a href="2_planet.html#マテリアルの作成">
-            
-                    
-                    マテリアルの作成
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.1.4" data-path="2_planet.html">
-            
-                <a href="2_planet.html#テクスチャの作成">
-            
-                    
-                    テクスチャの作成
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.1.5" data-path="2_planet.html">
-            
-                <a href="2_planet.html#カメラと光の演出">
-            
-                    
-                    カメラと光の演出
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.1.6" data-path="2_planet.html">
-            
-                <a href="2_planet.html#オブジェクトの回転">
-            
-                    
-                    オブジェクトの回転
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.1.7" data-path="2_planet.html">
-            
-                <a href="2_planet.html#発光の表現">
-            
-                    
-                    発光の表現
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.1.8" data-path="2_planet.html">
-            
-                <a href="2_planet.html#外観のブラッシュアップ">
-            
-                    
-                    外観のブラッシュアップ
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.1.9" data-path="2_planet.html">
-            
-                <a href="2_planet.html#別視点の演出">
-            
-                    
-                    別視点の演出
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-
-    
-        
-        <li class="divider"></li>
-        
-        
-    
-        <li class="chapter " data-level="4.1" data-path="3_penguin.html">
-            
-                <a href="3_penguin.html#チュートリアル２「Penguin」">
-            
-                    
-                    チュートリアル２「Penguin」
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="4.1.1" data-path="3_penguin.html">
-            
-                <a href="3_penguin.html#このチュートリアルについて">
-            
-                    
-                    このチュートリアルについて
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.1.2" data-path="3_penguin.html">
-            
-                <a href="3_penguin.html#モデルデザイン用シーン作成">
-            
-                    
-                    モデルデザイン用シーン作成
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.1.3" data-path="3_penguin.html">
-            
-                <a href="3_penguin.html#メインシーン作成">
-            
-                    
-                    メインシーン作成
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.1.4" data-path="3_penguin.html">
-            
-                <a href="3_penguin.html#ターゲットの方向を向く処理">
-            
-                    
-                    ターゲットの方向を向く処理
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.1.5" data-path="3_penguin.html">
-            
-                <a href="3_penguin.html#さまざまな動きのアルゴリズム">
-            
-                    
-                    さまざまな動きのアルゴリズム
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-
-    
-        
-        <li class="divider"></li>
-        
-        
-    
-        <li class="chapter " data-level="5.1" data-path="4_trenchfighter.html">
-            
-                <a href="4_trenchfighter.html#チュートリアル３「TrenchFighter」">
-            
-                    
-                    チュートリアル３「TrenchFighter」
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="5.1.1" data-path="4_trenchfighter.html">
-            
-                <a href="4_trenchfighter.html#このチュートリアルについて">
-            
-                    
-                    このチュートリアルについて
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.1.2" data-path="4_trenchfighter.html">
-            
-                <a href="4_trenchfighter.html#メインシーンの作成">
-            
-                    
-                    メインシーンの作成
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.1.3" data-path="4_trenchfighter.html">
-            
-                <a href="4_trenchfighter.html#モデルシーンの作成">
-            
-                    
-                    モデルシーンの作成
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.1.4" data-path="4_trenchfighter.html">
-            
-                <a href="4_trenchfighter.html#動的なステージ生成">
-            
-                    
-                    動的なステージ生成
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.1.5" data-path="4_trenchfighter.html">
-            
-                <a href="4_trenchfighter.html#サウンドの追加">
-            
-                    
-                    サウンドの追加
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.1.6" data-path="4_trenchfighter.html">
-            
-                <a href="4_trenchfighter.html#簡易的な衝突判定">
-            
-                    
-                    簡易的な衝突判定
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.1.7" data-path="4_trenchfighter.html">
-            
-                <a href="4_trenchfighter.html#入力の処理">
-            
-                    
-                    入力の処理
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.1.8" data-path="4_trenchfighter.html">
-            
-                <a href="4_trenchfighter.html#外観のブラッシュアップ">
-            
-                    
-                    外観のブラッシュアップ
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-
-    
-
-    <li class="divider"></li>
-
-    <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
-        </a>
-    </li>
-</ul>
-
-
-                </nav>
-            
-        
-    </div>
-
-    <div class="book-body">
-        
-            <div class="body-inner">
-                
-                    
-
-<div class="book-header" role="navigation">
-    
-
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >チュートリアル１「Planet」</a>
-    </h1>
-</div>
-
-
-
-
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
-                                <h1 id="&#x30C1;&#x30E5;&#x30FC;&#x30C8;&#x30EA;&#x30A2;&#x30EB;&#xFF11;&#x300C;planet&#x300D;">&#x30C1;&#x30E5;&#x30FC;&#x30C8;&#x30EA;&#x30A2;&#x30EB;&#xFF11;&#x300C;Planet&#x300D;</h1>
-<h2 id="&#x3053;&#x306E;&#x30C1;&#x30E5;&#x30FC;&#x30C8;&#x30EA;&#x30A2;&#x30EB;&#x306B;&#x3064;&#x3044;&#x3066;">&#x3053;&#x306E;&#x30C1;&#x30E5;&#x30FC;&#x30C8;&#x30EA;&#x30A2;&#x30EB;&#x306B;&#x3064;&#x3044;&#x3066;</h2>
-<p>&#x3000;&#x6700;&#x521D;&#x306E;&#x30C1;&#x30E5;&#x30FC;&#x30C8;&#x30EA;&#x30A2;&#x30EB;&#x3067;&#x3059;&#x3002;&#x7403;&#x5F62;&#x306E;&#x30E2;&#x30C7;&#x30EB;&#x3060;&#x3051;&#x3092;&#x4F7F;&#x7528;&#x3057;&#x3066;&#x5B87;&#x5B99;&#x7A7A;&#x9593;&#x306E;&#x8868;&#x73FE;&#x3092;&#x5B66;&#x3093;&#x3067;&#x3044;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>2_planet</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../styles/website.css" />
+</head>
+<body>
+<h1 id="チュートリアル１planet">チュートリアル１「Planet」</h1>
+<h2 id="このチュートリアルについて">このチュートリアルについて</h2>
+<p>　最初のチュートリアルです。球形のモデルだけを使用して宇宙空間の表現を学んでいきます。</p>
 <ul>
-<li>&#x7269;&#x4F53;&#x306E;&#x79FB;&#x52D5;&#x3068;&#x56DE;&#x8EE2;</li>
-<li>&#x57FA;&#x672C;&#x7684;&#x306A;&#x30DE;&#x30C6;&#x30EA;&#x30A2;&#x30EB;&#x3068;&#x30C6;&#x30AF;&#x30B9;&#x30C1;&#x30E3;</li>
-<li>&#x57FA;&#x672C;&#x7684;&#x306A;&#x30AB;&#x30E1;&#x30E9;&#x3068;&#x5149;&#x306E;&#x6F14;&#x51FA;</li>
-<li>&#x30A2;&#x30BB;&#x30C3;&#x30C8;&#x30B9;&#x30C8;&#x30A2;&#x3068;&#x306E;&#x4ED8;&#x304D;&#x5408;&#x3044;&#x65B9;</li>
-<li>&#x30DD;&#x30B9;&#x30C8;&#x30D7;&#x30ED;&#x30BB;&#x30C3;&#x30B7;&#x30F3;&#x30B0;&#x3067;&#x7D75;&#x4F5C;&#x308A;&#x305D;&#x306E;&#xFF11;</li>
+<li>物体の移動と回転</li>
+<li>基本的なマテリアルとテクスチャ</li>
+<li>基本的なカメラと光の演出</li>
+<li>アセットストアとの付き合い方</li>
+<li>ポストプロセッシングで絵作りその１</li>
 </ul>
-<p><a href="https://www.youtube.com/watch?v=MLqGxgJo3tg" target="_blank"><img src="img/yt1.png" alt="screenshot"></a><br><a href="https://www.youtube.com/watch?v=MLqGxgJo3tg" target="_blank">https://www.youtube.com/watch?v=MLqGxgJo3tg</a></p>
-<h2 id="&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x57FA;&#x672C;&#x64CD;&#x4F5C;">&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x57FA;&#x672C;&#x64CD;&#x4F5C;</h2>
-<p>&#x3000;&#x300C;Planet&#x300D;&#x306E;&#x540D;&#x524D;&#x3067;&#x65B0;&#x898F;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3092;&#x4F5C;&#x3063;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;&#x30C6;&#x30F3;&#x30D7;&#x30EC;&#x30FC;&#x30C8;&#x306F;3D&#x3092;&#x9078;&#x629E;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x4F5C;&#x6210;&#x76F4;&#x5F8C;&#x306F;&#x30B5;&#x30F3;&#x30D7;&#x30EB;&#x30B7;&#x30FC;&#x30F3;&#x304C;&#x958B;&#x3044;&#x3066;&#x3044;&#x308B;&#x72B6;&#x614B;&#x3067;&#x3059;&#x306E;&#x3067;&#x3001;File&#x2192;New Scene&#x3092;&#x9078;&#x3093;&#x3067;&#x3042;&#x3089;&#x305F;&#x306A;&#x30B7;&#x30FC;&#x30F3;&#x3092;&#x4F5C;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;&#x307E;&#x305A;&#x3001;&#x30B7;&#x30FC;&#x30F3;&#x306B;&#x7403;&#x4F53;&#xFF08;Sphere&#xFF09;&#x3092;&#x751F;&#x6210;&#x3057;&#x307E;&#x3059;&#x3002;Hierarchy&#x3067;&#x4F55;&#x3082;&#x9078;&#x629E;&#x3055;&#x308C;&#x3066;&#x3044;&#x306A;&#x3044;&#x3053;&#x3068;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x307E;&#x3059;&#xFF08;&#x91CD;&#x8981;&#xFF09;&#x3002;Hierarchy&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x7A7A;&#x304D;&#x9818;&#x57DF;&#x3092;&#x53F3;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#xFF08;&#x30C8;&#x30E9;&#x30C3;&#x30AF;&#x30D1;&#x30C3;&#x30C9;&#x3067;&#x306F;&#x4E8C;&#x672C;&#x6307;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#xFF09;&#x3057;&#x3066;&#x30B3;&#x30F3;&#x30C6;&#x30AD;&#x30B9;&#x30C8;&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x304B;&#x3089;3D Object&#x2192;Sphere&#x3092;&#x9078;&#x3073;&#x307E;&#x3059;&#x3002;&#xFF08;GameObject&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x3084;&#x30C4;&#x30FC;&#x30EB;&#x30D0;&#x30FC;&#x306E;Create&#x304B;&#x3089;&#x3082;&#x751F;&#x6210;&#x3067;&#x304D;&#x307E;&#x3059;&#x304C;&#x30B3;&#x30F3;&#x30C6;&#x30AD;&#x30B9;&#x30C8;&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x304B;&#x3089;&#x304C;&#x65E9;&#x304F;&#x3066;&#x697D;&#x3067;&#x3059;&#xFF09;</p>
-<p><img src="img/002.png" alt="screenshot"></p>
-<p>&#x3000;&#x751F;&#x6210;&#x3057;&#x305F;Sphere&#x3092;Hierarchy&#x3067;&#x9078;&#x629E;&#x3057;&#x3066;&#x3001;Inspector&#x306E;Position&#x3092;<code>0,0,0</code>&#x3001;Scale&#x3092;<code>3,3,3</code>&#x306B;&#x5909;&#x66F4;&#x3057;&#x307E;&#x3059;&#x3002;&#x3053;&#x308C;&#x3067;&#x5EA7;&#x6A19;<code>(0,0,0)</code>&#x306B;&#x76F4;&#x5F84;3&#x306E;&#x7403;&#x4F53;&#x304C;&#x4F5C;&#x6210;&#x3067;&#x304D;&#x307E;&#x3057;&#x305F;&#x3002;</p>
-<p><img src="img/003.png" alt="screenshot"></p>
-<p>&#x3000;&#x540C;&#x3058;&#x3088;&#x3046;&#x306B;&#x3082;&#x3046;&#x3072;&#x3068;&#x3064;&#x7403;&#x4F53;&#x3092;&#x751F;&#x6210;&#x3057;&#x307E;&#x3059;&#x3002;&#x4ECA;&#x5EA6;&#x306F;Position&#x3092;<code>10,0,0</code>&#x3001;Scale&#x3092;<code>1,1,1</code>&#x306B;&#x3057;&#x307E;&#x3059;&#x3002;&#x3053;&#x308C;&#x3067;&#x5730;&#x7403;&#x3068;&#x6708;&#x306E;&#x539F;&#x578B;&#x304C;&#x3067;&#x304D;&#x307E;&#x3057;&#x305F;&#x3002;&#x308F;&#x304B;&#x308A;&#x3084;&#x3059;&#x3044;&#x3088;&#x3046;&#x306B;&#x305D;&#x308C;&#x305E;&#x308C;Earth&#x3001;Moon&#x3068;&#x540D;&#x524D;&#x3092;&#x5909;&#x66F4;&#x3057;&#x3066;&#x304A;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x540D;&#x524D;&#x306E;&#x5909;&#x66F4;&#x306F;&#x3001;Hierarchy&#x3067;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x304C;&#x9078;&#x629E;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x72B6;&#x614B;&#x3067;&#x3082;&#x3046;&#xFF11;&#x56DE;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x304B;&#x3001;Inspector&#x306E;&#x4E00;&#x756A;&#x4E0A;&#x306E;&#x6587;&#x5B57;&#x5217;&#x3092;&#x5909;&#x66F4;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p><img src="img/004.png" alt="screenshot"></p>
-<p>&#x3000;&#x3053;&#x3053;&#x307E;&#x3067;&#x7D42;&#x308F;&#x3063;&#x305F;&#x3089;&#x3001;Ctrl+S&#x3067;&#x3044;&#x3063;&#x305F;&#x3093;&#x30B7;&#x30FC;&#x30F3;&#x3092;&#x30BB;&#x30FC;&#x30D6;&#x3057;&#x3066;&#x304A;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x540D;&#x524D;&#x306F;&#x306A;&#x3093;&#x3067;&#x3082;&#x3088;&#x3044;&#x3067;&#x3059;&#x304C;&#x3001;&#x304A;&#x52E7;&#x3081;&#x306F;&#x300C;main&#x300D;&#x3067;&#x3059;&#x3002;Scenes&#x3068;&#x3044;&#x3046;&#x30B7;&#x30FC;&#x30F3;&#x4FDD;&#x5B58;&#x7528;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x304C;&#x7528;&#x610F;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;&#x305D;&#x306E;&#x4E2D;&#x306B;&#x4FDD;&#x5B58;&#x3059;&#x308B;&#x3068;&#x308F;&#x304B;&#x308A;&#x3084;&#x3059;&#x3044;&#x3067;&#x3057;&#x3087;&#x3046;&#x3002;Unity&#x306F;&#x30BB;&#x30FC;&#x30D6;&#x306E;&#x6982;&#x5FF5;&#x304C;&#x30B7;&#x30FC;&#x30F3;&#x5358;&#x4F4D;&#x306E;&#x305F;&#x3081;&#x6163;&#x308C;&#x306A;&#x3044;&#x3046;&#x3061;&#x306F;&#x6CE8;&#x610F;&#x304C;&#x5FC5;&#x8981;&#x3067;&#x3059;&#x3002;Hierarchy&#x4E0A;&#x306E;&#x5909;&#x66F4;&#x306F;&#x539F;&#x5247;&#x3068;&#x3057;&#x3066;&#x30BB;&#x30FC;&#x30D6;&#x3057;&#x306A;&#x3044;&#x3068;&#x5931;&#x308F;&#x308C;&#x308B;&#x306E;&#x3067;&#x3053;&#x307E;&#x3081;&#x306B;&#x30BB;&#x30FC;&#x30D6;&#x3059;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-<h2 id="&#x30DE;&#x30C6;&#x30EA;&#x30A2;&#x30EB;&#x306E;&#x4F5C;&#x6210;">&#x30DE;&#x30C6;&#x30EA;&#x30A2;&#x30EB;&#x306E;&#x4F5C;&#x6210;</h2>
-<p>&#x3000;&#x3053;&#x306E;&#x307E;&#x307E;&#x3067;&#x306F;&#x307E;&#x3060;&#x8272;&#x304C;&#x6708;&#x3084;&#x5730;&#x7403;&#x306B;&#x898B;&#x3048;&#x306A;&#x3044;&#x306E;&#x3067;&#x30DE;&#x30C6;&#x30EA;&#x30A2;&#x30EB;&#x3092;&#x65B0;&#x898F;&#x4F5C;&#x6210;&#x3057;&#x3066;&#x8A2D;&#x5B9A;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;Project&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3067;Assets&#x3092;&#x9078;&#x629E;&#x3057;&#x3001;&#x6B21;&#x306B;Assets&#x30DA;&#x30A4;&#x30F3;&#x3067;&#x53F3;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x2192;Create&#x2192;Material&#x3092;&#x9078;&#x629E;&#x3057;&#x307E;&#x3059;&#x3002;&#x30DE;&#x30C6;&#x30EA;&#x30A2;&#x30EB;&#x540D;&#x306F;&#x300C;matMoon&#x300D;&#x3068;&#x3057;&#x3066;&#x304A;&#x304D;&#x307E;&#x3059;&#x3002;Unity&#x306F;&#x62E1;&#x5F35;&#x5B50;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x306A;&#x3044;&#x306E;&#x3067;&#x3001;&#x63A5;&#x982D;&#x5B50;&#x3068;&#x3057;&#x3066;&#x7A2E;&#x5225;&#x3092;&#x3064;&#x3051;&#x3066;&#x304A;&#x304F;&#x3068;&#x4FBF;&#x5229;&#x3067;&#x3059;&#x3002;</p>
-<p><img src="img/005.png" alt="screenshot"></p>
-<p>&#x3000;matMoon&#x3092;&#x9078;&#x629E;&#x3057;&#x3066;Inspector&#x3067;&#x30DE;&#x30C6;&#x30EA;&#x30A2;&#x30EB;&#x306E;&#x8A2D;&#x5B9A;&#x3092;&#x3057;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;&#x3002;&#x305F;&#x304F;&#x3055;&#x3093;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x304C;&#x3001;&#x6700;&#x521D;&#x306F;Albedo&#x3067;&#x8272;&#x307E;&#x305F;&#x306F;&#x30C6;&#x30AF;&#x30B9;&#x30C1;&#x30E3;&#x3092;&#x6307;&#x5B9A;&#x3001;Metallic&#x3068;Smoothness&#x3067;&#x8CEA;&#x611F;&#x3092;&#x6307;&#x5B9A;&#x3001;&#x5FC5;&#x8981;&#x3067;&#x3042;&#x308C;&#x3070;Emission&#x3067;&#x5149;&#x3089;&#x305B;&#x308B;&#x3001;&#x304F;&#x3089;&#x3044;&#x899A;&#x3048;&#x3066;&#x304A;&#x3051;&#x3070;&#x5341;&#x5206;&#x3067;&#x3059;&#x3002;</p>
+<p><a href="https://www.youtube.com/watch?v=MLqGxgJo3tg"><img
+src="img/yt1.png" alt="screenshot" /></a><br />
+https://www.youtube.com/watch?v=MLqGxgJo3tg</p>
+<h2 id="オブジェクトの基本操作">オブジェクトの基本操作</h2>
+<p>　「Planet」の名前で新規プロジェクトを作ってください。テンプレートは3D
+(Built-In Render Pipeline)を選択します。</p>
+<p>　プロジェクト作成直後はサンプルシーンが開いている状態ですので、File→New
+Scene→Basic (Built-in)を選んであらたなシーンを作ります。</p>
+<p>　まず、シーンに球体（Sphere）を生成します。Hierarchyで何も選択されていないことを確認します（重要）。Hierarchyウィンドウの空き領域を右クリック（トラックパッドでは二本指クリック）してコンテキストメニューから3D
+Object→Sphereを選びます。（GameObjectメニューやツールバーのCreateからも生成できますがコンテキストメニューからが早くて楽です）</p>
+<figure>
+<img src="img/002.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　生成したSphereをHierarchyで選択して、InspectorのPositionを<code>0,0,0</code>、Scaleを<code>3,3,3</code>に変更します。これで座標<code>(0,0,0)</code>に直径3の球体が作成できました。</p>
+<figure>
+<img src="img/003.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　同じようにもうひとつ球体を生成します。今度はPositionを<code>10,0,0</code>、Scaleを<code>1,1,1</code>にします。これで地球と月の原型ができました。わかりやすいようにそれぞれEarth、Moonと名前を変更しておきましょう。名前の変更は、Hierarchyでオブジェクトが選択されている状態でもう１回クリックするか、Inspectorの一番上の文字列を変更します。</p>
+<figure>
+<img src="img/004.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　ここまで終わったら、File→Save
+As…でいったんシーンをセーブしておきましょう。名前はなんでもよいですが、お勧めは「main」です。Scenesというシーン保存用フォルダが用意されているのでその中に保存するとわかりやすいでしょう。Unityはセーブの概念がシーン単位のため慣れないうちは注意が必要です。Hierarchy上の変更は原則としてセーブしないと失われるのでこまめにセーブするようにしましょう。</p>
+<h2 id="マテリアルの作成">マテリアルの作成</h2>
+<p>　このままではまだ色が月や地球に見えないのでマテリアルを新規作成して設定します。</p>
+<p>　ProjectウィンドウでAssetsを選択し、次にAssetsペインで右クリックメニュー→Create→Materialを選択します。マテリアル名は「matMoon」としておきます。Unityは拡張子が表示されないので、接頭子として種別をつけておくと便利です。</p>
+<figure>
+<img src="img/005.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　matMoonを選択してInspectorでマテリアルの設定をしていきます。たくさんパラメータがありますが、最初はAlbedoで色またはテクスチャを指定、MetallicとSmoothnessで質感を指定、必要であればEmissionで光らせる、くらい覚えておけば十分です。</p>
 <p>matMoon</p>
-<p>&#x3000;Albedo&#xFF1A; R:233, G:230, B:160, A:255<br>&#x3000;Metallic&#xFF1A;0.36<br>&#x3000;Smoothness&#xFF1A;0  </p>
-<p>&#x306B;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;&#x30DE;&#x30C6;&#x30EA;&#x30A2;&#x30EB;&#x3092;Hierarchy&#x306E;Moon&#x306E;&#x4E0A;&#x306B;&#x30C9;&#x30E9;&#x30C3;&#x30B0;&amp;&#x30C9;&#x30ED;&#x30C3;&#x30D7;&#x3059;&#x308B;&#x3068;&#x9069;&#x7528;&#x3055;&#x308C;&#x3066;&#x3001;Scene&#x30D3;&#x30E5;&#x30FC;&#x306E;&#x8272;&#x304C;&#x5909;&#x308F;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x6CE8;&#x3000;&#x30DE;&#x30C6;&#x30EA;&#x30A2;&#x30EB;&#x3092;Inspector&#x3067;&#x5909;&#x66F4;&#x3057;&#x305F;&#x5834;&#x5408;&#x3001;&#x4F8B;&#x5916;&#x7684;&#x306B;&#x30BB;&#x30FC;&#x30D6;&#x64CD;&#x4F5C;&#x3092;&#x3057;&#x306A;&#x304F;&#x3066;&#x3082;&#x5909;&#x66F4;&#x304C;&#x6C38;&#x7D9A;&#x7684;&#x306B;&#x6B8B;&#x308A;&#x307E;&#x3059;&#x3002;&#x30B7;&#x30FC;&#x30F3;&#x3092;&#x4FDD;&#x5B58;&#x305B;&#x305A;&#x306B;&#x7834;&#x68C4;&#x3057;&#x3066;&#x3082;&#x30DE;&#x30C6;&#x30EA;&#x30A2;&#x30EB;&#x306E;&#x5909;&#x66F4;&#x306F;&#x7834;&#x68C4;&#x3055;&#x308C;&#x306A;&#x3044;&#x306E;&#x3067;&#x6CE8;&#x610F;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
-<h2 id="&#x30C6;&#x30AF;&#x30B9;&#x30C1;&#x30E3;&#x306E;&#x4F5C;&#x6210;">&#x30C6;&#x30AF;&#x30B9;&#x30C1;&#x30E3;&#x306E;&#x4F5C;&#x6210;</h2>
-<p>&#x3000;&#x6B21;&#x306B;&#x5730;&#x7403;&#x306B;&#x30C6;&#x30AF;&#x30B9;&#x30C1;&#x30E3;&#x3092;&#x9069;&#x7528;&#x3057;&#x3066;&#x9678;&#x5730;&#x3092;&#x4F5C;&#x3063;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x30B5;&#x30A4;&#x30BA;&#x306F;512&#xD7;512&#x306A;&#x3069;&#x7E26;&#x6A2A;&#x540C;&#x3058;2&#x306E;n&#x4E57;&#x30D4;&#x30AF;&#x30BB;&#x30EB;&#x306B;&#x3057;&#x305F;png&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3001;&#x3053;&#x3093;&#x306A;&#x96D1;&#x306A;&#x611F;&#x3058;&#x3067;&#x5927;&#x4E08;&#x592B;&#x3067;&#x3059;&#x3002;&#x672C;&#x30C6;&#x30AD;&#x30B9;&#x30C8;&#x3092;Web&#x3067;&#x898B;&#x3066;&#x3044;&#x308B;&#x5834;&#x5408;&#x3001;&#x3053;&#x306E;&#x753B;&#x50CF;&#x3092;&#x53F3;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x4FDD;&#x5B58;&#x3059;&#x308C;&#x3070;&#x305D;&#x306E;&#x307E;&#x307E;&#x30C6;&#x30AF;&#x30B9;&#x30C1;&#x30E3;&#x7528;&#x753B;&#x50CF;&#x3068;&#x3057;&#x3066;&#x4F7F;&#x7528;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-<p><img src="img/earth.png" alt="screenshot"></p>
-<p>&#x3000;png&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;Project&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;Assets&#x30DA;&#x30A4;&#x30F3;&#x306B;&#x30C9;&#x30E9;&#x30C3;&#x30B0;&amp;&#x30C9;&#x30ED;&#x30C3;&#x30D7;&#x3057;&#x305F;&#x3089;&#x30A2;&#x30BB;&#x30C3;&#x30C8;&#x3068;&#x3057;&#x3066;&#x53D6;&#x308A;&#x8FBC;&#x307E;&#x308C;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;&#x30C6;&#x30AF;&#x30B9;&#x30C1;&#x30E3;&#x306F;&#x305D;&#x306E;&#x307E;&#x307E;&#x3067;&#x306F;&#x30E2;&#x30C7;&#x30EB;&#x306B;&#x8CBC;&#x308C;&#x305A;&#x3001;&#x3044;&#x3063;&#x305F;&#x3093;&#x30DE;&#x30C6;&#x30EA;&#x30A2;&#x30EB;&#x306B;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;&#x3042;&#x3089;&#x305F;&#x306B;matEarth&#x30DE;&#x30C6;&#x30EA;&#x30A2;&#x30EB;&#x3092;&#x4F5C;&#x6210;&#x3057;&#x3001;Albedo&#x306E;&#x5DE6;&#x5074;&#x306E;&#x6B63;&#x65B9;&#x5F62;&#x306B;&#x30C9;&#x30E9;&#x30C3;&#x30B0;&amp;&#x30C9;&#x30ED;&#x30C3;&#x30D7;&#x3059;&#x308B;&#x304B;&#x3001;&#x305D;&#x306E;&#x96A3;&#x306E;&#x5C0F;&#x3055;&#x306A;&#x5186;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x30C6;&#x30AF;&#x30B9;&#x30C1;&#x30E3;&#x753B;&#x50CF;&#x3092;&#x9078;&#x629E;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<p>　Albedo： R:233, G:230, B:160, A:255<br />
+　Metallic：0.36<br />
+　Smoothness：0</p>
+<p>にします。</p>
+<p>　マテリアルをHierarchyのMoonの上にドラッグ&amp;ドロップすると適用されて、Sceneビューの色が変わります。</p>
+<p>注　マテリアルをInspectorで変更した場合、例外的にセーブ操作をしなくても変更が永続的に残ります。シーンを保存せずに破棄してもマテリアルの変更は破棄されないので注意してください。</p>
+<h2 id="テクスチャの作成">テクスチャの作成</h2>
+<p>　次に地球にテクスチャを適用して陸地を作ってみましょう。サイズは512×512など縦横同じ2のn乗ピクセルにしたpngファイル、こんな雑な感じで大丈夫です。本テキストをWebで見ている場合、この画像を右クリックして保存すればそのままテクスチャ用画像として使用できます。</p>
+<figure>
+<img src="img/earth.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　pngファイルをProjectウィンドウのAssetsペインにドラッグ&amp;ドロップしたらアセットとして取り込まれます。</p>
+<p>　テクスチャはそのままではモデルに貼れず、いったんマテリアルにする必要があります。あらたにmatEarthマテリアルを作成し、Albedoの左側の正方形にドラッグ&amp;ドロップするか、その隣の小さな円をクリックしてテクスチャ画像を選択します。</p>
 <p>matEarth</p>
-<p>&#x3000;Albedo&#xFF1A; &#x5730;&#x7403;&#x30C6;&#x30AF;&#x30B9;&#x30C1;&#x30E3;&#x3092;&#x9078;&#x629E;&#x3000;R:255, G:255, B:255, A:255<br>&#x3000;Metallic&#xFF1A;0.285<br>&#x3000;Smoothness&#xFF1A;0.47</p>
-<p>&#x3000;&#x30DE;&#x30C6;&#x30EA;&#x30A2;&#x30EB;&#x3092;Hierarchy&#x306E;Earth&#x306E;&#x4E0A;&#x306B;&#x30C9;&#x30E9;&#x30C3;&#x30B0;&amp;&#x30C9;&#x30ED;&#x30C3;&#x30D7;&#x3059;&#x308B;&#x3068;&#x9069;&#x7528;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</p>
-<p><img src="img/006.png" alt="screenshot"></p>
-<h2 id="&#x30AB;&#x30E1;&#x30E9;&#x3068;&#x5149;&#x306E;&#x6F14;&#x51FA;">&#x30AB;&#x30E1;&#x30E9;&#x3068;&#x5149;&#x306E;&#x6F14;&#x51FA;</h2>
-<p>&#x3000;Unity&#x3067;&#x5149;&#x3092;&#x8868;&#x73FE;&#x3059;&#x308B;&#x305F;&#x3081;&#x306B;&#x306F;&#x6B21;&#x306E;&#x8A2D;&#x5B9A;&#x3092;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<p>　Albedo： 地球テクスチャを選択　R:255, G:255, B:255, A:255<br />
+　Metallic：0.285<br />
+　Smoothness：0.47</p>
+<p>　マテリアルをHierarchyのEarthの上にドラッグ&amp;ドロップすると適用されます。</p>
+<figure>
+<img src="img/006.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<h2 id="カメラと光の演出">カメラと光の演出</h2>
+<p>　Unityで光を表現するためには次の設定をする必要があります。</p>
 <ul>
-<li>Directional Light&#x3000;&#x964D;&#x308A;&#x6CE8;&#x3050;&#x5149;</li>
-<li>Environment Light&#x3000;&#x74B0;&#x5883;&#x5149;</li>
-<li>Skybox&#x3000;&#x7A7A;&#x3084;&#x5730;&#x9762;&#x306A;&#x3069;&#x3059;&#x3079;&#x3066;&#x306E;&#x9060;&#x666F;</li>
+<li>Directional Light　降り注ぐ光</li>
+<li>Environment Light　環境光</li>
+<li>Skybox　空や地面などすべての遠景</li>
 </ul>
-<p>&#x3000;&#x307E;&#x305F;&#x3001;&#x30B7;&#x30FC;&#x30F3;&#x306B;&#x767A;&#x5149;&#x3059;&#x308B;&#x7269;&#x4F53;&#x304C;&#x3042;&#x308B;&#x5834;&#x5408;&#x3001;&#x4E0A;&#x8A18;&#x306B;&#x52A0;&#x3048;&#x3066;&#x6B21;&#x306E;&#x8A2D;&#x5B9A;&#x3092;&#x304A;&#x3053;&#x306A;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p>　また、シーンに発光する物体がある場合、上記に加えて次の設定をおこないます。</p>
 <ul>
-<li>&#x30DE;&#x30C6;&#x30EA;&#x30A2;&#x30EB;&#x306E;Emission&#x3000;&#x30DE;&#x30C6;&#x30EA;&#x30A2;&#x30EB;&#x672C;&#x4F53;&#x306E;&#x660E;&#x308B;&#x3055;</li>
-<li>Point Light&#x3000;&#x767A;&#x5149;&#x7269;&#x8FD1;&#x8FBA;&#x306E;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3078;&#x306E;&#x5F71;&#x97FF;</li>
-<li>Bloom&#x3000;&#x767A;&#x5149;&#x7269;&#x8FD1;&#x8FBA;&#x306E;&#x7A7A;&#x6C17;&#x3078;&#x306E;&#x5F71;&#x97FF;</li>
+<li>マテリアルのEmission　マテリアル本体の明るさ</li>
+<li>Point Light　発光物近辺のオブジェクトへの影響</li>
+<li>Bloom　発光物近辺の空気への影響</li>
 </ul>
-<p>&#x3000;&#x3053;&#x308C;&#x3089;&#x306E;&#x5404;&#x7A2E;&#x5149;&#x306E;&#x8A2D;&#x5B9A;&#x304C;&#x3001;&#x305D;&#x308C;&#x305E;&#x308C;&#x5225;&#x306E;&#x753B;&#x9762;&#x306B;&#x3042;&#x308B;&#x3068;&#x3053;&#x308D;&#x304C;Unity&#x306E;&#x308F;&#x304B;&#x308A;&#x306B;&#x304F;&#x3068;&#x3053;&#x308D;&#x3067;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;&#x4E00;&#x5EA6;&#x6163;&#x308C;&#x3066;&#x3057;&#x307E;&#x3048;&#x3070;&#x52B9;&#x7387;&#x3088;&#x304F;&#x4F5C;&#x696D;&#x3067;&#x304D;&#x308B;&#x306E;&#x3067;&#x3001;&#x9811;&#x5F35;&#x3063;&#x3066;&#x64CD;&#x4F5C;&#x3092;&#x899A;&#x3048;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-<h3 id="directional-light&#x3000;&#x964D;&#x308A;&#x6CE8;&#x3050;&#x5149;">Directional Light&#x3000;&#x964D;&#x308A;&#x6CE8;&#x3050;&#x5149;</h3>
-<p>&#x3000;Directional Light&#x306F;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x3067;&#x914D;&#x7F6E;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x901A;&#x5E38;&#x306F;Inspector&#x3067;Rotation&#x3001;Color&#x3001;Intensity&#x3092;&#x8ABF;&#x6574;&#x3059;&#x308B;&#x304F;&#x3089;&#x3044;&#x3067;&#x3059;&#x3002;&#x4ECA;&#x56DE;&#x306F;&#x3042;&#x3068;&#x3067;&#x592A;&#x967D;&#x3068;&#x5DEE;&#x3057;&#x66FF;&#x3048;&#x308B;&#x3068;&#x3044;&#x3046;&#x3053;&#x3068;&#x3082;&#x3042;&#x308A;&#x3001;&#x305D;&#x306E;&#x307E;&#x307E;&#x306B;&#x3057;&#x3066;&#x304A;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-<h3 id="environment-light&#x3000;&#x74B0;&#x5883;&#x5149;">Environment Light&#x3000;&#x74B0;&#x5883;&#x5149;</h3>
-<p>&#x3000;&#x4ECA;&#x56DE;&#x306F;&#x821E;&#x53F0;&#x304C;&#x5B87;&#x5B99;&#x3067;&#x3042;&#x308A;&#x3001;&#x5149;&#x306E;&#x3042;&#x305F;&#x3089;&#x306A;&#x3044;&#x3068;&#x3053;&#x308D;&#x306F;&#x771F;&#x3063;&#x6697;&#x306B;&#x3057;&#x305F;&#x3044;&#x306E;&#x3067;&#x74B0;&#x5883;&#x5149;&#x3092;&#x6697;&#x304F;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;Window&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x2192;Rendering&#x2192;Lighting Settings&#x3067;&#x30C0;&#x30A4;&#x30A2;&#x30ED;&#x30B0;&#x3092;&#x958B;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;&#x4E0A;&#x6BB5;&#x306E;&#x30DC;&#x30BF;&#x30F3;&#x3067;&#x300C;Scene&#x300D;&#x304C;&#x9078;&#x629E;&#x3055;&#x308C;&#x3066;&#x3044;&#x306A;&#x3051;&#x308C;&#x3070;&#x9078;&#x629E;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
-<p>&#x3000;Environment Lighting&#x3067;&#x3001;Source&#x3092;Color&#x3001;Ambient Color&#x3092;R:0,B:0,G:0&#x306B;&#x8A2D;&#x5B9A;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p><img src="img/009.png" alt="screenshot"></p>
+<p>　これらの各種光の設定が、それぞれ別の画面にあるところがUnityのわかりにくところでもあります。一度慣れてしまえば効率よく作業できるので、頑張って操作を覚えましょう。</p>
+<h3 id="directional-light-降り注ぐ光">Directional Light　降り注ぐ光</h3>
+<p>　Directional
+Lightはデフォルトで配置されています。通常はInspectorでRotation、Color、Intensityを調整するくらいです。今回はあとで太陽と差し替えるということもあり、そのままにしておきます。</p>
+<h3 id="environment-light-環境光">Environment Light　環境光</h3>
+<p>　今回は舞台が宇宙であり、光のあたらないところは真っ暗にしたいので環境光を暗くします。</p>
+<p>　Windowメニュー→Rendering→Lightingでダイアログを開きます。</p>
+<p>　上段のボタンで「Environment」が選択されていなければ選択してください。</p>
+<p>　Environment Lightingで、SourceをColor、Ambient
+ColorをR:0,B:0,G:0に設定します。</p>
+<figure>
+<img src="img/009.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <h3 id="skybox">Skybox</h3>
-<p>&#x3000;Skybox&#x306E;&#x8A2D;&#x5B9A;&#x306F;&#x30AB;&#x30E1;&#x30E9;&#x306E;Inspector&#x306B;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;Main Camera&#x3092;&#x9078;&#x629E;&#x3057;&#x3066;Inspector&#x3067;&#x3001;Clear Flags&#x3092;Solid Color&#x3001;Background&#x3092;R:0,G:0,B:0&#x306B;&#x8A2D;&#x5B9A;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;&#x3064;&#x3044;&#x3067;&#x306B;&#x3001;&#x305D;&#x306E;&#x307E;&#x307E;&#x3060;&#x3068;&#x6708;&#x304C;&#x3061;&#x3087;&#x3063;&#x3068;&#x898B;&#x3065;&#x3089;&#x3044;&#x4F4D;&#x7F6E;&#x306B;&#x3042;&#x308B;&#x306E;&#x3067;&#x3001;Main Camera&#x306E;Position&#x3092;5,1,-10&#x306B;&#x5909;&#x66F4;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;Scene&#x30D3;&#x30E5;&#x30FC;&#x306F;&#x305D;&#x306E;&#x307E;&#x307E;&#x3067;&#x3059;&#x304C;&#x3001;Game&#x30D3;&#x30E5;&#x30FC;&#x306E;&#x80CC;&#x666F;&#x8272;&#x304C;&#x5909;&#x308F;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-<p><img src="img/010.png" alt="screenshot"></p>
-<p><img src="img/011.png" alt="screenshot"></p>
-<h2 id="&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x56DE;&#x8EE2;">&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x56DE;&#x8EE2;</h2>
-<h3 id="&#x81EA;&#x8EE2;">&#x81EA;&#x8EE2;</h3>
-<p>&#x3000;&#x6B21;&#x306B;&#x3001;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x3092;&#x66F8;&#x3044;&#x3066;&#x5730;&#x7403;&#x3092;&#x81EA;&#x8EE2;&#x3055;&#x305B;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-<p>&#x3000;Hierarchy&#x3067;Earth&#x3092;&#x9078;&#x629E;&#x3057;&#x3066;Inspector&#x306E;&#x6700;&#x4E0B;&#x6BB5;&#x306E;Add Component&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x62BC;&#x3057;&#x307E;&#x3059;&#x3002;New Script&#x3092;&#x9078;&#x629E;&#x3057;&#x3066;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x3092;&#x751F;&#x6210;&#x3057;&#x307E;&#x3059;&#x3002;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x540D;&#x306F;&#x4EFB;&#x610F;&#x3067;&#x3059;&#x304C;&#x3001;&#x3053;&#x3053;&#x3067;&#x306F;&#x300C;Spinner&#x300D;&#x3068;&#x3057;&#x3066;&#x304A;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<p>　Skyboxの設定はカメラのInspectorにあります。Main
+Cameraを選択してInspectorで、Clear FlagsをSolid
+Color、BackgroundをR:0,G:0,B:0に設定します。</p>
+<p>　ついでに、そのままだと月がちょっと見づらい位置にあるので、Main
+CameraのPositionを5,1,-10に変更します。</p>
+<p>　Sceneビューはそのままですが、Gameビューの背景色が変わります。</p>
+<figure>
+<img src="img/010.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<figure>
+<img src="img/011.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<h2 id="オブジェクトの回転">オブジェクトの回転</h2>
+<h3 id="自転">自転</h3>
+<p>　次に、スクリプトを書いて地球を自転させましょう。</p>
+<p>　HierarchyでEarthを選択してInspectorの最下段のAdd
+Componentボタンを押します。New
+Scriptを選択してスクリプトを生成します。スクリプト名は任意ですが、ここでは「Spinner」としておきます。</p>
 <p>Spinner.cs</p>
-<pre><code class="lang-cs"><span class="hljs-keyword">using</span> UnityEngine;
-
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Spinner</span> : <span class="hljs-title">MonoBehaviour</span> {
-
-    <span class="hljs-keyword">float</span> angle = <span class="hljs-number">0</span>;
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span> (<span class="hljs-params"></span>) </span>{
-
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span> (<span class="hljs-params"></span>) </span>{
-        angle = Time.deltaTime * <span class="hljs-number">360</span>;
-        transform.Rotate(Vector3.up, -angle);
-    }
-}
-</code></pre>
-<p>&#x3000;Update&#x95A2;&#x6570;&#x3067;&#x6BCE;&#x30D5;&#x30EC;&#x30FC;&#x30E0;&#x89D2;&#x5EA6;&#x3092;&#x8A08;&#x7B97;&#x3057;&#x3066;&#x3001;&#x3053;&#x306E;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x304C;&#x30A2;&#x30BF;&#x30C3;&#x30C1;&#x3055;&#x308C;&#x305F;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3092;&#x56DE;&#x8EE2;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<pre><code>angle = Time.deltaTime * 360;
-</code></pre><p>&#x3067;&#x89D2;&#x5EA6;&#x3092;&#x8A08;&#x7B97;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;Unity&#x3067;&#x79FB;&#x52D5;&#x3084;&#x56DE;&#x8EE2;&#x306E;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x3092;&#x66F8;&#x304F;&#x3068;&#x304D;&#x306F;&#x3001;&#x5FC5;&#x305A;Time.deltaTime&#x3092;&#x4F7F;&#x3063;&#x3066;&#x901F;&#x5EA6;&#x3092;&#x6C7A;&#x3081;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;&#x3053;&#x308C;&#x306F;1&#x30D5;&#x30EC;&#x30FC;&#x30E0;&#x5206;&#x306E;&#x6642;&#x9593;&#x304C;&#x683C;&#x7D0D;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x5909;&#x6570;&#x3067;&#x3001;&#x305F;&#x3068;&#x3048;&#x3070;30fps&#x306E;&#x5834;&#x5408;&#x306F;&#x3001;1&#xF7;30 = 0.03333&#x2026;&#x2026;&#x3068;&#x3044;&#x3046;&#x3088;&#x3046;&#x306A;&#x5024;&#x304C;&#x5165;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x3053;&#x306E;&#x5024;&#x3092;&#x6BCE;&#x56DE;&#x4F7F;&#x3046;&#x3053;&#x3068;&#x3067;&#x3001;CPU&#x306E;&#x9045;&#x3044;&#x30DE;&#x30B7;&#x30F3;&#x3084;&#x3001;&#x91CD;&#x3044;&#x51E6;&#x7406;&#x3067;&#x30D5;&#x30EC;&#x30FC;&#x30E0;&#x30EC;&#x30FC;&#x30C8;&#x304C;&#x5341;&#x5206;&#x51FA;&#x306A;&#x3044;&#x3068;&#x304D;&#x3067;&#x3082;&#x4E00;&#x5B9A;&#x306E;&#x901F;&#x5EA6;&#x3067;&#x52D5;&#x304B;&#x3059;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;&#x9006;&#x306B;&#x3053;&#x306E;&#x5024;&#x3092;&#x4F7F;&#x308F;&#x306A;&#x3044;&#x3068;&#x3001;&#x9AD8;&#x901F;&#x306A;PC&#x3067;&#x5B9F;&#x884C;&#x3057;&#x305F;&#x3068;&#x304D;&#x306B;&#x901F;&#x3059;&#x304E;&#x3066;&#x30B2;&#x30FC;&#x30E0;&#x306B;&#x306A;&#x3089;&#x306A;&#x3044;&#x3053;&#x3068;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;&#x3053;&#x3053;&#x3067;&#x306F;&#x3001;Time.deltaTime&#x306B;360&#xFF08;&#x5EA6;&#xFF09;&#x3092;&#x304B;&#x3051;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;&#x3001;1&#x79D2;&#x3042;&#x305F;&#x308A;1&#x56DE;&#x8EE2;&#x3059;&#x308B;&#x3053;&#x3068;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;&#x3064;&#x307E;&#x308A;&#x73FE;&#x5B9F;&#x306E;1&#x79D2;&#x304C;&#x3053;&#x306E;&#x5B87;&#x5B99;&#x3067;&#x306E;1&#x65E5;&#x3092;&#x8868;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;Rotate&#x95A2;&#x6570;&#x306E;Vector3.up&#x306F;&#x771F;&#x4E0A;&#x306B;&#x5411;&#x3044;&#x305F;&#x30D9;&#x30AF;&#x30C8;&#x30EB;&#x3067;&#x3001;&#x56DE;&#x8EE2;&#x904B;&#x52D5;&#x306E;&#x8EF8;&#x304C;y&#x8EF8;&#x3067;&#x3042;&#x308B;&#x3053;&#x3068;&#x3092;&#x6307;&#x5B9A;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;<code>new Vector3(0,1,0)</code>&#x3068;&#x66F8;&#x3044;&#x3066;&#x3082;&#x540C;&#x3058;&#x3067;&#x3059;&#x3002;</p>
-<p>&#x3000;-angle&#x306E;&#x3088;&#x3046;&#x306B;&#x30DE;&#x30A4;&#x30CA;&#x30B9;&#x7B26;&#x53F7;&#x3092;&#x3064;&#x3051;&#x308B;&#x3068;&#x53CD;&#x6642;&#x8A08;&#x65B9;&#x5411;&#x306E;&#x56DE;&#x8EE2;&#x3068;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-<h3 id="&#x5B9F;&#x884C;&#x78BA;&#x8A8D;">&#x5B9F;&#x884C;&#x78BA;&#x8A8D;</h3>
-<p>&#x3000;&#x3053;&#x3053;&#x3067;&#x30B9;&#x30BF;&#x30FC;&#x30C8;&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x62BC;&#x3057;&#x3066;&#x5B9F;&#x884C;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x5730;&#x7403;&#x304C;1&#x79D2;&#x9593;&#x306B;1&#x56DE;&#x307E;&#x308F;&#x3063;&#x3066;&#x3044;&#x308C;&#x3070;&#x6210;&#x529F;&#x3067;&#x3059;&#x3002;</p>
-<p>&#x3000;&#x5B9F;&#x884C;&#x306B;&#x3042;&#x305F;&#x308A;&#x304A;&#x52E7;&#x3081;&#x306E;&#x6A5F;&#x80FD;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;Game&#x30D3;&#x30E5;&#x30FC;&#x306E;Maximize On Play&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x304A;&#x304F;&#x3068;&#x5B9F;&#x884C;&#x3057;&#x305F;&#x3068;&#x304D;Unity&#x30A8;&#x30C7;&#x30A3;&#x30BF;&#x306E;&#x30B5;&#x30A4;&#x30BA;&#x3044;&#x3063;&#x3071;&#x3044;&#x306B;&#x8868;&#x793A;&#x3059;&#x308B;&#x306E;&#x3067;&#x898B;&#x3084;&#x3059;&#x304F;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;&#x3082;&#x3046;&#x4E00;&#x5EA6;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x3068;Game&#x30D3;&#x30E5;&#x30FC;&#x306E;&#x30B5;&#x30A4;&#x30BA;&#x306E;&#x307E;&#x307E;&#x5B9F;&#x884C;&#x3059;&#x308B;&#x305F;&#x3081;&#x3001;&#x4ECA;&#x5EA6;&#x306F;&#x52D5;&#x3044;&#x3066;&#x3044;&#x308B;&#x6700;&#x4E2D;&#x306E;Hierarchy&#x306E;&#x72B6;&#x614B;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x3084;&#x3059;&#x304F;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;&#x5B9F;&#x884C;&#x4E2D;&#x306B;&#x30B5;&#x30A4;&#x30BA;&#x3092;&#x5909;&#x3048;&#x305F;&#x3044;&#x3068;&#x304D;&#x306F;&#x3001;&#x53F3;&#x4E0A;&#x306B;&#x3042;&#x308B;&#x5C0F;&#x3055;&#x306A;&#x70B9;&#x304C;&#x7E26;&#x306B;&#x4E26;&#x3093;&#x3060;&#x3088;&#x3046;&#x306A;&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x30A2;&#x30A4;&#x30B3;&#x30F3;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;Maximize&#x3092;&#x9078;&#x629E;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p><img src="img/007.png" alt="screenshot"></p>
-<p><img src="img/008.png" alt="screenshot"></p>
-<h3 id="&#x516C;&#x8EE2;">&#x516C;&#x8EE2;</h3>
-<p>&#x3000;&#x6B21;&#x306B;&#x3001;&#x6708;&#x306E;&#x516C;&#x8EE2;&#x3092;&#x5B9F;&#x88C5;&#x3057;&#x3066;&#x5730;&#x7403;&#x306E;&#x5468;&#x308A;&#x3092;&#x307E;&#x308F;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;
-&#x5148;&#x307B;&#x3069;&#x3068;&#x540C;&#x3058;&#x3088;&#x3046;&#x306B;Moon&#x3092;&#x9078;&#x629E;&#x3057;&#x3066;Add Component&#x2192;New Script&#x3001;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x540D;&#x306F;Orbiter&#x3068;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Spinner <span class="op">:</span> MonoBehaviour <span class="op">{</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> angle <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Start</span> <span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Update</span> <span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        angle <span class="op">=</span> Time<span class="op">.</span><span class="fu">deltaTime</span> <span class="op">*</span> <span class="dv">360</span><span class="op">;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        transform<span class="op">.</span><span class="fu">Rotate</span><span class="op">(</span>Vector3<span class="op">.</span><span class="fu">up</span><span class="op">,</span> <span class="op">-</span>angle<span class="op">);</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>　Update関数で毎フレーム角度を計算して、このスクリプトがアタッチされたオブジェクトを回転します。</p>
+<pre><code>angle = Time.deltaTime * 360;</code></pre>
+<p>で角度を計算しています。Unityで移動や回転のスクリプトを書くときは、必ずTime.deltaTimeを使って速度を決めるようにしてください。これは1フレーム分の時間が格納されている変数で、たとえば30fpsの場合は、1÷30
+=
+0.03333……というような値が入っています。この値を毎回使うことで、CPUの遅いマシンや、重い処理でフレームレートが十分出ないときでも一定の速度で動かすことができます。逆にこの値を使わないと、高速なPCで実行したときに速すぎてゲームにならないこともあります。</p>
+<p>　ここでは、Time.deltaTimeに360（度）をかけているので、1秒あたり1回転することになります。つまり現実の1秒がこの宇宙での1日を表しています。</p>
+<p>　Rotate関数のVector3.upは真上に向いたベクトルで、回転運動の軸がy軸であることを指定しています。<code>new Vector3(0,1,0)</code>と書いても同じです。</p>
+<p>　-angleのようにマイナス符号をつけると反時計方向の回転となります。</p>
+<h3 id="実行確認">実行確認</h3>
+<p>　ここでスタートボタンを押して実行してみましょう。地球が1秒間に1回まわっていれば成功です。</p>
+<p>　実行にあたりお勧めの機能があります。Gameビューの再生モードをPlay
+Maxmizedにしておくと実行したときUnityエディタのサイズいっぱいに表示するので見やすくなります。もう一度クリックするとGameビューのサイズのまま実行するため、今度は動いている最中のHierarchyの状態を確認しやすくなります。実行中にサイズを変えたいときは、右上にある小さな点が縦に並んだようなメニューアイコンをクリックしてMaximizeを選択します。</p>
+<figure>
+<img src="img/007.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<figure>
+<img src="img/008.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<h3 id="公転">公転</h3>
+<p>　次に、月の公転を実装して地球の周りをまわしてみましょう。
+先ほどと同じようにMoonを選択してAdd Component→New
+Script、スクリプト名はOrbiterとします。</p>
 <p>Orbiter.cs</p>
-<pre><code class="lang-cs"><span class="hljs-keyword">using</span> UnityEngine;
-
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Orbiter</span> : <span class="hljs-title">MonoBehaviour</span> {
-
-    <span class="hljs-keyword">float</span> radius = <span class="hljs-number">10</span>;  <span class="hljs-comment">// &#x56DE;&#x8EE2;&#x534A;&#x5F84;</span>
-    <span class="hljs-keyword">float</span> cycle = <span class="hljs-number">27</span>;   <span class="hljs-comment">// &#x56DE;&#x8EE2;&#x5468;&#x671F; 27&#x79D2;</span>
-    <span class="hljs-keyword">float</span> angle = <span class="hljs-number">0</span>;
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span> (<span class="hljs-params"></span>) </span>{
-
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span> (<span class="hljs-params"></span>) </span>{
-        angle -= Time.deltaTime * <span class="hljs-number">2</span> * Mathf.PI / cycle;
-        <span class="hljs-keyword">float</span> x = Mathf.Sin(angle) * radius;
-        <span class="hljs-keyword">float</span> z = Mathf.Cos(angle) * radius;
-
-        transform.position = <span class="hljs-keyword">new</span> Vector3(x, <span class="hljs-number">0</span>, z);
-    }
-}
-</code></pre>
-<p>&#x3000;&#x3053;&#x3053;&#x3067;&#x3082;&#x3001;Time.deltaTime&#x3092;&#x4F7F;&#x3063;&#x3066;&#x89D2;&#x5EA6;&#x3092;&#x8A08;&#x7B97;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x4ECA;&#x56DE;&#x306F;&#x5EA6;&#x3067;&#x306F;&#x306A;&#x304F;&#x3001;&#x30E9;&#x30B8;&#x30A2;&#x30F3;&#x306A;&#x306E;&#x3067;360&#x306E;&#x4EE3;&#x308F;&#x308A;&#x306B;2&#x3C0;&#x3092;&#x304B;&#x3051;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x4F7F;&#x7528;&#x3059;&#x308B;&#x95A2;&#x6570;&#x306B;&#x3088;&#x3063;&#x3066;&#x3001;&#x540C;&#x3058;&#x89D2;&#x5EA6;&#x3067;&#x3082;&#x5EA6;&#x3067;&#x4E0E;&#x3048;&#x308B;&#x3082;&#x306E;&#x3068;&#x30E9;&#x30B8;&#x30A2;&#x30F3;&#x306E;&#x3082;&#x306E;&#x304C;&#x3042;&#x308B;&#x306E;&#x3067;&#x6DF7;&#x4E71;&#x3057;&#x306A;&#x3044;&#x3088;&#x3046;&#x306B;&#x6CE8;&#x610F;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
-<p>&#x3000;&#x8A08;&#x7B97;&#x3057;&#x305F;&#x89D2;&#x5EA6;&#x3092;Sin&#x95A2;&#x6570;&#x3068;Cos&#x95A2;&#x6570;&#x306B;&#x6E21;&#x3057;&#x3066;&#x4F4D;&#x7F6E;&#x3092;&#x8A08;&#x7B97;&#x3057;&#x307E;&#x3059;&#x3002;&#x30B5;&#x30A4;&#x30F3;&#x3001;&#x30B3;&#x30B5;&#x30A4;&#x30F3;&#x306F;&#x901A;&#x5E38;&#x3001;&#x4E09;&#x89D2;&#x95A2;&#x6570;&#x3068;&#x547C;&#x3070;&#x308C;&#x307E;&#x3059;&#x304C;&#x3001;&#x3053;&#x308C;&#x306F;&#x672C;&#x8CEA;&#x7684;&#x306B;&#x306F;&#x56DE;&#x8EE2;&#x3068;&#x5F80;&#x5FA9;&#x306E;&#x95A2;&#x6570;&#x3060;&#x3068;&#x8003;&#x3048;&#x305F;&#x65B9;&#x304C;&#x3088;&#x3044;&#x3067;&#x3059;&#x3002;&#x81EA;&#x7136;&#x754C;&#x3067;&#x76EE;&#x306B;&#x3059;&#x308B;&#x3088;&#x3046;&#x306A;&#x56DE;&#x8EE2;&#x904B;&#x52D5;&#x3084;&#x5F80;&#x5FA9;&#x904B;&#x52D5;&#x306E;&#x307B;&#x3068;&#x3093;&#x3069;&#x306F;&#x30B5;&#x30A4;&#x30F3;&#x3068;&#x30B3;&#x30B5;&#x30A4;&#x30F3;&#x3067;&#x8868;&#x73FE;&#x3067;&#x304D;&#x308B;&#x306E;&#x3067;&#x3001;&#x305C;&#x3072;&#x30DE;&#x30B9;&#x30BF;&#x30FC;&#x3059;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x3053;&#x3053;&#x3067;&#x306F;&#x30B5;&#x30A4;&#x30F3;&#x3092;x&#x8EF8;&#x3001;&#x30B3;&#x30B5;&#x30A4;&#x30F3;&#x3092;z&#x8EF8;&#x306B;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x3053;&#x306E;&#x5834;&#x5408;&#x306F;<code>(0,0,0)</code>&#x3092;&#x4E2D;&#x5FC3;&#x3068;&#x3057;&#x305F;&#x5186;&#x904B;&#x52D5;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;cycle&#x306F;&#x56DE;&#x8EE2;&#x5468;&#x671F;&#x3067;&#x3059;&#x3002;&#x6708;&#x306F;27&#x65E5;&#x304B;&#x3051;&#x3066;&#x5730;&#x7403;&#x306E;&#x5468;&#x308A;&#x3092;1&#x56DE;&#x8EE2;&#x3059;&#x308B;&#x306E;&#x3067;27&#x3068;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;1&#x79D2;&#x306B;1&#x56DE;&#x8EE2;&#x3059;&#x308B;&#x56DE;&#x8EE2;&#x901F;&#x5EA6;&#x3092;cycle&#x3067;&#x5272;&#x308A;&#x3001;&#x56DE;&#x8EE2;&#x901F;&#x5EA6;&#x3092;1/27&#x306B;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;&#x3053;&#x3053;&#x3067;&#x307E;&#x305F;&#x5B9F;&#x884C;&#x78BA;&#x8A8D;&#x3057;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;&#x5730;&#x7403;&#x304C;&#x81EA;&#x8EE2;&#x3057;&#x3066;&#x3001;&#x305D;&#x306E;&#x5468;&#x308A;&#x3092;&#x6708;&#x304C;&#x3086;&#x3063;&#x304F;&#x308A;&#x5468;&#x56DE;&#x3057;&#x3066;&#x3044;&#x308B;&#x3067;&#x3057;&#x3087;&#x3046;&#x304B;&#x3002;&#x753B;&#x9762;&#x304B;&#x3089;&#x306F;&#x307F;&#x3067;&#x3066;&#x898B;&#x3065;&#x3089;&#x3044;&#x3088;&#x3046;&#x306A;&#x3089;&#x3001;Main Camera&#x306E;&#x4F4D;&#x7F6E;&#x3092;&#x5C11;&#x3057;&#x52D5;&#x304B;&#x3057;&#x3066;&#x8ABF;&#x6574;&#x3057;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
-<h2 id="&#x767A;&#x5149;&#x306E;&#x8868;&#x73FE;">&#x767A;&#x5149;&#x306E;&#x8868;&#x73FE;</h2>
-<p>&#x3000;&#x4ECA;&#x5EA6;&#x306F;&#x592A;&#x967D;&#x3092;&#x4F5C;&#x3063;&#x3066;&#x5730;&#x7403;&#x304C;&#x592A;&#x967D;&#x306E;&#x5468;&#x308A;&#x3092;&#x307E;&#x308F;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;
-&#x4E2D;&#x5FC3;&#x306B;&#x592A;&#x967D;&#x3092;&#x7F6E;&#x3051;&#x308B;&#x3088;&#x3046;&#x306B;Scene&#x30D3;&#x30E5;&#x30FC;&#x3067;&#x5730;&#x7403;&#x3068;&#x6708;&#x306E;&#x4F4D;&#x7F6E;&#x3092;&#x5C11;&#x3057;&#x52D5;&#x304B;&#x3057;&#x3066;&#x3001;Hierarchy&#x306B;Sphere&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;Position&#x306F;<code>0,0,0</code>&#x3001;Scale&#x306F;<code>4,4,4</code>&#x3001;&#x540D;&#x524D;&#x306F;Sun&#x306B;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x203B;&#x3053;&#x306E;&#x30B5;&#x30F3;&#x30D7;&#x30EB;&#x3067;&#x4F5C;&#x6210;&#x3059;&#x308B;&#x592A;&#x967D;&#x3001;&#x5730;&#x7403;&#x3001;&#x6708;&#x306E;&#x5927;&#x304D;&#x3055;&#x3084;&#x8DDD;&#x96E2;&#x306E;&#x6BD4;&#x7387;&#x306F;&#x5B9F;&#x969B;&#x3068;&#x306F;&#x7570;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x6B21;&#x306B;&#x592A;&#x967D;&#x306E;&#x30DE;&#x30C6;&#x30EA;&#x30A2;&#x30EB;matSun&#x3092;&#x4F5C;&#x6210;&#x3057;&#x307E;&#x3059;&#x3002;&#x30DE;&#x30C6;&#x30EA;&#x30A2;&#x30EB;&#x306E;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x3092;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306B;&#x8A2D;&#x5B9A;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;<br>&#x3000;Albedo &#xFF1A; R:255, G:0, B:0, A255<br>&#x3000;Metallic&#xFF1A; 0<br>&#x3000;Smoothness&#xFF1A; 0.5  </p>
-<p>&#x3000;&#x3053;&#x308C;&#x3060;&#x3051;&#x3067;&#x306F;&#x307E;&#x3060;&#x767A;&#x5149;&#x3057;&#x305F;&#x611F;&#x3058;&#x306B;&#x306A;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;Emission&#x306B;&#x30C1;&#x30A7;&#x30C3;&#x30AF;&#x3092;&#x5165;&#x308C;&#x3066;Global Illumination&#x3092;Realtime&#x306B;&#x3001;Color&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306B;HDR Color&#x3092;&#x8A2D;&#x5B9A;&#x3057;&#x307E;&#x3059;&#x3002;<br>&#x3000;R:191, G:60, B:60<br>&#x3000;Intensity&#xFF1A; 3  </p>
-<p>&#x3000;&#x3053;&#x3046;&#x3059;&#x308B;&#x3053;&#x3068;&#x306B;&#x3088;&#x308A;Color&#x306B;HDR&#x306E;&#x6587;&#x5B57;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x3001;HDR&#x5BFE;&#x5FDC;&#x30C7;&#x30A3;&#x30B9;&#x30D7;&#x30EC;&#x30A4;&#x306E;&#x5834;&#x5408;&#x9AD8;&#x8F1D;&#x5EA6;&#x3067;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;&#x3057;&#x304B;&#x3057;&#x3001;&#x307E;&#x3060;&#x592A;&#x967D;&#x306F;&#x305F;&#x3060;&#x306E;&#x767D;&#x3044;&#x7403;&#x4F53;&#x306B;&#x898B;&#x3048;&#x307E;&#x3059;&#x3002;&#x3053;&#x308C;&#x304B;&#x3089;&#x5149;&#x308A;&#x8F1D;&#x304F;&#x6052;&#x661F;&#x306B;&#x3059;&#x308B;&#x305F;&#x3081;&#x306B;&#x306F;&#x3001;&#x307E;&#x3060;&#x6B21;&#x7BC0;&#x4EE5;&#x964D;&#x306E;&#x4F55;&#x6BB5;&#x968E;&#x304B;&#x306E;&#x624B;&#x9806;&#x3092;&#x5FC5;&#x8981;&#x3068;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p><img src="img/012.png" alt="screenshot"></p>
-<h3 id="&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x30E9;&#x30A4;&#x30C8;&#x3067;&#x307B;&#x304B;&#x306E;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x5F71;&#x97FF;&#x3092;&#x4E0E;&#x3048;&#x308B;">&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x30E9;&#x30A4;&#x30C8;&#x3067;&#x307B;&#x304B;&#x306E;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x5F71;&#x97FF;&#x3092;&#x4E0E;&#x3048;&#x308B;</h3>
-<p>&#x3000;&#x4EE5;&#x524D;&#x3001;<a href="#&#x30AB;&#x30E1;&#x30E9;&#x3068;&#x5149;&#x306E;&#x6F14;&#x51FA;">&#x30AB;&#x30E1;&#x30E9;&#x3068;&#x5149;&#x306E;&#x6F14;&#x51FA;</a>&#x306E;&#x9805;&#x306E;&#x5192;&#x982D;&#x3067;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306B;&#x66F8;&#x304D;&#x307E;&#x3057;&#x305F;&#x3002;</p>
-<blockquote>
-<p>&#x3000;&#x30B7;&#x30FC;&#x30F3;&#x306B;&#x767A;&#x5149;&#x3059;&#x308B;&#x7269;&#x4F53;&#x304C;&#x3042;&#x308B;&#x5834;&#x5408;&#x3001;&#x4E0A;&#x8A18;&#x306B;&#x52A0;&#x3048;&#x3066;&#x6B21;&#x306E;&#x8A2D;&#x5B9A;&#x3092;&#x304A;&#x3053;&#x306A;&#x3044;&#x307E;&#x3059;&#x3002;  </p>
-<ul>
-<li>&#x30DE;&#x30C6;&#x30EA;&#x30A2;&#x30EB;&#x306E;Emission&#x3000;&#x30DE;&#x30C6;&#x30EA;&#x30A2;&#x30EB;&#x672C;&#x4F53;&#x306E;&#x660E;&#x308B;&#x3055;</li>
-<li>Point Light&#x3000;&#x767A;&#x5149;&#x7269;&#x8FD1;&#x8FBA;&#x306E;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3078;&#x306E;&#x5F71;&#x97FF;</li>
-<li>Bloom&#x3000;&#x767A;&#x5149;&#x7269;&#x8FD1;&#x8FBA;&#x306E;&#x7A7A;&#x6C17;&#x3078;&#x306E;&#x5F71;&#x97FF;</li>
-</ul>
-</blockquote>
-<p>&#x3000;&#x73FE;&#x5728;&#x3001;&#x592A;&#x967D;&#x306F;&#x4E0A;&#x8A18;&#x306E;&#x30DE;&#x30C6;&#x30EA;&#x30A2;&#x30EB;&#x306E;&#x8A2D;&#x5B9A;&#x3092;&#x3057;&#x305F;&#x3060;&#x3051;&#x306E;&#x72B6;&#x614B;&#x3067;&#x3059;&#x3002;&#x7D9A;&#x3044;&#x3066;&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x30E9;&#x30A4;&#x30C8;&#x3092;&#x8A2D;&#x5B9A;&#x3057;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;Hierarchy&#x3067;Sun&#x3092;&#x9078;&#x629E;&#x3057;&#x305F;&#x72B6;&#x614B;&#x3067;&#x3001;&#x53F3;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x304B;&#x3089;Light&#x2192;Point Light&#x3092;&#x9078;&#x629E;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
-<p><img src="img/013.png" alt="screenshot"></p>
-<p>&#x3000;&#x6B21;&#x306B;Point Light&#x306E;Inspector&#x304B;&#x3089;&#x3001;Range:100&#x3001;Mode:Realtime&#x3001;Intensity:10&#x3001;Indirect Multiplier:0&#x306B;&#x8A2D;&#x5B9A;&#x3057;&#x307E;&#x3059;&#x3002;
-&#x3053;&#x308C;&#x3067;&#x8DDD;&#x96E2;100&#x307E;&#x3067;&#x5C4A;&#x304F;&#x3001;&#x660E;&#x308B;&#x3044;&#x5149;&#x3068;&#x306A;&#x308A;&#x307E;&#x3057;&#x305F;&#x3002;Color&#x306F;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x306E;&#x767D;&#x306E;&#x307E;&#x307E;&#x3067;&#x5927;&#x4E08;&#x592B;&#x3067;&#x3059;&#x3002;</p>
-<p><img src="img/013_2.png" alt="screenshot"></p>
-<p>&#x3000;&#x30B7;&#x30FC;&#x30F3;&#x306B;Point Light&#x3092;&#x7F6E;&#x3044;&#x305F;&#x306E;&#x3067;&#x3001;Directional Light&#x306F;&#x4E0D;&#x8981;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;Hierarchy&#x3067;&#x9078;&#x629E;&#x3057;&#x3066;&#x524A;&#x9664;&#x3059;&#x308B;&#x304B;&#x3001;Inspector&#x306E;&#x4E00;&#x756A;&#x4E0A;&#x306E;&#x30C1;&#x30A7;&#x30C3;&#x30AF;&#x30DC;&#x30C3;&#x30AF;&#x30B9;&#x3092;&#x5916;&#x3057;&#x3066;&#x7121;&#x52B9;&#x306B;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;&#x30AB;&#x30E1;&#x30E9;&#x3084;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x4F4D;&#x7F6E;&#x3092;&#x8ABF;&#x6574;&#x3057;&#x3066;Game&#x30D3;&#x30E5;&#x30FC;&#x306B;&#x3059;&#x3079;&#x3066;&#x304A;&#x3055;&#x307E;&#x308B;&#x3088;&#x3046;&#x306B;&#x8ABF;&#x6574;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3001;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306A;&#x8868;&#x793A;&#x306B;&#x306A;&#x3063;&#x305F;&#x3067;&#x3057;&#x3087;&#x3046;&#x304B;&#x3002;&#x592A;&#x967D;&#x306E;&#x5149;&#x304C;&#x6708;&#x3068;&#x5730;&#x7403;&#x306E;&#x592A;&#x967D;&#x5074;&#x306E;&#x9762;&#x3092;&#x7167;&#x3089;&#x3057;&#x3060;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-<p><img src="img/014.png" alt="screenshot"></p>
-<h3 id="&#x30DD;&#x30B9;&#x30C8;&#x30D7;&#x30ED;&#x30BB;&#x30C3;&#x30B7;&#x30F3;&#x30B0;">&#x30DD;&#x30B9;&#x30C8;&#x30D7;&#x30ED;&#x30BB;&#x30C3;&#x30B7;&#x30F3;&#x30B0;</h3>
-<p>&#x3000;&#x592A;&#x967D;&#x306E;&#x4ED5;&#x4E0A;&#x3052;&#x306B;&#x3001;&#x30DD;&#x30B9;&#x30C8;&#x30D7;&#x30ED;&#x30BB;&#x30C3;&#x30B7;&#x30F3;&#x30B0;&#x3067;&#x30D6;&#x30EB;&#x30FC;&#x30E0;&#x52B9;&#x679C;&#x3092;&#x4ED8;&#x3051;&#x52A0;&#x3048;&#x307E;&#x3059;&#x3002;Unity&#x306E;&#x30DD;&#x30B9;&#x30C8;&#x30D7;&#x30ED;&#x30BB;&#x30C3;&#x30B7;&#x30F3;&#x30B0;&#x306F;&#x5C0E;&#x5165;&#x3059;&#x308B;&#x306E;&#x306B;&#x3061;&#x3087;&#x3063;&#x3068;&#x624B;&#x9593;&#x304C;&#x304B;&#x304B;&#x308A;&#x307E;&#x3059;&#x304C;&#x3001;&#x975E;&#x5E38;&#x306B;&#x5F37;&#x529B;&#x306A;&#x5404;&#x7A2E;&#x8996;&#x899A;&#x52B9;&#x679C;&#x306E;&#x9069;&#x7528;&#x304C;&#x53EF;&#x80FD;&#x3067;&#x3001;&#x7F8E;&#x3057;&#x3044;&#x753B;&#x9762;&#x3092;&#x4F5C;&#x308B;&#x306E;&#x306B;&#x5FC5;&#x9808;&#x306A;&#x306E;&#x3067;&#x305C;&#x3072;&#x30DE;&#x30B9;&#x30BF;&#x30FC;&#x3059;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
-<p>&#x3000;Unity&#x306E;&#x30DD;&#x30B9;&#x30C8;&#x30D7;&#x30ED;&#x30BB;&#x30B9;&#x306B;&#x306F;&#x3001;&#x6BD4;&#x8F03;&#x7684;&#x65B0;&#x3057;&#x3044;Post Processing&#x3068;&#x3044;&#x3046;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x3092;&#x4F7F;&#x7528;&#x3057;&#x307E;&#x3059;&#x3002;&#x4EE5;&#x524D;&#x306F;Post Processing Stack&#x3068;&#x547C;&#x3070;&#x308C;&#x3066;&#x30A2;&#x30BB;&#x30C3;&#x30C8;&#x30B9;&#x30C8;&#x30A2;&#x304B;&#x3089;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3057;&#x307E;&#x3057;&#x305F;&#x304C;&#x3001;&#x6700;&#x65B0;&#x7248;&#x306F;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x30DE;&#x30CD;&#x30FC;&#x30B8;&#x30E3;&#x30FC;&#x304B;&#x3089;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x307E;&#x3057;&#x305F;&#x3002;&#x30CD;&#x30C3;&#x30C8;&#x3092;&#x691C;&#x7D22;&#x3059;&#x308B;&#x3068;&#x307E;&#x3060;&#x65E7;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x306E;&#x60C5;&#x5831;&#x304C;&#x51FA;&#x3066;&#x304F;&#x308B;&#x3053;&#x3068;&#x304C;&#x591A;&#x304F;&#x3001;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;2&#x4EE5;&#x964D;&#x306E;&#x6700;&#x65B0;&#x7248;&#x3068;&#x306F;&#x4F7F;&#x3044;&#x65B9;&#x3084;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x3082;&#x7570;&#x306A;&#x308B;&#x306E;&#x3067;&#x6CE8;&#x610F;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
-<p>&#x3000;Post Processing&#x306F;&#x975E;&#x5E38;&#x306B;&#x591A;&#x6A5F;&#x80FD;&#x3067;&#x3059;&#x306E;&#x3067;&#x3001;&#x3053;&#x3053;&#x3067;&#x306F;&#x4ECA;&#x56DE;&#x5FC5;&#x8981;&#x306B;&#x306A;&#x308B;&#x6A5F;&#x80FD;&#x3068;&#x624B;&#x9806;&#x3060;&#x3051;&#x8AAC;&#x660E;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<h4 id="&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h4>
-<p>&#x3000;Post Processing&#x306F;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x306E;&#x6A5F;&#x80FD;&#x3067;&#x306F;&#x306A;&#x3044;&#x306E;&#x3067;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;Window&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x2192;Package Manager&#x3092;&#x9078;&#x629E;&#x3057;&#x3066;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x30DE;&#x30CD;&#x30FC;&#x30B8;&#x30E3;&#x30FC;&#x3092;&#x958B;&#x3044;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
-<p>&#x3000;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x30DE;&#x30CD;&#x30FC;&#x30B8;&#x30E3;&#x30FC;&#x3067;Post Processing&#x3092;&#x9078;&#x629E;&#x3057;&#x3066;Install&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x62BC;&#x3059;&#x3068;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</p>
-<p><img src="img/014_2.png" alt="screenshot"></p>
-<p>&#x3000;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3057;&#x305F;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x306F;&#x3001;Packages&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x306E;&#x4E0B;&#x306B;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x5225;&#x306E;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x3092;&#x4F5C;&#x3063;&#x3066;&#x683C;&#x7D0D;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;&#x9593;&#x9055;&#x3048;&#x3066;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3057;&#x3066;&#x3057;&#x307E;&#x3063;&#x305F;&#x308A;&#x3001;&#x4E00;&#x5EA6;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3057;&#x305F;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x304C;&#x4E0D;&#x8981;&#x306B;&#x306A;&#x3063;&#x305F;&#x3068;&#x304D;&#x306F;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x30DE;&#x30CD;&#x30FC;&#x30B8;&#x30E3;&#x30FC;&#x304B;&#x3089;&#x524A;&#x9664;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-<h4 id="&#x30DD;&#x30B9;&#x30C8;&#x30D7;&#x30ED;&#x30BB;&#x30B9;&#x306E;&#x8A2D;&#x5B9A;">&#x30DD;&#x30B9;&#x30C8;&#x30D7;&#x30ED;&#x30BB;&#x30B9;&#x306E;&#x8A2D;&#x5B9A;</h4>
-<p>&#x3000;Post Processing&#x3092;&#x5229;&#x7528;&#x3059;&#x308B;&#x306B;&#x306F;&#x3001;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x4F5C;&#x6210;&#x30FB;&#x8A2D;&#x5B9A;&#x3068;&#x3001;&#x30E1;&#x30A4;&#x30F3;&#x30AB;&#x30E1;&#x30E9;&#x306E;&#x8A2D;&#x5B9A;&#x304C;&#x5FC5;&#x8981;&#x3067;&#x3059;&#x3002;&#x9806;&#x3092;&#x8FFD;&#x3063;&#x3066;&#x8AAC;&#x660E;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;&#x307E;&#x305A;&#x3001;Hierarchy&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x306E;&#x53F3;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x304B;&#x3089;Create Empty&#x3092;&#x9078;&#x3093;&#x3067;&#x30B7;&#x30FC;&#x30F3;&#x306B;&#x7A7A;&#x306E;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x307E;&#x3059;&#x3002;&#x540D;&#x524D;&#x306F;&#x306A;&#x3093;&#x3067;&#x3082;&#x304B;&#x307E;&#x3044;&#x307E;&#x305B;&#x3093;&#x304C;&#x3001;&#x308F;&#x304B;&#x308A;&#x3084;&#x3059;&#x3044;&#x3088;&#x3046;&#x306B;PostProcessing&#x3068;&#x3057;&#x3066;&#x304A;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-<p><img src="img/015_1.png" alt="screenshot"></p>
-<p>&#x3000;&#x7A7A;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;Inspector&#x306B;&#x3042;&#x308B;Layer&#x30C9;&#x30ED;&#x30C3;&#x30D7;&#x30C0;&#x30A6;&#x30F3;&#x3092;&#x958B;&#x3044;&#x3066;Add Layer...&#x3092;&#x9078;&#x629E;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p><img src="img/015_2.png" alt="screenshot"></p>
-<p>&#x3000;&#x30EC;&#x30A4;&#x30E4;&#x4E00;&#x89A7;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;&#x306E;&#x3067;&#x3001;&#x4F7F;&#x7528;&#x3057;&#x3066;&#x3044;&#x306A;&#x3044;&#x30EC;&#x30A4;&#x30E4;&#x306B;PostProcessing&#x3068;&#x5165;&#x529B;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;&#x8996;&#x899A;&#x52B9;&#x679C;&#x3092;&#x304B;&#x3051;&#x305F;&#x3044;&#x3060;&#x3051;&#x306A;&#x306E;&#x306B;&#x8A2D;&#x5B9A;&#x304C;&#x5C11;&#x3005;&#x8907;&#x96D1;&#x3067;&#x3059;&#x306D;&#x3002;Unity&#x306E;PostProcessing&#x3067;&#x306F;&#x3001;&#x540C;&#x3058;&#x30B7;&#x30FC;&#x30F3;&#x4E0A;&#x306E;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3067;&#x3082;&#x8996;&#x899A;&#x52B9;&#x679C;&#x3092;&#x304B;&#x3051;&#x308B;&#x5BFE;&#x8C61;&#x3068;&#x304B;&#x3051;&#x306A;&#x3044;&#x5BFE;&#x8C61;&#x3092;&#x30EC;&#x30A4;&#x30E4;&#x3067;&#x533A;&#x5225;&#x3067;&#x304D;&#x308B;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x3066;&#x3044;&#x308B;&#x305F;&#x3081;&#x3001;&#x3053;&#x306E;&#x3088;&#x3046;&#x306A;&#x624B;&#x9806;&#x304C;&#x5FC5;&#x8981;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-<p><img src="img/015_3.png" alt="screenshot"></p>
-<p>&#x3000;&#x8FFD;&#x52A0;&#x3057;&#x305F;&#x3060;&#x3051;&#x3067;&#x306F;&#x9078;&#x629E;&#x3055;&#x308C;&#x306A;&#x3044;&#x306E;&#x3067;&#x3001;&#x518D;&#x5EA6;Layer&#x30C9;&#x30ED;&#x30C3;&#x30D7;&#x30C0;&#x30A6;&#x30F3;&#x3067;&#x3001;&#x3044;&#x307E;&#x8FFD;&#x52A0;&#x3057;&#x305F;&#x30EC;&#x30A4;&#x30E4;PostProcessing&#x3092;&#x9078;&#x629E;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;&#x6B21;&#x306B;Inspector&#x304B;&#x3089;Add Component&#x2192;Rendering&#x2192;Post-process Volume&#x3068;&#x9078;&#x629E;&#x3057;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-<p><img src="img/015_4.png" alt="screenshot"></p>
-<p>&#x3000;&#x7A7A;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x8FFD;&#x52A0;&#x3055;&#x308C;&#x305F;Post-process Volume&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x306E;Is Global&#x306B;&#x30C1;&#x30A7;&#x30C3;&#x30AF;&#x3092;&#x5165;&#x308C;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;&#x305D;&#x3057;&#x3066;Profile&#x306E;New&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x62BC;&#x3057;&#x307E;&#x3059;&#x3002;&#x3053;&#x306E;&#x64CD;&#x4F5C;&#x3067;&#x30D7;&#x30ED;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304C;Assets/Scenes/main_Profiles&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x306B;PostProcessing Profile&#x3068;&#x3044;&#x3046;&#x540D;&#x524D;&#x3067;&#x4F5C;&#x6210;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;&#x3053;&#x306E;&#x30D7;&#x30ED;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306B;&#x5F8C;&#x3067;&#x8A2D;&#x5B9A;&#x3059;&#x308B;&#x8996;&#x899A;&#x52B9;&#x679C;&#x306E;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x304C;&#x66F8;&#x304D;&#x8FBC;&#x307E;&#x308C;&#x307E;&#x3059;&#x3002;</p>
-<p><img src="img/015_5.png" alt="screenshot"></p>
-<p>&#x3000;&#x6B21;&#x306B;Hierarchy&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3067;Main Camera&#x3092;&#x9078;&#x629E;&#x3057;&#x3066;&#x3001;Inspector&#x304B;&#x3089;Add Component&#x2192;Rendering&#x2192;Post-process Layer&#x3068;&#x9078;&#x629E;&#x3057;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-<p><img src="img/016.png" alt="screenshot"></p>
-<p>&#x3000;Post-processing Layer&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x306E;Layer&#x6B04;&#x3067;&#x3001;&#x5148;&#x307B;&#x3069;&#x8FFD;&#x52A0;&#x3057;&#x305F;&#x30EC;&#x30A4;&#x30E4;&#x540D;PostProcessing&#x3092;&#x9078;&#x629E;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p><img src="img/016_2.png" alt="screenshot"></p>
-<p>&#x3000;&#x3053;&#x308C;&#x3067;&#x30DD;&#x30B9;&#x30C8;&#x30D7;&#x30ED;&#x30BB;&#x30B9;&#x3092;&#x5229;&#x7528;&#x3059;&#x308B;&#x6E96;&#x5099;&#x306F;&#x5B8C;&#x4E86;&#x3067;&#x3059;&#x3002;</p>
-<p>&#x3000;Hierarchy&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3067;&#x7A7A;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;PostProcessing&#x3092;&#x9078;&#x629E;&#x3057;&#x3066;Inspector&#x306E;Post-process Volume&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x306B;&#x3042;&#x308B;Add effect...&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x2192;Unity&#x3092;&#x8868;&#x793A;&#x3059;&#x308B;&#x3068;&#x3001;&#x3055;&#x307E;&#x3056;&#x307E;&#x306A;&#x8A2D;&#x5B9A;&#x9805;&#x76EE;&#x304C;&#x898B;&#x3048;&#x307E;&#x3059;&#x306D;&#x3002;&#x4ECA;&#x56DE;&#x306F;Bloom&#x3092;&#x4F7F;&#x3063;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-<p><img src="img/016_3.png" alt="screenshot"></p>
-<p>Bloom&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x9805;&#x76EE;&#x3092;&#x958B;&#x3044;&#x3066;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x3092;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306B;&#x8A2D;&#x5B9A;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;Intensity&#xFF1A;3<br>&#x3000;Threshold &#xFF1A;1.5  </p>
-<p><img src="img/017.png" alt="screenshot"></p>
-<p>&#x3000;&#x3053;&#x308C;&#x3067;&#x592A;&#x967D;&#x5149;&#x306E;&#x8A2D;&#x5B9A;&#x306F;&#x5B8C;&#x4E86;&#x3067;&#x3059;&#x3002;&#x30DD;&#x30B9;&#x30C8;&#x30D7;&#x30ED;&#x30BB;&#x30B9;&#x306F;&#x3053;&#x306E;&#x5F8C;&#x3082;&#x3055;&#x307E;&#x3056;&#x307E;&#x306A;&#x7528;&#x9014;&#x3067;&#x4F7F;&#x7528;&#x3059;&#x308B;&#x306E;&#x3067;&#x5C11;&#x3057;&#x305A;&#x3064;&#x304A;&#x307C;&#x3048;&#x3066;&#x3044;&#x3063;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
-<p><img src="img/018.png" alt="screenshot"></p>
-<h3 id="&#x5730;&#x7403;&#x306E;&#x516C;&#x8EE2;">&#x5730;&#x7403;&#x306E;&#x516C;&#x8EE2;</h3>
-<p>&#x3000;&#x3044;&#x3088;&#x3044;&#x3088;&#x592A;&#x967D;&#x306E;&#x5468;&#x308A;&#x3092;&#x5730;&#x7403;&#x304C;&#x56DE;&#x8EE2;&#x3059;&#x308B;&#x3088;&#x3046;&#x306B;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x3092;&#x8A2D;&#x5B9A;&#x3057;&#x307E;&#x3059;&#x3002;&#x5148;&#x307B;&#x3069;&#x66F8;&#x3044;&#x305F;Orbiter.cs&#x3092;&#x6539;&#x9020;&#x3057;&#x3066;&#x5730;&#x7403;&#x306E;&#x516C;&#x8EE2;&#x3001;&#x6708;&#x306E;&#x516C;&#x8EE2;&#x306E;&#x4E21;&#x65B9;&#x3067;&#x4F7F;&#x3048;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x3066;&#x898B;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Orbiter <span class="op">:</span> MonoBehaviour <span class="op">{</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> radius <span class="op">=</span> <span class="dv">10</span><span class="op">;</span>  <span class="co">// 回転半径</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> cycle <span class="op">=</span> <span class="dv">27</span><span class="op">;</span>   <span class="co">// 回転周期 27秒</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> angle <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Start</span> <span class="op">()</span> <span class="op">{</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Update</span> <span class="op">()</span> <span class="op">{</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        angle <span class="op">-=</span> Time<span class="op">.</span><span class="fu">deltaTime</span> <span class="op">*</span> <span class="dv">2</span> <span class="op">*</span> Mathf<span class="op">.</span><span class="fu">PI</span> <span class="op">/</span> cycle<span class="op">;</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        <span class="dt">float</span> x <span class="op">=</span> Mathf<span class="op">.</span><span class="fu">Sin</span><span class="op">(</span>angle<span class="op">)</span> <span class="op">*</span> radius<span class="op">;</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>        <span class="dt">float</span> z <span class="op">=</span> Mathf<span class="op">.</span><span class="fu">Cos</span><span class="op">(</span>angle<span class="op">)</span> <span class="op">*</span> radius<span class="op">;</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>        transform<span class="op">.</span><span class="fu">position</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span>x<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> z<span class="op">);</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>　ここでも、Time.deltaTimeを使って角度を計算しています。今回は度ではなく、ラジアンなので360の代わりに2πをかけています。使用する関数によって、同じ角度でも度で与えるものとラジアンのものがあるので混乱しないように注意してください。</p>
+<p>　計算した角度をSin関数とCos関数に渡して位置を計算します。サイン、コサインは通常、三角関数と呼ばれますが、これは本質的には回転と往復の関数だと考えた方がよいです。自然界で目にするような回転運動や往復運動のほとんどはサインとコサインで表現できるので、ぜひマスターするようにしましょう。ここではサインをx軸、コサインをz軸にしています。この場合は<code>(0,0,0)</code>を中心とした円運動になります。</p>
+<p>　cycleは回転周期です。月は27日かけて地球の周りを1回転するので27としています。1秒に1回転する回転速度をcycleで割り、回転速度を1/27にしています。</p>
+<p>　ここでまた実行確認してみてください。地球が自転して、その周りを月がゆっくり周回しているでしょうか。画面からはみでて見づらいようなら、Main
+Cameraの位置を少し動かして調整してみてください。</p>
+<h2 id="発光の表現">発光の表現</h2>
+<p>　今度は太陽を作って地球が太陽の周りをまわるようにしましょう。
+中心に太陽を置けるようにSceneビューで地球のPositionを<code>25,0,0</code>、月のPositionを<code>30,0,0</code>に動かして、HierarchyにSphereを追加してください。Positionは<code>0,0,0</code>、Scaleは<code>4,4,4</code>、名前はSunにします。</p>
+<p>※このサンプルで作成する太陽、地球、月の大きさや距離の比率は実際とは異なります。</p>
+<p>次に太陽のマテリアルmatSunを作成します。マテリアルのパラメータを次のように設定してください。<br />
+　Albedo ： R:255, G:0, B:0, A255<br />
+　Metallic： 0<br />
+　Smoothness： 0.5</p>
+<p>　これだけではまだ発光した感じになりません。Emissionにチェックを入れてGlobal
+IlluminationをRealtimeに、Colorをクリックして次のようにHDR
+Colorを設定します。(Intensityを入力するときはテキストボックスを編集すると真っ黒になるバグがあるようなので、「+1」ボタンを押して設定してください)<br />
+　R:191, G:60, B:60<br />
+　Intensity： 3</p>
+<p>　こうすることによりColorにHDRの文字が表示され、HDR対応ディスプレイの場合高輝度で表示されます。</p>
+<p>　しかし、まだ太陽はただの白い球体に見えます。これから光り輝く恒星にするためには、まだ次節以降の何段階かの手順を必要とします。</p>
+<figure>
+<img src="img/012.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<h3
+id="ポイントライトでほかのオブジェクトに影響を与える">ポイントライトでほかのオブジェクトに影響を与える</h3>
+<p>　以前、<a
+href="#カメラと光の演出">カメラと光の演出</a>の項の冒頭で次のように書きました。
+&gt;　シーンに発光する物体がある場合、上記に加えて次の設定をおこないます。<br />
+&gt; * マテリアルのEmission　マテリアル本体の明るさ &gt; * Point
+Light　発光物近辺のオブジェクトへの影響 &gt; *
+Bloom　発光物近辺の空気への影響</p>
+<p>　現在、太陽は上記のマテリアルの設定をしただけの状態です。続いてポイントライトを設定していきます。</p>
+<p>　HierarchyでSunを選択した状態で、右クリックからLight→Point
+Lightを選択してください。</p>
+<figure>
+<img src="img/013.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　次にPoint
+LightのInspectorから、Range:100、Mode:Realtime、Intensity:3、Indirect
+Multiplier:0に設定します。
+これで距離100まで届く、明るい光となりました。Colorはデフォルトの白のままで大丈夫です。</p>
+<figure>
+<img src="img/013_2.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　シーンにPoint Lightを置いたので、Directional
+Lightは不要になります。Hierarchyで選択して削除するか、Inspectorの一番上のチェックボックスを外して無効にします。</p>
+<p>　カメラのPositionをたとえば<code>12,1,-25</code>にしてGameビューにすべておさまるように調整してください、次のような表示になったでしょうか。太陽の光が月と地球の太陽側の面を照らしだしています。</p>
+<figure>
+<img src="img/014.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<h3 id="ポストプロセッシング">ポストプロセッシング</h3>
+<p>　太陽の仕上げに、ポストプロセッシングでブルーム効果を付け加えます。Unityのポストプロセッシングは導入するのにちょっと手間がかかりますが、非常に強力な各種視覚効果の適用が可能で、美しい画面を作るのに必須なのでぜひマスターするようにしてください。</p>
+<p>　Unityのポストプロセスには、比較的新しいPost
+Processingというパッケージを使用します。以前はPost Processing
+Stackと呼ばれてアセットストアからインストールしましたが、最新版はパッケージマネージャーからインストールするようになりました。ネットを検索するとまだ旧バージョンの情報が出てくることが多く、バージョン2以降の最新版とは使い方やパラメータも異なるので注意してください。</p>
+<p>　Post
+Processingは非常に多機能ですので、ここでは今回必要になる機能と手順だけ説明します。</p>
+<h4 id="パッケージのインストール">パッケージのインストール</h4>
+<p>　Post
+Processingはデフォルトの機能ではないのでパッケージをインストールする必要があります。Windowメニュー→Package
+Managerを選択してパッケージマネージャーを開いてください。</p>
+<p>　パッケージマネージャーのPackagesでUnity Registryを選択し、Post
+Processingを選択してInstallボタンを押すとインストールされます。</p>
+<figure>
+<img src="img/014_2.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　インストールしたパッケージは、Packagesフォルダの下にパッケージ別のフォルダを作って格納されます。間違えてインストールしてしまったり、一度インストールしたパッケージが不要になったときはパッケージマネージャーから削除できます。</p>
+<h4 id="ポストプロセスの設定">ポストプロセスの設定</h4>
+<p>　Post
+Processingを利用するには、オブジェクト作成・設定と、メインカメラの設定が必要です。順を追って説明します。</p>
+<p>　まず、Hierarchyウィンドウの右クリックメニューからCreate
+Emptyを選んでシーンに空のオブジェクトを追加します。名前はなんでもかまいませんが、わかりやすいようにPostProcessingとしておきます。</p>
+<figure>
+<img src="img/015_1.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　空オブジェクトのInspectorにあるLayerドロップダウンを開いてAdd
+Layer…を選択します。</p>
+<figure>
+<img src="img/015_2.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　レイヤ一覧が表示されるので、使用していないレイヤにPostProcessingと入力します。</p>
+<p>　視覚効果をかけたいだけなのに設定が少々複雑ですね。UnityのPostProcessingでは、同じシーン上のオブジェクトでも視覚効果をかける対象とかけない対象をレイヤで区別できるるようにしているため、このような手順が必要になっています。</p>
+<figure>
+<img src="img/015_3.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　追加しただけでは選択されません。再度HierarchyウィンドウからPostProcessingを選択、Layerドロップダウンで、いま追加したレイヤPostProcessingを選択します。</p>
+<p>　次にInspectorからAdd Component→Rendering→Post-process
+Volumeと選択していきます。</p>
+<figure>
+<img src="img/015_4.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　空オブジェクトに追加されたPost-process VolumeコンポーネントのIs
+Globalにチェックを入れます。</p>
+<p>　そしてProfileのNewボタンを押します。この操作でプロファイルがAssets/Scenes/main_ProfilesフォルダにPostProcessing
+Profileという名前で作成されます。このプロファイルに後で設定する視覚効果のパラメータが書き込まれます。</p>
+<figure>
+<img src="img/015_5.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　次にHierarchyウィンドウでMain Cameraを選択して、InspectorからAdd
+Component→Rendering→Post-process Layerと選択していきます。</p>
+<figure>
+<img src="img/016.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　Post-processing
+LayerコンポーネントのLayer欄で、先ほど追加したレイヤ名PostProcessingを選択します。</p>
+<figure>
+<img src="img/016_2.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　これでポストプロセスを利用する準備は完了です。</p>
+<p>　Hierarchyウィンドウで空オブジェクトPostProcessingを選択してInspectorのPost-process
+VolumeコンポーネントにあるAdd
+effect…メニュー→Unityを表示すると、さまざまな設定項目が見えますね。今回はBloomを使っていきます。</p>
+<figure>
+<img src="img/016_3.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>Bloomをクリックして項目を開いてパラメータを次のように設定します。</p>
+<p>　Intensity：0.2<br />
+　Threshold ：0.5</p>
+<figure>
+<img src="img/017.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　これで太陽光の設定は完了です。ポストプロセスはこの後もさまざまな用途で使用するので少しずつおぼえていってください。</p>
+<figure>
+<img src="img/018.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<h3 id="地球の公転">地球の公転</h3>
+<p>　いよいよ太陽の周りを地球が回転するようにスクリプトを設定します。先ほど書いたOrbiter.csを改造して地球の公転、月の公転の両方で使えるようにして見ましょう。</p>
 <p>Orbiter.cs</p>
-<pre><code class="lang-cs"><span class="hljs-keyword">using</span> UnityEngine;
-
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Orbiter</span> : <span class="hljs-title">MonoBehaviour</span> {
-
-    <span class="hljs-keyword">public</span> GameObject centerObject; <span class="hljs-comment">// &#x56DE;&#x8EE2;&#x4E2D;&#x5FC3;&#x306E;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">float</span> radius;  <span class="hljs-comment">// &#x56DE;&#x8EE2;&#x534A;&#x5F84;</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">float</span> cycle;   <span class="hljs-comment">// &#x56DE;&#x8EE2;&#x5468;&#x671F;</span>
-
-    <span class="hljs-keyword">float</span> angle = <span class="hljs-number">0</span>;
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span> (<span class="hljs-params"></span>) </span>{
-
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span> (<span class="hljs-params"></span>) </span>{
-        angle -= Time.deltaTime * <span class="hljs-number">2</span> * Mathf.PI / cycle;
-        <span class="hljs-keyword">float</span> x = Mathf.Sin(angle) * radius;
-        <span class="hljs-keyword">float</span> z = Mathf.Cos(angle) * radius;
-
-        Vector3 center = centerObject.transform.position;
-        transform.position = center + <span class="hljs-keyword">new</span> Vector3(x, <span class="hljs-number">0</span>, z);
-    }
-}
-</code></pre>
-<p>&#x3000;&#x56DE;&#x8EE2;&#x534A;&#x5F84;&#x3068;&#x56DE;&#x8EE2;&#x5468;&#x671F;&#x3092;public&#x5909;&#x6570;&#x306B;&#x3057;&#x3066;Inspector&#x3067;&#x8A2D;&#x5B9A;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x307E;&#x3057;&#x305F;&#x3002;&#x307E;&#x305F;&#x3001;centerObject&#x3068;&#x3044;&#x3046;public&#x5909;&#x6570;&#x3092;&#x7528;&#x610F;&#x3057;&#x3066;&#x56DE;&#x8EE2;&#x306E;&#x4E2D;&#x5FC3;&#x3092;&#x6307;&#x5B9A;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x3064;&#x307E;&#x308A;&#x6708;&#x306E;&#x516C;&#x8EE2;&#x3067;&#x306F;&#x56DE;&#x8EE2;&#x4E2D;&#x5FC3;&#x306F;&#x5730;&#x7403;&#x3001;&#x5730;&#x7403;&#x306E;&#x516C;&#x8EE2;&#x3067;&#x306F;&#x56DE;&#x8EE2;&#x4E2D;&#x5FC3;&#x306F;&#x592A;&#x967D;&#x3068;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;&#x5730;&#x7403;&#x306E;&#x3088;&#x3046;&#x306B;&#x5E38;&#x306B;&#x79FB;&#x52D5;&#x3057;&#x3066;&#x3044;&#x308B;&#x56DE;&#x8EE2;&#x4E2D;&#x5FC3;&#x3082;&#x3042;&#x308B;&#x306E;&#x3067;&#x3001;Update&#x95A2;&#x6570;&#x5185;&#x3067;&#x6BCE;&#x30D5;&#x30EC;&#x30FC;&#x30E0;&#x4E2D;&#x5FC3;&#x4F4D;&#x7F6E;&#x3092;&#x53D6;&#x5F97;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;Hierarchy&#x306E;Earth&#x306B;Orbiter&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x3092;&#x30C9;&#x30E9;&#x30C3;&#x30B0;&amp;&#x30C9;&#x30ED;&#x30C3;&#x30D7;&#x3057;&#x3066;&#x30A2;&#x30BF;&#x30C3;&#x30C1;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;&#x30A2;&#x30BF;&#x30C3;&#x30C1;&#x3067;&#x304D;&#x305F;&#x3089;Inspector&#x3067;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306B;&#x8A2D;&#x5B9A;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;Center Object&#xFF1A;Sun<br>&#x3000;Radius&#xFF1A;50<br>&#x3000;Cycle&#xFF1A;365</p>
-<p><img src="img/019.png" alt="screenshot"></p>
-<p>&#x3000;&#x6708;&#x306F;&#x3059;&#x3067;&#x306B;Orbiter&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x304C;&#x30A2;&#x30BF;&#x30C3;&#x30C1;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x306F;&#x305A;&#x306A;&#x306E;&#x3067;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x3060;&#x3051;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306B;&#x8A2D;&#x5B9A;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;Center Object&#xFF1A;Earth<br>&#x3000;Radius&#xFF1A;10<br>&#x3000;Cycle&#xFF1A;27</p>
-<p>&#x3000;&#x5168;&#x4F53;&#x304C;&#x898B;&#x3084;&#x3059;&#x3044;&#x4F4D;&#x7F6E;&#x306B;Main Camera&#x3092;&#x79FB;&#x52D5;&#x3057;&#x3066;&#x5B9F;&#x884C;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;Main Camera&#x306E;&#x4F4D;&#x7F6E;&#x306F;&#x305F;&#x3068;&#x3048;&#x3070;&#x6B21;&#x306E;&#x8A2D;&#x5B9A;&#x304C;&#x304A;&#x52E7;&#x3081;&#x3067;&#x3059;&#x3002;</p>
-<p>&#x3000;Position&#xFF1A;20, 10, -10<br>&#x3000;Rotation&#xFF1A;10, -50, 0  </p>
-<p>&#x3000;Rotation&#x306E;X&#x3092;&#x5C11;&#x3057;&#x4E0A;&#x3052;&#x308B;&#x3053;&#x3068;&#x3067;&#x4E0B;&#x3092;&#x898B;&#x4E0B;&#x308D;&#x3059;&#x611F;&#x3058;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;Rotation&#x306E;Z&#x3092;0&#x4EE5;&#x5916;&#x306B;&#x3059;&#x308B;&#x3068;&#x4E0D;&#x81EA;&#x7136;&#x306B;&#x50BE;&#x3044;&#x305F;&#x7D75;&#x306B;&#x306A;&#x308B;&#x306E;&#x3067;&#x5FC5;&#x305A;0&#x306B;&#x3057;&#x3066;&#x304A;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;&#x592A;&#x967D;&#x306E;&#x5468;&#x56F2;&#x3092;&#x81EA;&#x8EE2;&#x3057;&#x306A;&#x304C;&#x3089;&#x5730;&#x7403;&#x304C;&#x56DE;&#x308A;&#x3001;&#x3055;&#x3089;&#x306B;&#x5730;&#x7403;&#x306E;&#x5468;&#x56F2;&#x3092;&#x6708;&#x304C;&#x56DE;&#x3063;&#x3066;&#x3044;&#x308B;&#x3067;&#x3057;&#x3087;&#x3046;&#x304B;&#x3002;</p>
-<h2 id="&#x5916;&#x89B3;&#x306E;&#x30D6;&#x30E9;&#x30C3;&#x30B7;&#x30E5;&#x30A2;&#x30C3;&#x30D7;">&#x5916;&#x89B3;&#x306E;&#x30D6;&#x30E9;&#x30C3;&#x30B7;&#x30E5;&#x30A2;&#x30C3;&#x30D7;</h2>
-<h3 id="&#x80CC;&#x666F;&#x306E;&#x5909;&#x66F4;">&#x80CC;&#x666F;&#x306E;&#x5909;&#x66F4;</h3>
-<p>&#x3000;&#x80CC;&#x666F;&#x304C;&#x771F;&#x3063;&#x9ED2;&#x3060;&#x3068;&#x5C11;&#x3057;&#x5473;&#x6C17;&#x306A;&#x3044;&#x306E;&#x3067;&#x661F;&#x7A7A;&#x306B;&#x5909;&#x66F4;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;Window&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x2192;Asset Store&#x304B;&#x3089;&#x30A2;&#x30BB;&#x30C3;&#x30C8;&#x30B9;&#x30C8;&#x30A2;&#x3092;&#x958B;&#x3044;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
-<p>&#x3000;&#x30A2;&#x30BB;&#x30C3;&#x30C8;&#x30B9;&#x30C8;&#x30A2;&#x3067;Skybox&#x3092;&#x691C;&#x7D22;&#x3059;&#x308B;&#x3068;&#x3055;&#x307E;&#x3056;&#x307E;&#x306A;&#x80CC;&#x666F;&#x304C;&#x898B;&#x3064;&#x304B;&#x308A;&#x307E;&#x3059;&#x3002;&#x4ECA;&#x56DE;&#x306F;&#x30B7;&#x30F3;&#x30D7;&#x30EB;&#x306A;&#x661F;&#x7A7A;&#x306E;&#x3053;&#x3061;&#x3089;&#x3092;&#x4F7F;&#x7528;&#x3059;&#x308B;&#x3053;&#x3068;&#x306B;&#x3057;&#x307E;&#x3059;&#x3002;&#x30A2;&#x30BB;&#x30C3;&#x30C8;&#x30B9;&#x30C8;&#x30A2;&#x306E;&#x30A2;&#x30BB;&#x30C3;&#x30C8;&#x304C;&#x76EE;&#x7684;&#x306B;&#x5408;&#x3046;&#x3082;&#x306E;&#x304B;&#x3001;&#x4F7F;&#x3044;&#x3084;&#x3059;&#x3044;&#x3082;&#x306E;&#x304B;&#x3092;&#x898B;&#x6975;&#x3081;&#x308B;&#x306E;&#x306F;&#x306A;&#x304B;&#x306A;&#x304B;&#x96E3;&#x3057;&#x3044;&#x3067;&#x3059;&#x304C;&#x3001;&#x4ECA;&#x56DE;&#x306F;&#x5229;&#x7528;&#x8005;&#x306E;&#x8A55;&#x4FA1;&#x304C;&#x9AD8;&#x3044;&#x30A2;&#x30BB;&#x30C3;&#x30C8;&#x306A;&#x306E;&#x3067;&#x6BD4;&#x8F03;&#x7684;&#x5B89;&#x5FC3;&#x3057;&#x3066;&#x5C0E;&#x5165;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;&#x866B;&#x30E1;&#x30AC;&#x30CD;&#x30A2;&#x30A4;&#x30B3;&#x30F3;&#x306E;Search&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3001;&#x691C;&#x7D22;&#x30D5;&#x30A9;&#x30FC;&#x30E0;&#x306B;&#x300C;Stellar Sky&#x300D;&#x3068;&#x5165;&#x529B;&#x3057;&#x3066;&#x691C;&#x7D22;&#x3057;&#x3066;&#x898B;&#x3064;&#x304B;&#x3063;&#x305F;&#x3089;Download&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
-<p><img src="img/020.png" alt="screenshot"></p>
-<p>&#x3000;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x304C;&#x7D42;&#x308F;&#x3063;&#x305F;&#x3089;&#x3001;&#x9805;&#x76EE;&#x3072;&#x3068;&#x3064;&#x3072;&#x3068;&#x3064;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x30A4;&#x30F3;&#x30DD;&#x30FC;&#x30C8;&#x3059;&#x308B;&#x304B;&#x9078;&#x629E;&#x3067;&#x304D;&#x308B;&#x753B;&#x9762;&#x304C;&#x51FA;&#x3066;&#x304D;&#x307E;&#x3059;&#x3002;&#x77E5;&#x8B58;&#x304C;&#x306A;&#x3044;&#x3068;&#x3053;&#x3053;&#x3067;&#x5FC5;&#x8981;&#x6027;&#x3092;&#x5224;&#x65AD;&#x3059;&#x308B;&#x306E;&#x306F;&#x96E3;&#x3057;&#x3044;&#x306E;&#x3067;&#x3001;&#x6700;&#x521D;&#x306E;&#x3046;&#x3061;&#x306F;&#x3059;&#x3079;&#x3066;&#x9078;&#x629E;&#x3057;&#x305F;&#x72B6;&#x614B;&#x3067;&#x30A4;&#x30F3;&#x30DD;&#x30FC;&#x30C8;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;&#x4F59;&#x8A08;&#x306A;&#x3082;&#x306E;&#x3092;&#x30A4;&#x30F3;&#x30DD;&#x30FC;&#x30C8;&#x3057;&#x3066;&#x3057;&#x307E;&#x3063;&#x3066;&#x3082;&#x3001;&#x30B7;&#x30FC;&#x30F3;&#x306B;&#x542B;&#x307E;&#x308C;&#x306A;&#x3044;&#x3082;&#x306E;&#x306F;&#x30D3;&#x30EB;&#x30C9;&#x5F8C;&#x306E;&#x5B9F;&#x884C;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306B;&#x306F;&#x542B;&#x307E;&#x308C;&#x306A;&#x3044;&#x306E;&#x3067;&#x554F;&#x984C;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;</p>
-<p>&#x3000;&#x30A2;&#x30BB;&#x30C3;&#x30C8;&#x306F;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x5185;&#x306B;&#x76F4;&#x63A5;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3055;&#x308C;&#x308B;&#x306E;&#x3067;&#x306F;&#x306A;&#x304F;&#x3001;&#x30C7;&#x30A3;&#x30B9;&#x30AF;&#x306E;&#x5C02;&#x7528;&#x306E;&#x5834;&#x6240;&#x306B;&#x30DE;&#x30B9;&#x30BF;&#x30FC;&#x3068;&#x3057;&#x3066;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x305D;&#x308C;&#x3092;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x30A4;&#x30F3;&#x30DD;&#x30FC;&#x30C8;&#x3059;&#x308B;&#x3068;&#x30DE;&#x30B9;&#x30BF;&#x30FC;&#x306E;&#x8907;&#x88FD;&#x304C;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x3078;&#x30B3;&#x30D4;&#x30FC;&#x3055;&#x308C;&#x308B;&#x3057;&#x304F;&#x307F;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;&#x30A4;&#x30F3;&#x30DD;&#x30FC;&#x30C8;&#x3057;&#x305F;&#x30A2;&#x30BB;&#x30C3;&#x30C8;&#x306F;&#x3001;Assets&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x306E;&#x4E0B;&#x306B;&#x30A2;&#x30BB;&#x30C3;&#x30C8;&#x5225;&#x306E;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x3092;&#x4F5C;&#x3063;&#x3066;&#x683C;&#x7D0D;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;&#x3082;&#x3057;&#x3001;&#x3042;&#x308B;&#x30A2;&#x30BB;&#x30C3;&#x30C8;&#x3092;&#x30A4;&#x30F3;&#x30DD;&#x30FC;&#x30C8;&#x3057;&#x305F;&#x5F8C;&#x306B;&#x8A2D;&#x8A08;&#x5909;&#x66F4;&#x306A;&#x3069;&#x3067;&#x4E0D;&#x8981;&#x306B;&#x306A;&#x3063;&#x305F;&#x5834;&#x5408;&#x3001;&#x305D;&#x306E;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x3054;&#x3068;&#x524A;&#x9664;&#x3059;&#x308C;&#x3070;&#x30A4;&#x30F3;&#x30DD;&#x30FC;&#x30C8;&#x3092;&#x53D6;&#x308A;&#x6D88;&#x3059;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;&#x305D;&#x306E;&#x5834;&#x5408;&#x3067;&#x3082;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x305F;&#x30DE;&#x30B9;&#x30BF;&#x30FC;&#x306F;&#x6B8B;&#x3063;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;&#x3001;&#x5F8C;&#x304B;&#x3089;&#x307E;&#x305F;&#x5225;&#x306E;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x30A4;&#x30F3;&#x30DD;&#x30FC;&#x30C8;&#x3057;&#x305F;&#x308A;&#x3059;&#x308B;&#x3053;&#x3068;&#x3082;&#x53EF;&#x80FD;&#x3067;&#x3059;&#x3002;</p>
-<p><img src="img/020_2.png" alt="screenshot"></p>
-<p>&#x3000;&#x30A4;&#x30F3;&#x30DD;&#x30FC;&#x30C8;&#x3057;&#x305F;&#x3089;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x306E;&#x4E2D;&#x8EAB;&#x3092;&#x3056;&#x3063;&#x304F;&#x308A;&#x78BA;&#x8A8D;&#x3057;&#x307E;&#x3059;&#x3002;Stellar Sky/Skyboxes&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x306E;&#x4E0B;&#x306B;512&#x3001;1024&#x3001;2048&#x3068;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x304C;&#x3042;&#x308A;&#x3001;SS_512&#x3001;SS_1024&#x3001;SS_2048&#x3068;3&#x7A2E;&#x985E;&#x306E;Skybox&#x304C;&#x542B;&#x307E;&#x308C;&#x3066;&#x3044;&#x308B;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;</p>
-<p>&#x3000;Skybox&#x306E;&#x8A2D;&#x5B9A;&#x306F;Lighting&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3068;Main Camera&#x306E;&#xFF12;&#x30F5;&#x6240;&#x3067;&#x304A;&#x3053;&#x306A;&#x3044;&#x307E;&#x3059;&#x3002;&#x307E;&#x305A;&#x3001;Window&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x2192;Rendering&#x2192;Lighting Settings&#x3067;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3092;&#x958B;&#x304D;&#x307E;&#x3059;&#x3002;&#x4E00;&#x756A;&#x4E0A;&#x306E;Skybox Material&#x306B;&#x5148;&#x307B;&#x3069;&#x30A4;&#x30F3;&#x30DD;&#x30FC;&#x30C8;&#x3057;&#x305F;SS_2048&#x3092;&#x30C9;&#x30E9;&#x30C3;&#x30B0;&amp;&#x30C9;&#x30ED;&#x30C3;&#x30D7;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;Skybox Material&#x306E;&#x53F3;&#x5074;&#x306E;&#x5C0F;&#x3055;&#x306A;&#x4E38;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x4E00;&#x89A7;&#x304B;&#x3089;&#x9078;&#x629E;&#x3059;&#x308B;&#x3053;&#x3068;&#x3082;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;Sun Source&#x306F;None&#x3068;&#x3057;&#x3066;&#x304A;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-<p><img src="img/061.png" alt="screenshot"></p>
-<p>&#x3000;&#x6B21;&#x306B;Main Camera&#x306E;Inspector&#x3067;Camera&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x306E;Clear Flags&#x3092;Skybox&#x306B;&#x5909;&#x66F4;&#x3057;&#x307E;&#x3059;&#x3002;&#x3053;&#x308C;&#x3067;Game&#x30D3;&#x30E5;&#x30FC;&#x306B;Skybox&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x307E;&#x3057;&#x305F;&#x3002;</p>
-<p><img src="img/063.png" alt="screenshot"></p>
-<p>&#x3000;Scene&#x30D3;&#x30E5;&#x30FC;&#x306B;&#x3082;Skybox&#x3092;&#x8868;&#x793A;&#x3059;&#x308B;&#x306B;&#x306F;&#x3001;&#x6B21;&#x306E;&#x5834;&#x6240;&#x306B;&#x3042;&#x308B;&#x8868;&#x793A;&#x5207;&#x66FF;&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x62BC;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
-<p><img src="img/062.png" alt="screenshot"></p>
-<p>&#x3000;&#x3053;&#x308C;&#x3067;Scene&#x30D3;&#x30E5;&#x30FC;&#x3068;Game&#x30D3;&#x30E5;&#x30FC;&#x306E;&#x4E21;&#x65B9;&#x3068;&#x3082;&#x661F;&#x7A7A;&#x306E;&#x753B;&#x9762;&#x306B;&#x306A;&#x308A;&#x307E;&#x3057;&#x305F;&#x3002;</p>
-<p><img src="img/021.png" alt="screenshot"></p>
-<h3 id="&#x5730;&#x7403;&#x30E2;&#x30C7;&#x30EB;&#x306E;&#x5DEE;&#x3057;&#x66FF;&#x3048;">&#x5730;&#x7403;&#x30E2;&#x30C7;&#x30EB;&#x306E;&#x5DEE;&#x3057;&#x66FF;&#x3048;</h3>
-<p>&#x3000;&#x3053;&#x308C;&#x307E;&#x3067;&#x96D1;&#x306B;&#x4F5C;&#x3063;&#x305F;&#x30C6;&#x30AF;&#x30B9;&#x30C1;&#x30E3;&#x30FC;&#x3067;&#x5730;&#x7403;&#x3092;&#x8868;&#x73FE;&#x3057;&#x3066;&#x3044;&#x307E;&#x3057;&#x305F;&#x304C;&#x3001;&#x3055;&#x3059;&#x304C;&#x306B;&#x3082;&#x3046;&#x3061;&#x3087;&#x3063;&#x3068;&#x683C;&#x597D;&#x826F;&#x304F;&#x3057;&#x305F;&#x304F;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;&#x30AF;&#x30AA;&#x30EA;&#x30C6;&#x30A3;&#x306E;&#x9AD8;&#x3044;&#x5730;&#x7403;&#x306E;&#x30E2;&#x30C7;&#x30EB;&#x304C;&#x30A2;&#x30BB;&#x30C3;&#x30C8;&#x30B9;&#x30C8;&#x30A2;&#x306B;&#x4F55;&#x7A2E;&#x985E;&#x3082;&#x3042;&#x308B;&#x306E;&#x3067;&#x3001;&#x305D;&#x308C;&#x306B;&#x5DEE;&#x3057;&#x66FF;&#x3048;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-<p><img src="img/022.png" alt="screenshot"></p>
-<p>&#x3000;&#x30A2;&#x30BB;&#x30C3;&#x30C8;&#x30B9;&#x30C8;&#x30A2;&#x3067;&#x300C;Planet Earth Free&#x300D;&#x3092;&#x691C;&#x7D22;&#x3001;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3001;&#x30A4;&#x30F3;&#x30DD;&#x30FC;&#x30C8;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;&#x30A4;&#x30F3;&#x30DD;&#x30FC;&#x30C8;&#x3057;&#x305F;&#x3089;&#x3001;&#x307E;&#x305F;&#x3056;&#x3063;&#x304F;&#x308A;&#x4E2D;&#x8EAB;&#x3092;&#x78BA;&#x8A8D;&#x3002;Assets/Planet Earth Free/Prefabs&#x306E;&#x4E0B;&#x306B;EarthHigh&#x3001;EarthLow&#x3001;EarthMedium&#x306E;&#xFF13;&#x7A2E;&#x985E;&#x306E;&#x30E2;&#x30C7;&#x30EB;&#x304C;&#x5165;&#x3063;&#x3066;&#x3044;&#x308B;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;EarthHigh&#x3092;Hierarchy&#x306B;&#x30C9;&#x30E9;&#x30C3;&#x30B0;&amp;&#x30C9;&#x30ED;&#x30C3;&#x30D7;&#x3057;&#x3066;&#x914D;&#x7F6E;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;&#x3057;&#x304B;&#x3057;&#x306A;&#x304C;&#x3089;&#x3001;&#x4E88;&#x60F3;&#x306B;&#x53CD;&#x3057;&#x3066;&#x5DE8;&#x5927;&#x306A;&#x9752;&#x3044;&#x7403;&#x4F53;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3057;&#x305F;&#x3002;Hierarchy&#x306E;EarthHigh&#x3092;&#x898B;&#x308B;&#x3068;&#x3001;&#x5B50;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3068;&#x3057;&#x3066;Planet16128Tris&#x3068;EarthGlow&#x306E;2&#x500B;&#x306E;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x304C;&#x3076;&#x3089;&#x4E0B;&#x304C;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x3053;&#x306E;EarthGlow&#x304C;&#x602A;&#x3057;&#x3044;&#x306E;&#x3067;&#x3001;Inspector&#x3067;&#x8868;&#x793A;&#x3057;&#x3066;&#x4E00;&#x756A;&#x4E0A;&#x306E;&#x30C1;&#x30A7;&#x30C3;&#x30AF;&#x3092;&#x5916;&#x3057;&#x3066;&#x975E;&#x8868;&#x793A;&#x306B;&#x3057;&#x3066;&#x3057;&#x307E;&#x3044;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-<p>&#x3000;&#x5DE8;&#x5927;&#x306A;&#x9752;&#x3044;&#x7403;&#x306F;&#x306A;&#x304F;&#x306A;&#x3063;&#x305F;&#x3082;&#x306E;&#x306E;&#x3001;&#x307E;&#x3060;&#x30B5;&#x30A4;&#x30BA;&#x7684;&#x306B;&#x5927;&#x304D;&#x3044;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;Planet16128Tris&#x3092;&#x9078;&#x629E;&#x3057;&#x3066;&#x3001;Scale&#x3092;0.07,0.07,0.07&#x306B;&#x5909;&#x66F4;&#x3057;&#x307E;&#x3059;&#x3002;&#x3053;&#x306E;&#x3068;&#x304D;&#x3001;&#x89AA;&#x306E;EarthHigh&#x306E;Scale&#x3067;&#x306F;&#x306A;&#x304F;&#x3001;&#x5B50;&#x306E;Planet16128Tris&#x306E;Scale&#x3092;&#x5909;&#x66F4;&#x3059;&#x308B;&#x306E;&#x304C;&#x30B3;&#x30C4;&#x3067;&#x3059;&#x3002;&#x30C8;&#x30C3;&#x30D7;&#x30EC;&#x30D9;&#x30EB;&#x306E;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306F;&#x30B9;&#x30B1;&#x30FC;&#x30EB;&#x304C;1&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x308B;&#x65B9;&#x304C;&#x4F55;&#x304B;&#x3068;&#x697D;&#x3067;&#x3059;&#x3002;</p>
-<p>&#x3000;&#x9069;&#x5EA6;&#x306A;&#x30B5;&#x30A4;&#x30BA;&#x306B;&#x306A;&#x3063;&#x305F;&#x3089;EarthHigh&#x3092;&#x9078;&#x629E;&#x3057;&#x3066;Position&#x3092;12,0,10&#x306A;&#x3069;&#x5C11;&#x3057;&#x79FB;&#x52D5;&#x3055;&#x305B;&#x3066;&#x592A;&#x967D;&#x3068;&#x91CD;&#x306A;&#x3089;&#x306A;&#x3044;&#x3088;&#x3046;&#x306B;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-<p>&#x3000;&#x7D9A;&#x3044;&#x3066;&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x3092;&#x8A2D;&#x5B9A;&#x3057;&#x307E;&#x3059;&#x3002;EarthHigh&#x306E;Inspector&#x3092;&#x898B;&#x308B;&#x3068;Spin Free&#x3068;&#x3044;&#x3046;&#x81EA;&#x8EE2;&#x7528;&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x304C;&#x6700;&#x521D;&#x304B;&#x3089;&#x30A2;&#x30BF;&#x30C3;&#x30C1;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x3053;&#x308C;&#x306F;&#x4E0D;&#x8981;&#x306A;&#x306E;&#x3067;&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x53F3;&#x4E0A;&#x306E;&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x304B;&#x3089;Remove Component&#x3067;&#x524A;&#x9664;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p><img src="img/064.png" alt="screenshot"></p>
-<p>&#x3000;&#x4EE3;&#x308F;&#x308A;&#x306B;&#x81EA;&#x4F5C;&#x306E;Spinner&#x3068;Orbiter&#x3092;&#x30C9;&#x30E9;&#x30C3;&#x30B0;&amp;&#x30C9;&#x30ED;&#x30C3;&#x30D7;&#x3067;&#x30A2;&#x30BF;&#x30C3;&#x30C1;&#x3057;&#x307E;&#x3059;&#x3002;Orbiter&#x306E;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x3092;Earth&#x3068;&#x540C;&#x3058;&#x304F;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306B;&#x8A2D;&#x5B9A;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;Center Object&#xFF1A; Sun<br>&#x3000;Radius&#xFF1A; 50<br>&#x3000;Cycle&#xFF1A; 365  </p>
-<p>&#x3000;&#x6B21;&#x306B;Hierarchy&#x3067;Moon&#x3092;&#x9078;&#x629E;&#x3001;Orbiter&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x306E;Center Object&#x3092;Earth&#x304B;&#x3089;EarthHigh&#x306B;&#x5909;&#x66F4;&#x3057;&#x307E;&#x3059;&#x3002;&#x6700;&#x5F8C;&#x306B;&#x3001;&#x3082;&#x3068;&#x3082;&#x3068;&#x3042;&#x3063;&#x305F;Earth&#x306F;&#x3082;&#x3046;&#x4E0D;&#x8981;&#x306A;&#x306E;&#x3067;Inspector&#x6700;&#x4E0A;&#x6BB5;&#x306E;&#x30C1;&#x30A7;&#x30C3;&#x30AF;&#x30DC;&#x30C3;&#x30AF;&#x30B9;&#x3092;&#x5916;&#x3057;&#x3066;&#x975E;&#x8868;&#x793A;&#x306B;&#x3057;&#x307E;&#x3059;&#x3002;&#x3053;&#x308C;&#x3067;&#x5730;&#x7403;&#x306E;&#x898B;&#x305F;&#x76EE;&#x304C;&#x3050;&#x3063;&#x3068;&#x826F;&#x304F;&#x306A;&#x308A;&#x307E;&#x3057;&#x305F;&#x3002;</p>
-<p>&#x3000;&#x5B9F;&#x884C;&#x3057;&#x3066;&#x3001;&#x5B87;&#x5B99;&#x7A7A;&#x9593;&#x306B;&#x6D6E;&#x304B;&#x3093;&#x3060;&#x5730;&#x7403;&#x3068;&#x6708;&#x304C;&#x592A;&#x967D;&#x306B;&#x5411;&#x3044;&#x305F;&#x9762;&#x3092;&#x7167;&#x3089;&#x3055;&#x308C;&#x306A;&#x304C;&#x3089;&#x3086;&#x3063;&#x304F;&#x308A;&#x56DE;&#x8EE2;&#x3059;&#x308B;&#x69D8;&#x5B50;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
-<p><img src="img/023.png" alt="screenshot"></p>
-<p>&#x3000;&#x3053;&#x308C;&#x3067;&#x3053;&#x306E;&#x30B7;&#x30FC;&#x30F3;&#x306F;&#x5B8C;&#x6210;&#x3067;&#x3059;&#x3002;&#x30C1;&#x30E5;&#x30FC;&#x30C8;&#x30EA;&#x30A2;&#x30EB;&#x3068;&#x3057;&#x3066;&#x306F;&#x3053;&#x3053;&#x3067;&#x7D42;&#x4E86;&#x3057;&#x3066;&#x3082;&#x3088;&#x3044;&#x306E;&#x3067;&#x3059;&#x304C;&#x3001;&#x305B;&#x3063;&#x304B;&#x304F;&#x306A;&#x306E;&#x3067;&#x6B21;&#x9805;&#x3067;&#x3053;&#x306E;&#x30B7;&#x30FC;&#x30F3;&#x3092;&#x3082;&#x3068;&#x306B;&#x3057;&#x3066;&#x96F0;&#x56F2;&#x6C17;&#x306E;&#x7570;&#x306A;&#x308B;&#x5225;&#x8996;&#x70B9;&#x306E;&#x30B7;&#x30FC;&#x30F3;&#x3092;&#x4F5C;&#x3063;&#x3066;&#x307F;&#x307E;&#x3059;&#x3002;</p>
-<h2 id="&#x5225;&#x8996;&#x70B9;&#x306E;&#x6F14;&#x51FA;">&#x5225;&#x8996;&#x70B9;&#x306E;&#x6F14;&#x51FA;</h2>
-<p>&#x3000;&#x4ECA;&#x5EA6;&#x306F;Main Camera&#x3092;&#x79FB;&#x52D5;&#x3057;&#x3066;&#x5730;&#x7403;&#x304B;&#x3089;&#x5B87;&#x5B99;&#x3092;&#x898B;&#x305F;&#x98A8;&#x666F;&#x3092;&#x4F5C;&#x3063;&#x3066;&#x3044;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-<p>&#x3000;&#x305D;&#x306E;&#x524D;&#x306B;&#x73FE;&#x5728;&#x306E;&#x30B7;&#x30FC;&#x30F3;&#x3092;main&#x3068;&#x3057;&#x3066;&#x30BB;&#x30FC;&#x30D6;&#x3057;&#x3066;&#x304A;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;&#x6B21;&#x306B;File&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x2192;Save Scene As&#x3067;&#x5225;&#x540D;&#x4FDD;&#x5B58;&#x3057;&#x307E;&#x3059;&#x3002;&#x30B7;&#x30FC;&#x30F3;&#x540D;&#x306F;&#x300C;EarthView&#x300D;&#x3068;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;Hierarchy&#x5185;&#x3067;Main Camera&#x3092;&#x30C9;&#x30E9;&#x30C3;&#x30B0;&#x3057;&#x3066;EarthHigh&#x306E;&#x5B50;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x3057;&#x307E;&#x3059;&#x3002;&#x6B21;&#x306B;&#x30AB;&#x30E1;&#x30E9;&#x306E;&#x5EA7;&#x6A19;&#x3092;&#x5730;&#x8868;&#x306B;&#x8FD1;&#x304F;&#x3001;&#x5730;&#x8868;&#x3068;&#x5730;&#x5E73;&#x7DDA;&#x3068;&#x540C;&#x3058;&#x5411;&#x304D;&#x306B;&#x306A;&#x308B;&#x3088;&#x3046;&#x306B;&#x3001;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306B;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x3092;&#x8A2D;&#x5B9A;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;Position&#xFF1A;-1.8, 0, 1.7<br>&#x3000;Rotation&#xFF1A; 0, 180, -90</p>
-<p>&#x3000;&#x305D;&#x308C;&#x304B;&#x3089;&#x5730;&#x7403;&#x306E;&#x5927;&#x304D;&#x3055;&#x3092;&#x6F14;&#x51FA;&#x3059;&#x308B;&#x305F;&#x3081;&#x306B;&#x30AB;&#x30E1;&#x30E9;&#x306E;&#x753B;&#x89D2;&#x3092;&#x8ABF;&#x6574;&#x3057;&#x307E;&#x3059;&#x3002;Main Camera&#x306E;Camera&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x306B;&#x3042;&#x308B;Field of View&#x306F;&#x521D;&#x671F;&#x5024;&#x304C;60&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;&#x3001;&#x3053;&#x308C;&#x3092;40&#x306B;&#x5909;&#x66F4;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x3000;&#x5B9F;&#x884C;&#x3057;&#x3066;&#x307F;&#x308B;&#x3068;&#x3001;&#x3042;&#x307E;&#x308A;&#x306B;&#x3082;&#x9AD8;&#x901F;&#x56DE;&#x8EE2;&#x3057;&#x3066;&#x76EE;&#x304C;&#x56DE;&#x308A;&#x305D;&#x3046;&#x306B;&#x306A;&#x3063;&#x3066;&#x3057;&#x307E;&#x3044;&#x307E;&#x3059;&#x3002;&#x5C11;&#x3057;&#x81EA;&#x8EE2;&#x3068;&#x516C;&#x8EE2;&#x306E;&#x56DE;&#x8EE2;&#x901F;&#x5EA6;&#x3092;&#x8ABF;&#x6574;&#x3057;&#x305F;&#x65B9;&#x304C;&#x826F;&#x3055;&#x305D;&#x3046;&#x3067;&#x3059;&#x3002;Spinner.cs&#x3068;Orbiter.cs&#x306E;Update&#x95A2;&#x6570;&#x306E;&#x305D;&#x308C;&#x305E;&#x308C;1&#x884C;&#x76EE;&#x306B;&#x300C; / 50 &#x300D;&#x3092;&#x66F8;&#x304D;&#x52A0;&#x3048;&#x3066;&#x3001;&#x56DE;&#x8EE2;&#x901F;&#x5EA6;&#x3092;1/50&#x306B;&#x843D;&#x3068;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Orbiter <span class="op">:</span> MonoBehaviour <span class="op">{</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> GameObject centerObject<span class="op">;</span> <span class="co">// 回転中心のオブジェクト</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">float</span> radius<span class="op">;</span>  <span class="co">// 回転半径</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">float</span> cycle<span class="op">;</span>   <span class="co">// 回転周期</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> angle <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Start</span> <span class="op">()</span> <span class="op">{</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Update</span> <span class="op">()</span> <span class="op">{</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        angle <span class="op">-=</span> Time<span class="op">.</span><span class="fu">deltaTime</span> <span class="op">*</span> <span class="dv">2</span> <span class="op">*</span> Mathf<span class="op">.</span><span class="fu">PI</span> <span class="op">/</span> cycle<span class="op">;</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>        <span class="dt">float</span> x <span class="op">=</span> Mathf<span class="op">.</span><span class="fu">Sin</span><span class="op">(</span>angle<span class="op">)</span> <span class="op">*</span> radius<span class="op">;</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>        <span class="dt">float</span> z <span class="op">=</span> Mathf<span class="op">.</span><span class="fu">Cos</span><span class="op">(</span>angle<span class="op">)</span> <span class="op">*</span> radius<span class="op">;</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>        Vector3 center <span class="op">=</span> centerObject<span class="op">.</span><span class="fu">transform</span><span class="op">.</span><span class="fu">position</span><span class="op">;</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>        transform<span class="op">.</span><span class="fu">position</span> <span class="op">=</span> center <span class="op">+</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span>x<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> z<span class="op">);</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>　回転半径と回転周期をpublic変数にしてInspectorで設定できるようにしました。また、centerObjectというpublic変数を用意して回転の中心を指定できるようにしています。つまり月の公転では回転中心は地球、地球の公転では回転中心は太陽となります。地球のように常に移動している回転中心もあるので、Update関数内で毎フレーム中心位置を取得しています。</p>
+<p>　HierarchyのEarthにOrbiterスクリプトをドラッグ&amp;ドロップしてアタッチしてください。アタッチできたらInspectorで次のように設定します。</p>
+<p>　Center Object：Sun<br />
+　Radius：50<br />
+　Cycle：365</p>
+<figure>
+<img src="img/019.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　月はすでにOrbiterスクリプトがアタッチされているはずなのでパラメータだけ次のように設定します。</p>
+<p>　Center Object：Earth<br />
+　Radius：10<br />
+　Cycle：27</p>
+<p>　全体が見やすい位置にMain Cameraを移動して実行してみましょう。Main
+Cameraの位置はたとえば次の設定がお勧めです。</p>
+<p>　Position：20, 10, -10<br />
+　Rotation：10, -50, 0</p>
+<p>　RotationのXを少し上げることで下を見下ろす感じになります。RotationのZを0以外にすると不自然に傾いた絵になるので必ず0にしておきます。</p>
+<p>　太陽の周囲を自転しながら地球が回り、さらに地球の周囲を月が回っているでしょうか。</p>
+<h2 id="外観のブラッシュアップ">外観のブラッシュアップ</h2>
+<h3 id="背景の変更">背景の変更</h3>
+<p>　背景が真っ黒だと少し味気ないので星空に変更しましょう。Windowメニュー→Asset
+Storeを選択すると、ウェブブラウザでアセットストアのウェブページが開きます。</p>
+<p>　もしウェブページが開かない場合、アセットストア画面の「Search
+Online」という青いボタンをクリックすると開きます。</p>
+<p>　アセットストアでSkyboxを検索するとさまざまな背景が見つかります。今回はシンプルな星空のこちらを使用することにします。アセットストアのアセットが目的に合うものか、使いやすいものかを見極めるのはなかなか難しいですが、今回は利用者の評価が高いアセットなので比較的安心して導入できます。</p>
+<p>　検索フォームに「Stellar
+Sky」と入力して検索して見つかったらDownloadボタンをクリックしてダウンロードしてください。</p>
+<figure>
+<img src="img/020.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　ダウンロードが終わったら、UnityのPackage
+Managerが開いているのでImportボタンをクリックします。項目ひとつひとつに対してインポートするか選択できる画面が出てきますが、知識がないとここで必要性を判断するのは難しいので、最初のうちはすべて選択した状態でインポートしてください。余計なものをインポートしてしまっても、シーンに含まれないものはビルド後の実行ファイルには含まれないので問題ありません。</p>
+<p>　アセットはプロジェクト内に直接ダウンロードされるのではなく、ディスクの専用の場所にマスターとしてダウンロードされています。それをプロジェクトにインポートするとマスターの複製がプロジェクトフォルダへコピーされるしくみになっています。</p>
+<p>　インポートしたアセットは、Assetsフォルダの下にアセット別のフォルダを作って格納されます。もし、あるアセットをインポートした後に設計変更などで不要になった場合、そのフォルダごと削除すればインポートを取り消すことができます。その場合でもダウンロードしたマスターは残っているので、後からまた別のプロジェクトにインポートしたりすることも可能です。</p>
+<figure>
+<img src="img/020_2.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　インポートしたらフォルダの中身をざっくり確認します。Stellar
+Sky/Skyboxesフォルダの下に512、1024、2048とフォルダがあり、SS_512、SS_1024、SS_2048と3種類のSkyboxが含まれているようです。</p>
+<p>　Skyboxの設定はLightingウィンドウとMain
+Cameraの２ヵ所でおこないます。まず、Windowメニュー→Rendering→Lightingでウィンドウを開きEnvironmentタブを選択します。一番上のSkybox
+Materialに先ほどインポートしたSS_2048をドラッグ&amp;ドロップしてください。Skybox
+Materialの右側の小さな丸をクリックして一覧から選択することもできます。Sun
+SourceはNoneとしておきます。</p>
+<figure>
+<img src="img/061.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　次にMain CameraのInspectorでCameraコンポーネントのClear
+FlagsをSkyboxに変更します。これでSkyboxが表示されるようになりました。</p>
+<figure>
+<img src="img/063.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　SceneビューでSkyboxが表示されていないときは、次の場所にある表示切替ボタンを押してください。</p>
+<figure>
+<img src="img/062.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　SceneビューとGameビューの両方とも星空の画面が表示されます。</p>
+<figure>
+<img src="img/021.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<h3 id="地球モデルの差し替え">地球モデルの差し替え</h3>
+<p>　これまで雑に作ったテクスチャーで地球を表現していましたが、さすがにもうちょっと格好良くしたくなります。クオリティの高い地球のモデルがアセットストアに何種類もあるので、それに差し替えてみましょう。</p>
+<figure>
+<img src="img/022.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　アセットストアで「Planet Earth
+Free」を検索、ダウンロード、インポートします。</p>
+<p>　インポートしたら、またざっくり中身を確認。Assets/Planet Earth
+Free/Prefabsの下にEarthHigh、EarthLow、EarthMediumの３種類のモデルが入っているようです。EarthHighをHierarchyにドラッグ&amp;ドロップして配置します。</p>
+<p>　しかしながら、予想に反して巨大な青い球体が表示されました。HierarchyのEarthHighを見ると、子オブジェクトとしてPlanet16128TrisとEarthGlowの2個のオブジェクトがぶら下がっています。このEarthGlowが怪しいので、Inspectorで表示して一番上のチェックを外して非表示にしてしまいましょう。</p>
+<p>　巨大な青い球はなくなったものの、まだサイズ的に大きいようです。Planet16128Trisを選択して、Scaleを0.07,0.07,0.07に変更します。このとき、親のEarthHighのScaleではなく、子のPlanet16128TrisのScaleを変更するのがコツです。トップレベルのオブジェクトはスケールが1になっている方が何かと楽です。</p>
+<p>　適度なサイズになったらEarthHighを選択してPositionを12,0,10など少し移動させて太陽と重ならないようにしましょう。</p>
+<p>　続いてコンポーネントを設定します。EarthHighのInspectorを見るとSpin
+Freeという自転用コンポーネントが最初からアタッチされています。これは不要なのでコンポーネント右上のメニューからRemove
+Componentで削除します。</p>
+<figure>
+<img src="img/064.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　代わりに自作のSpinnerとOrbiterをドラッグ&amp;ドロップでアタッチします。OrbiterのパラメータをEarthと同じく次のように設定します。</p>
+<p>　Center Object： Sun<br />
+　Radius： 50<br />
+　Cycle： 365</p>
+<p>　次にHierarchyでMoonを選択、OrbiterコンポーネントのCenter
+ObjectをEarthからEarthHighに変更します。最後に、もともとあったEarthはもう不要なのでInspector最上段のチェックボックスを外して非表示にします。これで地球の見た目がぐっと良くなりました。</p>
+<p>　実行して、宇宙空間に浮かんだ地球と月が太陽に向いた面を照らされながらゆっくり回転する様子を確認してください。</p>
+<figure>
+<img src="img/023.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　これでこのシーンは完成です。チュートリアルとしてはここで終了してもよいのですが、せっかくなので次項でこのシーンをもとにして雰囲気の異なる別視点のシーンを作ってみます。</p>
+<h2 id="別視点の演出">別視点の演出</h2>
+<p>　今度はMain
+Cameraを移動して地球から宇宙を見た風景を作っていきましょう。</p>
+<p>　その前に現在のシーンをmainとしてセーブしておきます。</p>
+<p>　次にFileメニュー→Save Scene
+Asで別名保存します。シーン名は「EarthView」とします。</p>
+<p>　Hierarchy内でMain
+CameraをドラッグしてEarthHighの子オブジェクトにします。次にカメラの座標を地表に近く、地表と地平線と同じ向きになるように、次のようにパラメータを設定します。</p>
+<p>　Position：-1.8, 0, 1.7<br />
+　Rotation： 0, 180, -90</p>
+<p>　それから地球の大きさを演出するためにカメラの画角を調整します。Main
+CameraのCameraコンポーネントにあるField of
+Viewは初期値が60になっているので、これを40に変更します。</p>
+<p>　実行してみると、あまりにも高速回転して目が回りそうになってしまいます。少し自転と公転の回転速度を調整した方が良さそうです。Spinner.csとOrbiter.csのUpdate関数のそれぞれ1行目に「
+/ 50 」を書き加えて、回転速度を1/50に落とします。</p>
 <p>Spinner.cs</p>
-<pre><code class="lang-cs">    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span> (<span class="hljs-params"></span>) </span>{
-        angle = Time.deltaTime * <span class="hljs-number">360</span> / <span class="hljs-number">50</span>;
-        transform.Rotate(Vector3.up, -angle);
-    }
-</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Update</span> <span class="op">()</span> <span class="op">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>        angle <span class="op">=</span> Time<span class="op">.</span><span class="fu">deltaTime</span> <span class="op">*</span> <span class="dv">360</span> <span class="op">/</span> <span class="dv">50</span><span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        transform<span class="op">.</span><span class="fu">Rotate</span><span class="op">(</span>Vector3<span class="op">.</span><span class="fu">up</span><span class="op">,</span> <span class="op">-</span>angle<span class="op">);</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code></pre></div>
 <p>Orbiter.cs</p>
-<pre><code class="lang-cs">    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span> (<span class="hljs-params"></span>) </span>{
-        angle -= Time.deltaTime * <span class="hljs-number">2</span> * Mathf.PI / cycle / <span class="hljs-number">50</span>;
-        <span class="hljs-keyword">float</span> x = Mathf.Sin(angle) * radius;
-        <span class="hljs-keyword">float</span> z = Mathf.Cos(angle) * radius;
-
-        Vector3 center = centerObject.transform.position;
-        transform.position = center + <span class="hljs-keyword">new</span> Vector3(x, <span class="hljs-number">0</span>, z);
-    }
-</code></pre>
-<p>&#x3000;&#x3053;&#x308C;&#x3067;&#x30C1;&#x30E5;&#x30FC;&#x30C8;&#x30EA;&#x30A2;&#x30EB;&#x300C;Planet&#x300D;&#x306F;&#x7D42;&#x4E86;&#x3067;&#x3059;&#x3002;</p>
-<p>&#x3000;&#x3053;&#x306E;&#x5148;&#x306F;&#x3001;&#x30DD;&#x30B9;&#x30C8;&#x30D7;&#x30ED;&#x30BB;&#x30C3;&#x30B7;&#x30F3;&#x30B0;&#x306E;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x3092;&#x8ABF;&#x6574;&#x3057;&#x3066;&#x3001;&#x3055;&#x3089;&#x306B;&#x9AD8;&#x54C1;&#x8CEA;&#x306A;&#x7D75;&#x3092;&#x8FFD;&#x6C42;&#x3057;&#x3066;&#x3044;&#x304F;&#x3053;&#x3068;&#x3082;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;&#x7A7A;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;PostProcessing&#x306E;&#x30A8;&#x30D5;&#x30A7;&#x30AF;&#x30C8;&#x306B;Color Grading&#x3001;Vignette&#x3042;&#x305F;&#x308A;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#x8ABF;&#x6574;&#x3057;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;Main Camera&#x306E;Post-process Layer&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x306E;Anti-aliasing&#x3082;&#x304A;&#x52E7;&#x3081;&#x3067;&#x3059;&#x3002;</p>
-<p><img src="img/024.png" alt="screenshot"></p>
-<p><a href="3_penguin.html">&#x30C1;&#x30E5;&#x30FC;&#x30C8;&#x30EA;&#x30A2;&#x30EB;&#xFF12;&#x300C;Penguin&#x300D;&#x3078;&#x9032;&#x3080;</a></p>
-
-                                
-                                </section>
-                            
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-            
-        </div>
-        <div class="no-results">
-            
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-            
-        </div>
-    </div>
-</div>
-
-                        </div>
-                    </div>
-                
-            </div>
-
-            
-                
-                <a href="1_general.html#テキストエディタ" class="navigation navigation-prev " aria-label="Previous page: テキストエディタ">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="2_planet.html#このチュートリアルについて" class="navigation navigation-next " aria-label="Next page: このチュートリアルについて">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
-            
-        
-    </div>
-
-    <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"チュートリアル１「Planet」","level":"3.1","depth":1,"next":{"title":"このチュートリアルについて","level":"3.1.1","depth":2,"anchor":"#このチュートリアルについて","path":"doc/2_planet.md","ref":"doc/2_planet.md#このチュートリアルについて","articles":[]},"previous":{"title":"テキストエディタ","level":"2.1.5","depth":2,"anchor":"#テキストエディタ","path":"doc/1_general.md","ref":"doc/1_general.md#テキストエディタ","articles":[]},"dir":"ltr"},"config":{"gitbook":">=3.2.1","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/2_planet.md","mtime":"2020-08-04T22:10:19.625Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-05T00:15:16.038Z"},"basePath":"..","book":{"language":""}});
-        });
-    </script>
-</div>
-
-        
-    <script src="../gitbook/gitbook.js"></script>
-    <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
-        
-    
-
-    </body>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Update</span> <span class="op">()</span> <span class="op">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>        angle <span class="op">-=</span> Time<span class="op">.</span><span class="fu">deltaTime</span> <span class="op">*</span> <span class="dv">2</span> <span class="op">*</span> Mathf<span class="op">.</span><span class="fu">PI</span> <span class="op">/</span> cycle <span class="op">/</span> <span class="dv">50</span><span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">float</span> x <span class="op">=</span> Mathf<span class="op">.</span><span class="fu">Sin</span><span class="op">(</span>angle<span class="op">)</span> <span class="op">*</span> radius<span class="op">;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">float</span> z <span class="op">=</span> Mathf<span class="op">.</span><span class="fu">Cos</span><span class="op">(</span>angle<span class="op">)</span> <span class="op">*</span> radius<span class="op">;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        Vector3 center <span class="op">=</span> centerObject<span class="op">.</span><span class="fu">transform</span><span class="op">.</span><span class="fu">position</span><span class="op">;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        transform<span class="op">.</span><span class="fu">position</span> <span class="op">=</span> center <span class="op">+</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span>x<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> z<span class="op">);</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code></pre></div>
+<p>　これでチュートリアル「Planet」は終了です。</p>
+<p>　この先は、ポストプロセッシングのパラメータを調整して、さらに高品質な絵を追求していくこともできます。空オブジェクトPostProcessingのエフェクトにColor
+Grading、Vignetteあたりを追加して調整してみてください。Main
+CameraのPost-process
+LayerコンポーネントのAnti-aliasingもお勧めです。</p>
+<figure>
+<img src="img/024.png" alt="screenshot" />
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p><a href="3_penguin.html">チュートリアル２「Penguin」へ進む</a></p>
+</body>
 </html>
-
