@@ -1,52 +1,96 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
-  <title></title>
-  <style type="text/css">code{white-space: pre;}</style>
-  <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>4_trenchfighter</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../styles/website.css" type="text/css" />
+  <link rel="stylesheet" href="../styles/website.css" />
 </head>
 <body>
-<h1 id="チュートリアルtrenchfighter">チュートリアル３「TrenchFighter」</h1>
+<h1
+id="チュートリアル３trenchfighter">チュートリアル３「TrenchFighter」</h1>
 <h2 id="このチュートリアルについて">このチュートリアルについて</h2>
 <p>　今回のチュートリアルでは、敵機をよけながら高速で狭い隙間を進んでいくゲーム風の画面を作っていきます。項目としては次のような内容を学んでいきます。</p>
 <ul>
@@ -57,11 +101,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>入力の処理</li>
 <li>ポストプロセッシングで絵作りその２</li>
 </ul>
-<p><a href="https://www.youtube.com/watch?v=0RFQhiBr58c"><img src="img/yt3.png" alt="screenshot" /></a><br />
+<p><a href="https://www.youtube.com/watch?v=0RFQhiBr58c"><img
+src="img/yt3.png" alt="screenshot" /></a><br />
 https://www.youtube.com/watch?v=0RFQhiBr58c</p>
 <h2 id="メインシーンの作成">メインシーンの作成</h2>
 <p>　このテーマも、前回同様にmainとmodelの2つのシーンを用意します。敵機のような常に動き回るものをじっくり確認しながら調整するためにmodelシーンを利用します。</p>
-<p>　Unityの起動画面、あるいはFileメニュー→New Projectから新規プロジェクトを作成します。テンプレートは3D、プロジェクト名は「TrenchFighter」にします。今回のステージはmainシーンに直接作っていきます。Hierarchyで何も選択していない状態で、右クリックメニューから平面（Plane）1個と直方体（Cube）2個を作成してください。</p>
+<p>　Unityの起動画面、あるいはFileメニュー→New
+Projectから新規プロジェクトを作成します。テンプレートは3D、プロジェクト名は「TrenchFighter」にします。今回のステージはmainシーンに直接作っていきます。Hierarchyで何も選択していない状態で、右クリックメニューから平面（Plane）1個と直方体（Cube）2個を作成してください。</p>
 <p>Plane<br />
 　Position： 0, 0, 0<br />
 　Scale： 50, 1, 50</p>
@@ -71,11 +117,12 @@ https://www.youtube.com/watch?v=0RFQhiBr58c</p>
 <p>Cube<br />
 　Positon： 11.7, 0, 0<br />
 　Scale： 20, 8, 80</p>
-<div class="figure">
+<figure>
 <img src="img/041.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
-<p>　ここでFileメニュー→Save As...を選択していったんセーブします。シーン名は「main」としてScenesフォルダに保存します。</p>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　ここでFileメニュー→Save
+As…を選択していったんセーブします。シーン名は「main」としてScenesフォルダに保存します。</p>
 <p>　次はマテリアルです。これまで同様、ProjectウィンドウのAssetsの空き領域を右クリック、メニューから→Create→Materialの操作ですね。名前はmatStageとします。建築物の外壁のようなイメージで、少しくすんだ水色にしておきます。</p>
 <p>　マテリアル matStage<br />
 　Albedo： R:182,G:194,B:244,A:255<br />
@@ -83,65 +130,79 @@ https://www.youtube.com/watch?v=0RFQhiBr58c</p>
 　Smoothness： 0</p>
 <p>　このマテリアルを先ほどのPlaneとCubeにそれぞれドラッグ&amp;ドロップで適用します。</p>
 <h3 id="アセットのインポート">アセットのインポート</h3>
-<p>　背景は星空にしたいので、チュートリアル１で使った「Stellar Sky」をここでも利用します。ダウンロードしたオリジナルのアセットは専用のフォルダに保存されているので、再度ダウンロードする必要はありません。次の手順でインポートしてください。</p>
+<p>　背景は星空にしたいので、チュートリアル１で使った「Stellar
+Sky」をここでも利用します。ダウンロードしたオリジナルのアセットは専用のフォルダに保存されているので、再度ダウンロードする必要はありません。次の手順でインポートしてください。</p>
 <ul>
 <li>Windowメニュー→Asset Storeを選択してAsset Storeウィンドウを開く</li>
-<li>Asset Storeウィンドウの右上が人型のアイコンになっていたらクリックしてログイン</li>
+<li>Asset
+Storeウィンドウの右上が人型のアイコンになっていたらクリックしてログイン</li>
 <li>右上がそれ以外のアイコンであればログインは不要です</li>
 </ul>
-<div class="figure">
+<figure>
 <img src="img/042.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <ul>
 <li>次に四角形に下向き矢印のついたアイコンのMy Assetsを選択します。</li>
 </ul>
-<div class="figure">
+<figure>
 <img src="img/044.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
-<p>ここには、過去に入手したアセットが一覧表示されます。Stellar Skyが見つかったら「Import」ボタンを押してプロジェクトにインポートします。インポート対象はデフォルトの全選択のままでよいです。</p>
-<div class="figure">
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>ここには、過去に入手したアセットが一覧表示されます。Stellar
+Skyが見つかったら「Import」ボタンを押してプロジェクトにインポートします。インポート対象はデフォルトの全選択のままでよいです。</p>
+<figure>
 <img src="img/045.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
-<p>　Skyboxの設定も以前おこなったとおりです。Assets/Stellar Sky/の下にSS_512、SS_1024、SS_2048と3種類のSkyboxが含まれていることを確認します。Windowメニュー→Rendering→Lighting Settingsでウィンドウを開いて、一番上のSkybox MaterialにSS_2048をドラッグ&amp;ドロップします。Skybox Materiaの右側の小さな丸をクリックして一覧から選択することもできます。Sun SourceはNoneとしておきます。</p>
-<div class="figure">
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　Skyboxの設定も以前おこなったとおりです。Assets/Stellar
+Sky/の下にSS_512、SS_1024、SS_2048と3種類のSkyboxが含まれていることを確認します。Windowメニュー→Rendering→Lighting
+Settingsでウィンドウを開いて、一番上のSkybox
+MaterialにSS_2048をドラッグ&amp;ドロップします。Skybox
+Materiaの右側の小さな丸をクリックして一覧から選択することもできます。Sun
+SourceはNoneとしておきます。</p>
+<figure>
 <img src="img/061.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
-<p>　次にMain CameraのInspectorでCameraコンポーネントのClear FlagsがSkyboxになっていること、Sceneビューの各種表示ボタンが押されていることを確認します。</p>
-<p><img src="img/063.png" alt="screenshot" /> <img src="img/062.png" alt="screenshot" /></p>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　次にMain CameraのInspectorでCameraコンポーネントのClear
+FlagsがSkyboxになっていること、Sceneビューの各種表示ボタンが押されていることを確認します。</p>
+<p><img src="img/063.png" alt="screenshot" /> <img src="img/062.png"
+alt="screenshot" /></p>
 <p>　Sceneビュー、Gameビューの背景が星空になりました。</p>
-<div class="figure">
+<figure>
 <img src="img/046.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <h3 id="ライトの設定">ライトの設定</h3>
 <p>　ここからライトを設定していきます。カメラの右後ろから投影して映画のように陰影を強調した雰囲気を作ります。影が濃く出すぎるときは環境光で強調します。また色味もデフォルトで黄色味がかっているので調整します。</p>
-<p>HierarchyのDirectional Lightを選択して、Inspectorから次のパラメータを変更します。</p>
+<p>HierarchyのDirectional
+Lightを選択して、Inspectorから次のパラメータを変更します。</p>
 <p>　Rotation: 20, -20, 45</p>
 <p>　Color: R:255 G:255 B:255 A:255<br />
 　Intensity： 1.3</p>
-<div class="figure">
+<figure>
 <img src="img/047_2.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
-<p>　次に環境光です。Windowメニュー→Rendering→Lighting Settingsで再度ウィンドウを開き、Environment Lightingを次のように設定します。</p>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　次に環境光です。Windowメニュー→Rendering→Lighting
+Settingsで再度ウィンドウを開き、Environment
+Lightingを次のように設定します。</p>
 <p>　Source： Color<br />
 　Ambient Color： R:75 G:75 B:75</p>
-<div class="figure">
+<figure>
 <img src="img/047.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <p>　これでmainシーンはほぼ完成です。Ctrl+S（Macは⌘+S）でシーンをセーブしましょう。</p>
 <h2 id="モデルシーンの作成">モデルシーンの作成</h2>
 <p>　次にmodelシーンでモデルを作成していきます。今回はステージに現れるでこぼこした構造物と敵機をモデルとして作成します。</p>
-<p>　先ほどmainシーンのライトを設定しました。モデル調整時の色味もmainシーンと同じようにした方がわかりやすいので設定をそのまま流用します。mainシーンを開いている状態でFileメニュー→Save As...を選択してセーブします。シーン名は「model」とします。タイトルバーにシーン名modelが表示されていることを確認してください。</p>
-<div class="figure">
+<p>　先ほどmainシーンのライトを設定しました。モデル調整時の色味もmainシーンと同じようにした方がわかりやすいので設定をそのまま流用します。mainシーンを開いている状態でFileメニュー→Save
+As…を選択してセーブします。シーン名は「model」とします。タイトルバーにシーン名modelが表示されていることを確認してください。</p>
+<figure>
 <img src="img/048.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <p>　mainシーン用に配置したPlaneとCubeは不要なので削除します。Hierarchyで選択、右クリックメニューからDeleteです。</p>
 <h3 id="構造物モデルの作成">構造物モデルの作成</h3>
 <p>　ステージに配置する構造物は非常にシンプルです。HierarchyにCubeをひとつ生成して、「Structure」と名前を付けます。設定値は次のとおりです。</p>
@@ -149,15 +210,17 @@ https://www.youtube.com/watch?v=0RFQhiBr58c</p>
 　Scale： 1, 1, 1</p>
 <p>　次にStructureに、先ほど作成したmatStageをドラッグ&amp;ドロップします。その後Structureをプレハブ化するためにProjectウィンドウのAssetsにドラッグ&amp;ドロップします。</p>
 <p>　これで構造物のモデルは完成です。この立方体をランダムに生成することで複雑な壁面を表現します。今回作成するプログラムでは、自機が高速で進んでいるように見えますが、実は自機もmainシーンの溝も動いていません。ランダムに生成した構造物モデルが前から後ろに移動することで自分が前進しているように見せています。無限に続くステージをUnityのシーンで作成するのは困難です。そこで見える部分の構造物だけ生成して奥から手前に動かし続け、メインカメラを通過したらまた前方から現れるようにして長いステージを表現しています。</p>
-<div class="figure">
+<figure>
 <img src="img/049.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <h3 id="敵機モデルの作成">敵機モデルの作成</h3>
-<p>　次に敵機モデルを作成します。何も選択されていない状態のHierarchyで右クリックからCreate Empty、名前を「Enemy」とします。パラメータは次のとおり。</p>
+<p>　次に敵機モデルを作成します。何も選択されていない状態のHierarchyで右クリックからCreate
+Empty、名前を「Enemy」とします。パラメータは次のとおり。</p>
 <p>　Position： 2, 0, 0<br />
 　Scale： 1, 1, 1</p>
-<p>　Enemyの下にもう１階層Create Emptyして名前を「Wrapper」とします。さらにその下にSphere1個、Cube2個、Cylinder1個を配置します。</p>
+<p>　Enemyの下にもう１階層Create
+Emptyして名前を「Wrapper」とします。さらにその下にSphere1個、Cube2個、Cylinder1個を配置します。</p>
 <p>　Sphere<br />
 　Position: 0, 0, 0<br />
 　Rotation: 0, 0, 0<br />
@@ -175,190 +238,210 @@ https://www.youtube.com/watch?v=0RFQhiBr58c</p>
 　Rotation: 0, 0, 90<br />
 　Scale: 0.1, 0.25, 0.1</p>
 <p>　今回の宇宙船のデザインに前後はありませんが、独自のデザインの場合、前方はZ軸がマイナスの方向を向くようにします。Gameビューには宇宙船の正面が見えている状態になります。（後から方向が間違っていることに気付いたときや、サイズを変えたくなった場合は、wrapperのRotationやScaleを変更することで調整できます）</p>
-<div class="figure">
+<figure>
 <img src="img/050.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <p>　次に敵機のマテリアルを作成します。敵機は周りの物体を反射する鏡面素材にします。ProjectウィンドウのAssetsで右クリック→Create→Materialを選択してマテリアルを作成してください。名前はmatEnemyにします。</p>
 <p>　Albedo：R:255 G:255 B:255 A:255<br />
 　Metallic： 0.95<br />
 　Smoothness： 0.6</p>
 <p>　マテリアルができたら、敵機の各部にドラッグ&amp;ドロップして適用します。</p>
-<p>　鏡面素材の場合、もう一工夫必要です。反射する物体を検知するためにReflection ProbeというオブジェクトをEnemyに追加します。 　Wrapperを右クリックしてLight→Reflection Probeを選択して、Inspectorで次のように設定してください。</p>
+<p>　鏡面素材の場合、もう一工夫必要です。反射する物体を検知するためにReflection
+ProbeというオブジェクトをEnemyに追加します。
+　Wrapperを右クリックしてLight→Reflection
+Probeを選択して、Inspectorで次のように設定してください。</p>
 <p>　Type: Realtime<br />
 　Refresh Mode: Every frame<br />
 　Time Slicing: No time slicing</p>
-<div class="figure">
+<figure>
 <img src="img/051.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <p>　反射が確認しやすいように床も配置しましょう。何も選択されていない状態のHierarchyで右クリックからPlaneを作成します。</p>
 <p>　Position: 0, -2, 0<br />
 　Scale: 1, 1, 1</p>
-<p>　スタートボタンを押すと、周囲のオブジェクトを検知してマテリアルが鏡面反射したでしょうか。今回の反射の設定は動き続ける物体のため、毎フレーム周囲を検知するようにしています。これはPCによっては高負荷になってしまう可能性もあります。重くて動きが悪い場合はTypeやRefresh Modeの設定を調整したり、場合によっては反射させるのをやめたりといったことを検討してください。</p>
-<div class="figure">
+<p>　スタートボタンを押すと、周囲のオブジェクトを検知してマテリアルが鏡面反射したでしょうか。今回の反射の設定は動き続ける物体のため、毎フレーム周囲を検知するようにしています。これはPCによっては高負荷になってしまう可能性もあります。重くて動きが悪い場合はTypeやRefresh
+Modeの設定を調整したり、場合によっては反射させるのをやめたりといったことを検討してください。</p>
+<figure>
 <img src="img/052.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <p>　スタートボタンを再度押して実行終了してから、EnemyをProjectウィンドウのAssetsにドラッグ&amp;ドロップしてプレハブ化します。</p>
 <h3 id="移動スクリプトの作成">移動スクリプトの作成</h3>
 <p>　次に構造物モデルと敵機モデルを移動するプログラムを作成します。先ほども説明したように前方に現れて後方に移動し、見えなくなったらまた前方から現れる、という処理です。</p>
-<p>　Structureオブジェクトを選択し、InspectorのAdd Component→New Scriptを選んで新規スクリプトを作成しましょう。スクリプト名はStructureMoverとします。</p>
+<p>　Structureオブジェクトを選択し、InspectorのAdd Component→New
+Scriptを選んで新規スクリプトを作成しましょう。スクリプト名はStructureMoverとします。</p>
 <p>StructureMover.cs</p>
-<div class="sourceCode"><pre class="sourceCode cs"><code class="sourceCode cs"><span class="kw">using</span> UnityEngine;
-
-<span class="kw">public</span> <span class="kw">class</span> StructureMover : MonoBehaviour {
-
-    <span class="dt">float</span> speed = <span class="dv">30</span>;
-
-    <span class="dt">void</span> <span class="fu">Update</span> () {
-        <span class="dt">float</span> z = Time.<span class="fu">deltaTime</span> * speed;
-
-        transform.<span class="fu">position</span> -= <span class="kw">new</span> <span class="fu">Vector3</span>(<span class="dv">0</span>, <span class="dv">0</span>, z);
-        <span class="kw">if</span> (transform.<span class="fu">position</span>.<span class="fu">z</span> &lt; -<span class="dv">10</span>)
-        {
-            transform.<span class="fu">position</span> += <span class="kw">new</span> <span class="fu">Vector3</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">50</span>);
-        }
-    }
-}</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> StructureMover <span class="op">:</span> MonoBehaviour <span class="op">{</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> speed <span class="op">=</span> <span class="dv">30</span><span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Update</span> <span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">float</span> z <span class="op">=</span> Time<span class="op">.</span><span class="fu">deltaTime</span> <span class="op">*</span> speed<span class="op">;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        transform<span class="op">.</span><span class="fu">position</span> <span class="op">-=</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> z<span class="op">);</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="kw">if</span> <span class="op">(</span>transform<span class="op">.</span><span class="fu">position</span><span class="op">.</span><span class="fu">z</span> <span class="op">&lt;</span> <span class="op">-</span><span class="dv">10</span><span class="op">)</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>            transform<span class="op">.</span><span class="fu">position</span> <span class="op">+=</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">50</span><span class="op">);</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p>　速度のパラメータを30とし、Time.deltaTimeと掛けることでPC性能にかかわらず一定の速度で動くようにしています。x、y座標は変化せず、z座標だけをマイナスしていくことで奥から手前へ移動させています。z座標が-10になったら、もう後方で見えなくなっているので、z座標に50を足して再び前方から現れるようにしています。</p>
-<p>　敵機のスクリプトも同じような構造です。Enemyを選択し、InspectorのAdd Component→New Script。スクリプト名はEnemyMoverとします。</p>
+<p>　敵機のスクリプトも同じような構造です。Enemyを選択し、InspectorのAdd
+Component→New Script。スクリプト名はEnemyMoverとします。</p>
 <p>EnemyMover.cs</p>
-<div class="sourceCode"><pre class="sourceCode cs"><code class="sourceCode cs"><span class="kw">using</span> UnityEngine;
-
-<span class="kw">public</span> <span class="kw">class</span> EnemyMover : MonoBehaviour {
-
-    <span class="dt">float</span> speed;
-
-    <span class="dt">void</span> <span class="fu">Start</span> () {
-        <span class="fu">Init</span>();    
-    }
-    
-    <span class="dt">void</span> <span class="fu">Update</span> () {
-        <span class="dt">float</span> z = Time.<span class="fu">deltaTime</span> * speed;
-
-        transform.<span class="fu">position</span> -= <span class="kw">new</span> <span class="fu">Vector3</span>(<span class="dv">0</span>, <span class="dv">0</span>, z);
-        <span class="kw">if</span> (transform.<span class="fu">position</span>.<span class="fu">z</span> &lt; -<span class="dv">30</span>)
-        {
-            <span class="fu">Init</span>();
-        }        
-    }
-
-    <span class="dt">void</span> <span class="fu">Init</span>() {
-        speed = Random.<span class="fu">Range</span>(25f, 35f);
-        <span class="dt">float</span> x = Random.<span class="fu">Range</span>(-1f, 1f);
-        <span class="dt">float</span> y = Random.<span class="fu">Range</span>(<span class="fl">0.</span>5f, 5f);
-        <span class="dt">float</span> z = <span class="dv">50</span>;
-        transform.<span class="fu">position</span> = <span class="kw">new</span> <span class="fu">Vector3</span>(x, y, z);
-    }
-}</code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> EnemyMover <span class="op">:</span> MonoBehaviour <span class="op">{</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> speed<span class="op">;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Start</span> <span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="fu">Init</span><span class="op">();</span>    </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Update</span> <span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        <span class="dt">float</span> z <span class="op">=</span> Time<span class="op">.</span><span class="fu">deltaTime</span> <span class="op">*</span> speed<span class="op">;</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        transform<span class="op">.</span><span class="fu">position</span> <span class="op">-=</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> z<span class="op">);</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        <span class="kw">if</span> <span class="op">(</span>transform<span class="op">.</span><span class="fu">position</span><span class="op">.</span><span class="fu">z</span> <span class="op">&lt;</span> <span class="op">-</span><span class="dv">30</span><span class="op">)</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>            <span class="fu">Init</span><span class="op">();</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span>        </span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Init</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>        speed <span class="op">=</span> Random<span class="op">.</span><span class="fu">Range</span><span class="op">(</span><span class="dv">25</span>f<span class="op">,</span> <span class="dv">35</span>f<span class="op">);</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>        <span class="dt">float</span> x <span class="op">=</span> Random<span class="op">.</span><span class="fu">Range</span><span class="op">(-</span><span class="dv">1</span>f<span class="op">,</span> <span class="dv">1</span>f<span class="op">);</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>        <span class="dt">float</span> y <span class="op">=</span> Random<span class="op">.</span><span class="fu">Range</span><span class="op">(</span><span class="fl">0.5f</span><span class="op">,</span> <span class="dv">5</span>f<span class="op">);</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>        <span class="dt">float</span> z <span class="op">=</span> <span class="dv">50</span><span class="op">;</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>        transform<span class="op">.</span><span class="fu">position</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span>x<span class="op">,</span> y<span class="op">,</span> z<span class="op">);</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p>　構造物の移動処理と似ているのがわかりますね。今度は出現位置と速度が都度ランダムになっています。一番初めのStart時と、後ろに消えて再出現するときに乱数で位置と速度を決めるため、共通関数Init()を用意して呼ぶようにしています。</p>
 <p>　構造物はz座標が-10になったら前方へ移動して再び出現するようにしていましたが、敵機の場合はあとでエンジン音を追加する関係上、通過直後の-10ではなく-30にしています。距離が離れて音が聞こえなくなるくらいになってから再出現するように調整してあります。</p>
-<p>　スクリプトを追加したので、Hierarchyとプレハブとの相違が発生しています。変更をプレハブに反映するため、HierarchyのStructureを選択してInspectorからOverrides→Apply Allを押してください。Enemyも同様にApplyします。</p>
+<p>　スクリプトを追加したので、Hierarchyとプレハブとの相違が発生しています。変更をプレハブに反映するため、HierarchyのStructureを選択してInspectorからOverrides→Apply
+Allを押してください。Enemyも同様にApplyします。</p>
 <p>　ここでCtrl+S（Macは⌘+S）を押してmodelシーンをセーブしましょう。</p>
 <h2 id="動的なステージ生成">動的なステージ生成</h2>
 <h3 id="構造物の生成処理">構造物の生成処理</h3>
 <p>　それでは作成したモデルを生成する処理を書いていきましょう。mainシーンを開いてください。</p>
-<p>　ゲーム全体の処理のスクリプトを配置するために、前回も作成した空のオブジェクトを配置しましょう。HierarchyでCreate Emptyして名前を「Game」とします。</p>
-<p>　次にGameを選択し、InspectorのAdd Component→New Script。スクリプト名はStructureGeneratorとします。</p>
+<p>　ゲーム全体の処理のスクリプトを配置するために、前回も作成した空のオブジェクトを配置しましょう。HierarchyでCreate
+Emptyして名前を「Game」とします。</p>
+<p>　次にGameを選択し、InspectorのAdd Component→New
+Script。スクリプト名はStructureGeneratorとします。</p>
 <p>StructureGenerator.cs</p>
-<div class="sourceCode"><pre class="sourceCode cs"><code class="sourceCode cs"><span class="kw">using</span> UnityEngine;
-
-<span class="kw">public</span> <span class="kw">class</span> StructureGenerator : MonoBehaviour {
-
-    <span class="kw">public</span> GameObject structurePrefab;
-
-    <span class="dt">void</span> <span class="fu">Start</span> () {
-        <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; <span class="dv">100</span>; i++)
-        {
-            <span class="dt">float</span> size;
-            Vector3 pos;
-            GameObject obj;
-
-            <span class="co">// 右側</span>
-            size = Random.<span class="fu">Range</span>(<span class="fl">0.</span>3f, 2f);
-            pos = <span class="kw">new</span> <span class="fu">Vector3</span>(
-                Random.<span class="fu">Range</span>(-<span class="fl">0.</span>1f, <span class="fl">0.</span>1f) + 2f,
-                Random.<span class="fu">Range</span>(0f, 4f),
-                Random.<span class="fu">Range</span>(-10f, 50f)
-            );
-            obj = <span class="fu">Instantiate</span>(structurePrefab, pos, Quaternion.<span class="fu">identity</span>);
-            obj.<span class="fu">transform</span>.<span class="fu">localScale</span> = <span class="kw">new</span> <span class="fu">Vector3</span>(1f, size, size);
-
-            <span class="co">// 左側</span>
-            size = Random.<span class="fu">Range</span>(<span class="fl">0.</span>3f, 2f);
-            pos = <span class="kw">new</span> <span class="fu">Vector3</span>(
-                Random.<span class="fu">Range</span>(-<span class="fl">0.</span>1f, <span class="fl">0.</span>1f) - 2f,
-                Random.<span class="fu">Range</span>(0f, 4f),
-                Random.<span class="fu">Range</span>(-10f, 50f)
-            );
-            obj = <span class="fu">Instantiate</span>(structurePrefab, pos, Quaternion.<span class="fu">identity</span>);
-            obj.<span class="fu">transform</span>.<span class="fu">localScale</span> = <span class="kw">new</span> <span class="fu">Vector3</span>(1f, size, size);
-
-            <span class="co">// 下側</span>
-            size = Random.<span class="fu">Range</span>(1f, 2f);
-            pos = <span class="kw">new</span> <span class="fu">Vector3</span>(
-                Random.<span class="fu">Range</span>(-1f, 1f),
-                <span class="dv">0</span>,
-                Random.<span class="fu">Range</span>(-10f, 50f)
-            );
-            obj = <span class="fu">Instantiate</span>(structurePrefab, pos, Quaternion.<span class="fu">identity</span>);
-            obj.<span class="fu">transform</span>.<span class="fu">localScale</span> = <span class="kw">new</span> <span class="fu">Vector3</span>(size, <span class="fl">0.</span>1f, size);
-        }
-    }
-}</code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> StructureGenerator <span class="op">:</span> MonoBehaviour <span class="op">{</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> GameObject structurePrefab<span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Start</span> <span class="op">()</span> <span class="op">{</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="kw">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="dv">100</span><span class="op">;</span> i<span class="op">++)</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>            <span class="dt">float</span> size<span class="op">;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>            Vector3 pos<span class="op">;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>            GameObject obj<span class="op">;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>            <span class="co">// 右側</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>            size <span class="op">=</span> Random<span class="op">.</span><span class="fu">Range</span><span class="op">(</span><span class="fl">0.3f</span><span class="op">,</span> <span class="dv">2</span>f<span class="op">);</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>            pos <span class="op">=</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>                Random<span class="op">.</span><span class="fu">Range</span><span class="op">(-</span><span class="fl">0.1f</span><span class="op">,</span> <span class="fl">0.1f</span><span class="op">)</span> <span class="op">+</span> <span class="dv">2</span>f<span class="op">,</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>                Random<span class="op">.</span><span class="fu">Range</span><span class="op">(</span><span class="dv">0</span>f<span class="op">,</span> <span class="dv">4</span>f<span class="op">),</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>                Random<span class="op">.</span><span class="fu">Range</span><span class="op">(-</span><span class="dv">10</span>f<span class="op">,</span> <span class="dv">50</span>f<span class="op">)</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>            <span class="op">);</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>            obj <span class="op">=</span> <span class="fu">Instantiate</span><span class="op">(</span>structurePrefab<span class="op">,</span> pos<span class="op">,</span> Quaternion<span class="op">.</span><span class="fu">identity</span><span class="op">);</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>            obj<span class="op">.</span><span class="fu">transform</span><span class="op">.</span><span class="fu">localScale</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span><span class="dv">1</span>f<span class="op">,</span> size<span class="op">,</span> size<span class="op">);</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>            <span class="co">// 左側</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>            size <span class="op">=</span> Random<span class="op">.</span><span class="fu">Range</span><span class="op">(</span><span class="fl">0.3f</span><span class="op">,</span> <span class="dv">2</span>f<span class="op">);</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>            pos <span class="op">=</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>                Random<span class="op">.</span><span class="fu">Range</span><span class="op">(-</span><span class="fl">0.1f</span><span class="op">,</span> <span class="fl">0.1f</span><span class="op">)</span> <span class="op">-</span> <span class="dv">2</span>f<span class="op">,</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>                Random<span class="op">.</span><span class="fu">Range</span><span class="op">(</span><span class="dv">0</span>f<span class="op">,</span> <span class="dv">4</span>f<span class="op">),</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>                Random<span class="op">.</span><span class="fu">Range</span><span class="op">(-</span><span class="dv">10</span>f<span class="op">,</span> <span class="dv">50</span>f<span class="op">)</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>            <span class="op">);</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>            obj <span class="op">=</span> <span class="fu">Instantiate</span><span class="op">(</span>structurePrefab<span class="op">,</span> pos<span class="op">,</span> Quaternion<span class="op">.</span><span class="fu">identity</span><span class="op">);</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>            obj<span class="op">.</span><span class="fu">transform</span><span class="op">.</span><span class="fu">localScale</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span><span class="dv">1</span>f<span class="op">,</span> size<span class="op">,</span> size<span class="op">);</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>            <span class="co">// 下側</span></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>            size <span class="op">=</span> Random<span class="op">.</span><span class="fu">Range</span><span class="op">(</span><span class="dv">1</span>f<span class="op">,</span> <span class="dv">2</span>f<span class="op">);</span></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>            pos <span class="op">=</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>                Random<span class="op">.</span><span class="fu">Range</span><span class="op">(-</span><span class="dv">1</span>f<span class="op">,</span> <span class="dv">1</span>f<span class="op">),</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>                <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>                Random<span class="op">.</span><span class="fu">Range</span><span class="op">(-</span><span class="dv">10</span>f<span class="op">,</span> <span class="dv">50</span>f<span class="op">)</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>            <span class="op">);</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>            obj <span class="op">=</span> <span class="fu">Instantiate</span><span class="op">(</span>structurePrefab<span class="op">,</span> pos<span class="op">,</span> Quaternion<span class="op">.</span><span class="fu">identity</span><span class="op">);</span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>            obj<span class="op">.</span><span class="fu">transform</span><span class="op">.</span><span class="fu">localScale</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span>size<span class="op">,</span> <span class="fl">0.1f</span><span class="op">,</span> size<span class="op">);</span></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p>　ちょっと長いですが、頑張って読んでみてください。やっていることは単純です。右側、左側、下側にそれぞれランダムなサイズ、ランダムな位置に構造物モデルを生成しています。Instantiate関数は、以前も出てきましたがプレハブをシーン上に実体化する処理です。ひとつのプレハブからたくさんのコピーを作成するときに良く使われます。今回は全体が100回ループのfor文で囲まれているので、右、左、下それぞれ100個ずつの構造物オブジェクトが生成されます。このように、あらかじめシーンに配置するのではなく、動的にプログラムでステージを生成することをプロシージャルな手法と呼びます。うまく生成すると複雑で広大な地形を一気に作ることができるので、最近のゲーム制作でもよく使用される手法です。</p>
 <p>　なお、実行時にフレームレートが十分出ないときは、この100の数字を下げることで処理を軽くできます。画面上のオブジェクトの数と処理速度はトレードオフなので仕上げの段階になったらこういったところを調整するようにしてみてください。</p>
 <p>　このスクリプトは、public変数で構造物のプレハブをInspectorから設定できるようにしてあります。AssetsにあるStructureプレハブをInspectorのStructurePrefabにドラッグ&amp;ドロップしてから実行してください。</p>
-<div class="figure">
+<figure>
 <img src="img/053.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <h3 id="敵機生成処理">敵機生成処理</h3>
-<p>　敵機生成処理も同様に、Gameを選択し、InspectorのAdd Component→New Scriptです。スクリプト名はEnemyGeneratorとします。</p>
+<p>　敵機生成処理も同様に、Gameを選択し、InspectorのAdd Component→New
+Scriptです。スクリプト名はEnemyGeneratorとします。</p>
 <p>EnemyGenerator.cs</p>
-<div class="sourceCode"><pre class="sourceCode cs"><code class="sourceCode cs"><span class="kw">using</span> UnityEngine;
-
-<span class="kw">public</span> <span class="kw">class</span> EnemyGenerator : MonoBehaviour {
-
-    <span class="kw">public</span> GameObject enemyPrefab;
-
-    <span class="dt">void</span> <span class="fu">Start</span> () {
-        <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; <span class="dv">3</span>; i++)
-        {
-            GameObject enemy = <span class="fu">Instantiate</span>(enemyPrefab, Vector3.<span class="fu">zero</span>, Quaternion.<span class="fu">identity</span>);
-        }
-    }    
-}</code></pre></div>
-<p>　敵機生成は非常にシンプルです。出現位置は敵機自身がランダムに決める処理を先ほど書きましたし、サイズも一定でよいので、単純にInstantiateするだけです。for文で3回ループしているので敵機は3機出現します。 　これも、AssetsにあるEnemyプレハブをInspectorのEnemyPrefabにドラッグ&amp;ドロップしてから実行してください。</p>
-<div class="figure">
+<div class="sourceCode" id="cb4"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> EnemyGenerator <span class="op">:</span> MonoBehaviour <span class="op">{</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> GameObject enemyPrefab<span class="op">;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Start</span> <span class="op">()</span> <span class="op">{</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        <span class="kw">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="dv">3</span><span class="op">;</span> i<span class="op">++)</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>            GameObject enemy <span class="op">=</span> <span class="fu">Instantiate</span><span class="op">(</span>enemyPrefab<span class="op">,</span> Vector3<span class="op">.</span><span class="fu">zero</span><span class="op">,</span> Quaternion<span class="op">.</span><span class="fu">identity</span><span class="op">);</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span>    </span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>　敵機生成は非常にシンプルです。出現位置は敵機自身がランダムに決める処理を先ほど書きましたし、サイズも一定でよいので、単純にInstantiateするだけです。for文で3回ループしているので敵機は3機出現します。
+　これも、AssetsにあるEnemyプレハブをInspectorのEnemyPrefabにドラッグ&amp;ドロップしてから実行してください。</p>
+<figure>
 <img src="img/054.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <h2 id="サウンドの追加">サウンドの追加</h2>
-<p>　次はサウンドを追加してみましょう。Asset StoreでそれっぽいフリーSE集を探してみます。</p>
-<div class="figure">
+<p>　次はサウンドを追加してみましょう。Asset
+StoreでそれっぽいフリーSE集を探してみます。</p>
+<figure>
 <img src="img/055.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
-<p>　Asset StoreでSci-Fi Sfxを検索してダウンロード、インポートしてください。</p>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　Asset StoreでSci-Fi
+Sfxを検索してダウンロード、インポートしてください。</p>
 <p>　インポートしたら、中身を確認しましょう。サウンドファイルを選択してInspector下部の波形表示の右上に再生ボタンがあるのでひとつひとつ聞いてます。<br />
 　（なんか、どれも思ってたんと違う感じ……）<br />
 　まあ、でも妥協して使っていきましょう。イメージぴったりのアセットが見つかることはめったにないので、とりあえず手元にある素材でなんとかするのも腕の見せ所です。</p>
 <p>　今回導入したいSEは、自機のエンジン音、敵機のエンジン音、自機と敵機の衝突音の３種類です。まずは自機のエンジン音から設定していきます。</p>
 <h3 id="自機のエンジン音">自機のエンジン音</h3>
-<p>　自機のエンジン音はAssets/Sci-Fi-Sfx/Wav/Ambience_Space_00が良さそうです。ゴーという低い小さな音が鳴り続ける感じです。Sci-Fi SfxにはMP3のサウンドファイルとWavのサウンドファイルが両方収録されているようです。注意点としては、環境音のように無限ループで鳴らす音の場合MP3は避けた方がよいです。MP3は構造上先頭に空白が入ってしまうため、ループするときにブツッと音が途切れてしまいます。Wavの場合は空白が入らないのでこちらを使うようにしましょう。</p>
-<p>　自機のサウンドはMain Cameraにアタッチします。音を受けるAudio ListenerコンポーネントがMain Cameraにアタッチされているため、音の方向や移動の設定をしない音はそれと同じ場所に配置します。</p>
-<p>　Main CameraのInspectorからAdd Component→Audio Sourceを選択します。次にAudio SourceコンポーネントのAudioClipにAmbience_Space_00をドラッグ&amp;ドロップします。次のようにパラメータを設定してください。</p>
+<p>　自機のエンジン音はAssets/Sci-Fi-Sfx/Wav/Ambience_Space_00が良さそうです。ゴーという低い小さな音が鳴り続ける感じです。Sci-Fi
+SfxにはMP3のサウンドファイルとWavのサウンドファイルが両方収録されているようです。注意点としては、環境音のように無限ループで鳴らす音の場合MP3は避けた方がよいです。MP3は構造上先頭に空白が入ってしまうため、ループするときにブツッと音が途切れてしまいます。Wavの場合は空白が入らないのでこちらを使うようにしましょう。</p>
+<p>　自機のサウンドはMain Cameraにアタッチします。音を受けるAudio
+ListenerコンポーネントがMain
+Cameraにアタッチされているため、音の方向や移動の設定をしない音はそれと同じ場所に配置します。</p>
+<p>　Main CameraのInspectorからAdd Component→Audio
+Sourceを選択します。次にAudio
+SourceコンポーネントのAudioClipにAmbience_Space_00をドラッグ&amp;ドロップします。次のようにパラメータを設定してください。</p>
 <p>　Play On Awake：有効<br />
 　Loop：有効<br />
 　Spatial Blend：0 （2D）</p>
-<div class="figure">
+<figure>
 <img src="img/056.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <h3 id="敵機のエンジン音">敵機のエンジン音</h3>
-<p>　敵機のエンジン音はAssets/Sci-Fi-Sfx/Wav/SpaceShip_Engine_Large_Loop_00を使います。今度は自機と敵機の位置や速度によって音が変化する3Dオーディオを活用しましょう。AssetsのEnemyプレハブを選択してAdd Component→Audio Sourceとします。次にAudio SourceコンポーネントのAudioClipにSpaceShip_Engine_Large_Loop_00をドラッグ&amp;ドロップします。パラメータは次のようにします。</p>
+<p>　敵機のエンジン音はAssets/Sci-Fi-Sfx/Wav/SpaceShip_Engine_Large_Loop_00を使います。今度は自機と敵機の位置や速度によって音が変化する3Dオーディオを活用しましょう。AssetsのEnemyプレハブを選択してAdd
+Component→Audio Sourceとします。次にAudio
+SourceコンポーネントのAudioClipにSpaceShip_Engine_Large_Loop_00をドラッグ&amp;ドロップします。パラメータは次のようにします。</p>
 <p>　Play On Awake：有効<br />
 　Loop：有効<br />
 　Spatial Blend：1 （3D）</p>
@@ -366,101 +449,120 @@ https://www.youtube.com/watch?v=0RFQhiBr58c</p>
 　Doppler Level： 3<br />
 　Min Distance： 2<br />
 　Max Distance： 6</p>
-<p>　Doppler Levelを設定することでドップラー効果をシミュレートできます。近付いてくるときは高い音、離れていくときは低い音になり、すれ違うときにビューウンという音程変化が生まれます。またMin Distance、Max Distanceを小さめにすることで近付いたときに急に音が大きくなり、スピード感が強調されます。</p>
-<div class="figure">
+<p>　Doppler
+Levelを設定することでドップラー効果をシミュレートできます。近付いてくるときは高い音、離れていくときは低い音になり、すれ違うときにビューウンという音程変化が生まれます。またMin
+Distance、Max
+Distanceを小さめにすることで近付いたときに急に音が大きくなり、スピード感が強調されます。</p>
+<figure>
 <img src="img/057.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <h3 id="衝突音">衝突音</h3>
-<p>　後で使うときのために衝突音も準備しておきましょう。衝突音はAssets/Sci-Fi-Sfx/Wav/Laser/Laser_02を使います。このサウンドファイルは音量が大きいので少し調整した方が良さそうです。先ほどと同様に、AssetsのEnemyプレハブを選択してAdd Component→Audio Sourceを選択します。次にAudio SourceコンポーネントのAudioClipにLaser_02をドラッグ&amp;ドロップします。パラメータは次のようにします。</p>
+<p>　後で使うときのために衝突音も準備しておきましょう。衝突音はAssets/Sci-Fi-Sfx/Wav/Laser/Laser_02を使います。このサウンドファイルは音量が大きいので少し調整した方が良さそうです。先ほどと同様に、AssetsのEnemyプレハブを選択してAdd
+Component→Audio Sourceを選択します。次にAudio
+SourceコンポーネントのAudioClipにLaser_02をドラッグ&amp;ドロップします。パラメータは次のようにします。</p>
 <p>　Play On Awake： 無効<br />
 　Loop： 無効<br />
 　Volume： 0.16<br />
 　Spatial Blend： 0 （2D）</p>
-<p>　Play On Awakeを無効にしたので、そのままでは音は鳴りません。後でスクリプトに鳴らす処理を追加します。</p>
+<p>　Play On
+Awakeを無効にしたので、そのままでは音は鳴りません。後でスクリプトに鳴らす処理を追加します。</p>
 <p>　それでは実行してみましょう。低い自機のエンジン音と、敵機とすれ違うときの音が聞こえたでしょうか。</p>
 <h2 id="簡易的な衝突判定">簡易的な衝突判定</h2>
-<p>　Unityでは物理演算を使って衝突判定をするのが定番ですが、物理演算はかなり癖があって初心者にはあまりお勧めできないと思っています。たとえば今回のような高速で移動するオブジェクトは、物理演算だと意図せずすり抜けてしまう現象が起こりやすく、それらに対処するため直感的とはいえないいくつものバッドノウハウを必要とします。そのため、最初はシンプルな衝突判定を実装し、その後本格的なゲームを作成するときに物理演算を学んでいくような順番がよいと考えています。 　</p>
+<p>　Unityでは物理演算を使って衝突判定をするのが定番ですが、物理演算はかなり癖があって初心者にはあまりお勧めできないと思っています。たとえば今回のような高速で移動するオブジェクトは、物理演算だと意図せずすり抜けてしまう現象が起こりやすく、それらに対処するため直感的とはいえないいくつものバッドノウハウを必要とします。そのため、最初はシンプルな衝突判定を実装し、その後本格的なゲームを作成するときに物理演算を学んでいくような順番がよいと考えています。
+　</p>
 <p>　今回実装する衝突判定処理は、敵機と自機（メインカメラ）との距離を毎フレーム計算し、一定距離より近付いたら衝突したと判断するものです。</p>
-<p>AssetsのEnemyプレハブを選択し、InspectorのAdd Component→New Script。スクリプト名はHitDetectorとします。</p>
+<p>AssetsのEnemyプレハブを選択し、InspectorのAdd Component→New
+Script。スクリプト名はHitDetectorとします。</p>
 <p>HitDetector.cs</p>
-<div class="sourceCode"><pre class="sourceCode cs"><code class="sourceCode cs"><span class="kw">using</span> UnityEngine;
-
-<span class="kw">public</span> <span class="kw">class</span> HitDetector : MonoBehaviour {
-
-    GameObject target;
-    AudioSource se;
-
-    <span class="dt">void</span> <span class="fu">Start</span> () {
-        target = Camera.<span class="fu">main</span>.<span class="fu">gameObject</span>;
-        se = GetComponents&lt;AudioSource&gt;()[<span class="dv">1</span>];
-    }
-    
-    <span class="dt">void</span> <span class="fu">Update</span> () {
-        <span class="kw">if</span> (Vector3.<span class="fu">Distance</span>(target.<span class="fu">transform</span>.<span class="fu">position</span>, transform.<span class="fu">position</span>) &lt; <span class="fl">0.</span>5f)
-        {
-            se.<span class="fu">Play</span>();
-        }
-    }
-}</code></pre></div>
-<p>　targetが自機（メインカメラ）です。これはCamera.main.gameObjectとして取得できます。また、衝突音seはGetComponents<AudioSource>()としてEnemyにアタッチされている複数のAudio Sourceを取得しています。先ほど敵機のエンジン音と衝突音の2個のAudio Sourceをアタッチしました。そのため、[0]を指定するとエンジン音、[1]を指定すると衝突音が得られます。</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> HitDetector <span class="op">:</span> MonoBehaviour <span class="op">{</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    GameObject target<span class="op">;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    AudioSource se<span class="op">;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Start</span> <span class="op">()</span> <span class="op">{</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        target <span class="op">=</span> Camera<span class="op">.</span><span class="fu">main</span><span class="op">.</span><span class="fu">gameObject</span><span class="op">;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        se <span class="op">=</span> GetComponents<span class="op">&lt;</span>AudioSource<span class="op">&gt;()[</span><span class="dv">1</span><span class="op">];</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Update</span> <span class="op">()</span> <span class="op">{</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>        <span class="kw">if</span> <span class="op">(</span>Vector3<span class="op">.</span><span class="fu">Distance</span><span class="op">(</span>target<span class="op">.</span><span class="fu">transform</span><span class="op">.</span><span class="fu">position</span><span class="op">,</span> transform<span class="op">.</span><span class="fu">position</span><span class="op">)</span> <span class="op">&lt;</span> <span class="fl">0.5f</span><span class="op">)</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>            se<span class="op">.</span><span class="fu">Play</span><span class="op">();</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>　targetが自機（メインカメラ）です。これはCamera.main.gameObjectとして取得できます。また、衝突音seはGetComponents<AudioSource>()としてEnemyにアタッチされている複数のAudio
+Sourceを取得しています。先ほど敵機のエンジン音と衝突音の2個のAudio
+Sourceをアタッチしました。そのため、[0]を指定するとエンジン音、[1]を指定すると衝突音が得られます。</p>
 <p>　Update関数の中で、自機とEnemyの距離Distanceを取得して、距離が0.5未満の場合、衝突音を鳴らしています。</p>
 <h2 id="入力の処理">入力の処理</h2>
 <p>　敵機と衝突するようになったので、キー操作で自機を移動できるようにしましょう。基本的にはGetKeyでキーの状態を読んで、positionを移動するだけです。</p>
-<p>　HierarchyのMain Cameraを選択し、Add Component→New Script。スクリプト名はCameraMoverとします。</p>
+<p>　HierarchyのMain Cameraを選択し、Add Component→New
+Script。スクリプト名はCameraMoverとします。</p>
 <p>CameraMover.cs</p>
-<div class="sourceCode"><pre class="sourceCode cs"><code class="sourceCode cs"><span class="kw">using</span> UnityEngine;
-
-<span class="kw">public</span> <span class="kw">class</span> CameraMover : MonoBehaviour {
-    <span class="dt">void</span> <span class="fu">Update</span> () {
-        <span class="dt">float</span> delta = Time.<span class="fu">deltaTime</span> * <span class="fl">1.</span>5f;
-
-        <span class="kw">if</span> (Input.<span class="fu">GetKey</span>(KeyCode.<span class="fu">LeftArrow</span>))
-        {
-            <span class="kw">if</span> (transform.<span class="fu">position</span>.<span class="fu">x</span> &gt; -<span class="dv">1</span>)
-            {
-                transform.<span class="fu">position</span> -= <span class="kw">new</span> <span class="fu">Vector3</span>(delta, 0f, 0f);
-            }
-        }
-        <span class="kw">if</span> (Input.<span class="fu">GetKey</span>(KeyCode.<span class="fu">RightArrow</span>))
-        {
-            <span class="kw">if</span> (transform.<span class="fu">position</span>.<span class="fu">x</span> &lt; <span class="dv">1</span>)
-            {
-                transform.<span class="fu">position</span> += <span class="kw">new</span> <span class="fu">Vector3</span>(delta, 0f, 0f);
-            }
-        }
-        <span class="kw">if</span> (Input.<span class="fu">GetKey</span>(KeyCode.<span class="fu">DownArrow</span>))
-        {
-            <span class="kw">if</span> (transform.<span class="fu">position</span>.<span class="fu">y</span> &gt; <span class="fl">0.</span>5f)
-            {
-                transform.<span class="fu">position</span> -= <span class="kw">new</span> <span class="fu">Vector3</span>(0f, delta, 0f);
-            }
-        }
-        <span class="kw">if</span> (Input.<span class="fu">GetKey</span>(KeyCode.<span class="fu">UpArrow</span>))
-        {
-            <span class="kw">if</span> (transform.<span class="fu">position</span>.<span class="fu">y</span> &lt; <span class="dv">5</span>)
-            {
-                transform.<span class="fu">position</span> += <span class="kw">new</span> <span class="fu">Vector3</span>(0f, delta, 0f);
-            }
-        }
-    }
-}</code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> CameraMover <span class="op">:</span> MonoBehaviour <span class="op">{</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Update</span> <span class="op">()</span> <span class="op">{</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">float</span> delta <span class="op">=</span> Time<span class="op">.</span><span class="fu">deltaTime</span> <span class="op">*</span> <span class="fl">1.5f</span><span class="op">;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        <span class="kw">if</span> <span class="op">(</span>Input<span class="op">.</span><span class="fu">GetKey</span><span class="op">(</span>KeyCode<span class="op">.</span><span class="fu">LeftArrow</span><span class="op">))</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>            <span class="kw">if</span> <span class="op">(</span>transform<span class="op">.</span><span class="fu">position</span><span class="op">.</span><span class="fu">x</span> <span class="op">&gt;</span> <span class="op">-</span><span class="dv">1</span><span class="op">)</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>            <span class="op">{</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>                transform<span class="op">.</span><span class="fu">position</span> <span class="op">-=</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span>delta<span class="op">,</span> <span class="dv">0</span>f<span class="op">,</span> <span class="dv">0</span>f<span class="op">);</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>        <span class="kw">if</span> <span class="op">(</span>Input<span class="op">.</span><span class="fu">GetKey</span><span class="op">(</span>KeyCode<span class="op">.</span><span class="fu">RightArrow</span><span class="op">))</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>            <span class="kw">if</span> <span class="op">(</span>transform<span class="op">.</span><span class="fu">position</span><span class="op">.</span><span class="fu">x</span> <span class="op">&lt;</span> <span class="dv">1</span><span class="op">)</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>            <span class="op">{</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>                transform<span class="op">.</span><span class="fu">position</span> <span class="op">+=</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span>delta<span class="op">,</span> <span class="dv">0</span>f<span class="op">,</span> <span class="dv">0</span>f<span class="op">);</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>        <span class="kw">if</span> <span class="op">(</span>Input<span class="op">.</span><span class="fu">GetKey</span><span class="op">(</span>KeyCode<span class="op">.</span><span class="fu">DownArrow</span><span class="op">))</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>            <span class="kw">if</span> <span class="op">(</span>transform<span class="op">.</span><span class="fu">position</span><span class="op">.</span><span class="fu">y</span> <span class="op">&gt;</span> <span class="fl">0.5f</span><span class="op">)</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>            <span class="op">{</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>                transform<span class="op">.</span><span class="fu">position</span> <span class="op">-=</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span><span class="dv">0</span>f<span class="op">,</span> delta<span class="op">,</span> <span class="dv">0</span>f<span class="op">);</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>        <span class="kw">if</span> <span class="op">(</span>Input<span class="op">.</span><span class="fu">GetKey</span><span class="op">(</span>KeyCode<span class="op">.</span><span class="fu">UpArrow</span><span class="op">))</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>            <span class="kw">if</span> <span class="op">(</span>transform<span class="op">.</span><span class="fu">position</span><span class="op">.</span><span class="fu">y</span> <span class="op">&lt;</span> <span class="dv">5</span><span class="op">)</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>            <span class="op">{</span></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>                transform<span class="op">.</span><span class="fu">position</span> <span class="op">+=</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span><span class="dv">0</span>f<span class="op">,</span> delta<span class="op">,</span> <span class="dv">0</span>f<span class="op">);</span></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p>　キーコードを見て矢印キーなら上下左右に動かしているだけです。それぞれリミットに達したらそれ以上は動かないよう制限しています。Unityのキー状態取得関数にはGetKeyのほかにもGetKeyDown、GetKeyUpなどがあります。GetKeyは押している間ずっとtrueが返りますが、GetKeyDown、GetKeyUpはキーのダウン、アップの1回だけtrueが返ります。今回のようにキーを押している間移動し続けるような場合はGetKeyが適しています。</p>
 <h2 id="外観のブラッシュアップ">外観のブラッシュアップ</h2>
 <p>　ゲームの構造は以上で完成です。最後にまたポストプロセスを使って画面をリアルにしていきましょう。</p>
 <h3 id="ポストプロセスの追加">ポストプロセスの追加</h3>
-<p>　Post Processingの導入手順はチュートリアル１でも詳しく説明しています。</p>
+<p>　Post
+Processingの導入手順はチュートリアル１でも詳しく説明しています。</p>
 <ul>
-<li>Windowメニュー→Package Managerを選び、Post Processingをインストール</li>
-<li>Hierarchyウィンドウの右クリックメニューからCreate Empty、名前はPostProcessingとする</li>
-<li>空オブジェクトのInspectorにあるLayerドロップダウンを開いてAdd Layer...を選択、PostProcessingレイヤを追加</li>
+<li>Windowメニュー→Package Managerを選び、Post
+Processingをインストール</li>
+<li>Hierarchyウィンドウの右クリックメニューからCreate
+Empty、名前はPostProcessingとする</li>
+<li>空オブジェクトのInspectorにあるLayerドロップダウンを開いてAdd
+Layer…を選択、PostProcessingレイヤを追加</li>
 <li>空オブジェクトのInspectorにあるLayerドロップダウンを開いてPostProcessingレイヤを選択</li>
-<li>空オブジェクトのInspectorからAdd Component→Rendering→Post-process Volumeを追加</li>
+<li>空オブジェクトのInspectorからAdd Component→Rendering→Post-process
+Volumeを追加</li>
 <li>Post-process VolumeコンポーネントのIs Globalにチェックを入れる</li>
 <li>Post-process VolumeコンポーネントのProfileのNewボタンを押す</li>
-<li>HierarchyウィンドウでMain Cameraを選択、InspectorからAdd Component→Rendering→Post-process Layerを追加</li>
-<li>Post-processing LayerコンポーネントのLayer欄で、先ほど追加したレイヤ名PostProcessingを選択</li>
-<li>空オブジェクトのPost-processing VolumeコンポーネントにあるAdd effect...メニュー→Unityから各種エフェクトを追加</li>
+<li>HierarchyウィンドウでMain Cameraを選択、InspectorからAdd
+Component→Rendering→Post-process Layerを追加</li>
+<li>Post-processing
+LayerコンポーネントのLayer欄で、先ほど追加したレイヤ名PostProcessingを選択</li>
+<li>空オブジェクトのPost-processing VolumeコンポーネントにあるAdd
+effect…メニュー→Unityから各種エフェクトを追加</li>
 </ul>
 <h4 id="ambient-occlusion">Ambient Occlusion</h4>
 <p>　壁と床の交わるような角を暗くする効果です。古びた雰囲気やリアルな質感が簡単に出せるのでお勧めです。</p>
@@ -475,25 +577,28 @@ https://www.youtube.com/watch?v=0RFQhiBr58c</p>
 　Smoothness：0.43<br />
 　ほかのパラメータはデフォルト。</p>
 <p>　次にフォグ（霧）の効果をかけます。距離的に遠いものを暗くするエフェクトで、視認性を悪くする効果だけでなく、遠近感やスケール感の演出に使えます。ライトの設定にあります。</p>
-<p>　Windowメニュー→Lighting→Settingsでウィンドウを開いて、下の方にあるOther Settingsで設定します。</p>
+<p>　Windowメニュー→Lighting→Settingsでウィンドウを開いて、下の方にあるOther
+Settingsで設定します。</p>
 <p>　Fog：有効<br />
 　Color：R:15 G:15 B:20<br />
 　Mode：Exponential<br />
 　Density：0.1</p>
 <h3 id="ヘッドライトの追加">ヘッドライトの追加</h3>
-<p>　最後にまたライトを調整します。ポストプロセスのVignetteやフォグで少し画面が暗くなったので、Main Cameraの下にPoint lightを置いてヘッドライトで近距離の敵や壁を照らす効果を追加します。</p>
-<div class="figure">
+<p>　最後にまたライトを調整します。ポストプロセスのVignetteやフォグで少し画面が暗くなったので、Main
+Cameraの下にPoint
+lightを置いてヘッドライトで近距離の敵や壁を照らす効果を追加します。</p>
+<figure>
 <img src="img/060.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <p>　Position: 0, 0, 2</p>
 <p>　Light<br />
 　Range: 10<br />
 　Intensity: 0.5</p>
 <p>　おつかれさまでした。これでチュートリアル「TrenchFighter」は終了です。</p>
-<div class="figure">
+<figure>
 <img src="img/058.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 </body>
 </html>

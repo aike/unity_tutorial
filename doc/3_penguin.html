@@ -1,52 +1,95 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
-  <title></title>
-  <style type="text/css">code{white-space: pre;}</style>
-  <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>3_penguin</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../styles/website.css" type="text/css" />
+  <link rel="stylesheet" href="../styles/website.css" />
 </head>
 <body>
-<h1 id="チュートリアルpenguin">チュートリアル２「Penguin」</h1>
+<h1 id="チュートリアル２penguin">チュートリアル２「Penguin」</h1>
 <h2 id="このチュートリアルについて">このチュートリアルについて</h2>
 <p>　今回のチュートリアルでは光を追いかけるように顔を向けるペンギンを作っていきます。項目としては次のような内容を学んでいきます。</p>
 <ul>
@@ -56,37 +99,45 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>ターゲットの方向を向く処理</li>
 <li>三角関数を使ったさまざまな動き</li>
 </ul>
-<p><a href="https://www.youtube.com/watch?v=AcOAPCGrMmQ"><img src="img/yt2.png" alt="screenshot" /></a><br />
+<p><a href="https://www.youtube.com/watch?v=AcOAPCGrMmQ"><img
+src="img/yt2.png" alt="screenshot" /></a><br />
 https://www.youtube.com/watch?v=AcOAPCGrMmQ</p>
 <h2 id="モデルデザイン用シーン作成">モデルデザイン用シーン作成</h2>
 <p>　このテーマではmainとmodelの2つのシーンを作成します。mainは通常のゲーム画面用のシーン、modelはゲーム用のモデルを準備するためのシーンです。実際のゲーム開発でもこのようにシーンを2つ使うことがよくあります。ゲーム画面ではスタートしてすぐにキャラクターや背景のモデルが表示されるとは限らず、しばらく経ってから出現することがあります。出現したモデルも高速で動きまわっていたり、複数同時に現れたりするとモデルの見え方をさまざまな方向からじっくり確認するのには向いていません。そのため、モデルを一覧表示して確認・調整するための専用のシーンを開発用に用意します。また、こうしてシーンを別にすることで、ゲームを実装するプログラマーとモデルを作るデザイナーが分業しやすくなるという大きなメリットもあります。</p>
-<p>　Unityの起動画面、あるいはFileメニュー→New Projectから新規プロジェクトを作成します。テンプレートは3Dを選択、プロジェクト名は「Penguin」とします。</p>
+<p>　Unityの起動画面、あるいはFileメニュー→New
+Projectから新規プロジェクトを作成します。テンプレートは3D (Built-In
+Render Pipeline)を選択、プロジェクト名は「Penguin」とします。</p>
 <h3 id="シーンの準備">シーンの準備</h3>
-<p>　最初にmodelシーンを作っていきます。modelシーンには、ステージ（動物園のペンギン舎）のモデルと、ペンギンのモデルひとつだけが置かれます。ここでは、MayaやBlenderといった外部のDCCツール（Digital Content Creation Tool）を使用せず、Unityのプリミティブの組み合わせだけでモデルを作ります。</p>
+<p>　最初にmodelシーンを作っていきます。modelシーンには、ステージ（動物園のペンギン舎）のモデルと、ペンギンのモデルひとつだけが置かれます。ここでは、MayaやBlenderといった外部のDCCツール（Digital
+Content Creation
+Tool）を使用せず、Unityのプリミティブの組み合わせだけでモデルを作ります。</p>
 <p>　File→New Sceneを選んであらたなシーンを作ってください。</p>
 <p>　モデルを配置する前に環境光の設定をしておきましょう。Unityの最近のバージョンはデフォルトで環境光が暗く、そのままではモデルが黒っぽく表示されてしまいます。今回は昼間のシーンなので明るくしておく必要があります。</p>
-<p>　Windowメニュー→Rendering→Lighting Settingsでダイアログを開きます。</p>
-<p>　上段のボタンで「Scene」が選択されていなければ選択してください。</p>
-<p>　Environment Lightingで、SourceをColor、Ambient ColorをR:255,B:255,G:255に設定します。</p>
-<div class="figure">
+<p>　Windowメニュー→Rendering→Lightingでダイアログを開きます。</p>
+<p>　上段のボタンで「Environment」が選択されていなければ選択してください。</p>
+<p>　Environment Lightingで、SourceをColor、Ambient
+ColorをR:255,B:255,G:255に設定します。</p>
+<figure>
 <img src="img/025_1.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <p>　また、次の場所にある表示切替ボタンを押してSceneビューに青空のSkyboxを表示させておきましょう。</p>
-<div class="figure">
+<figure>
 <img src="img/025_2.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <h3 id="ステージの作成">ステージの作成</h3>
-<p>　Hierarchyで何も選択されていないことを確認し、右クリックメニュー→Create Emptyで空のオブジェクトを作成し、名前を「Stage」と変更します。この下にステージのパーツを子オブジェクトとしてぶら下げていきます。親となるオブジェクトを空ではないキューブや球体にすることもできますが、あとあと必要になる個別の移動やスケール変更といった調整作業を考えると一番親は空オブジェクトにしておくのが楽です。</p>
-<p>　次にHierarchyでStageを選択した状態で、右クリックメニュー→3D Object→Cubeを選択してキューブを作成し、名前を「Floor」にします。生成したFloorを選択してInspectorで次のようにパラメータを設定します。</p>
+<p>　Hierarchyで何も選択されていないことを確認し、右クリックメニュー→Create
+Emptyで空のオブジェクトを作成し、名前を「Stage」と変更します。この下にステージのパーツを子オブジェクトとしてぶら下げていきます。親となるオブジェクトを空ではないキューブや球体にすることもできますが、あとあと必要になる個別の移動やスケール変更といった調整作業を考えると一番親は空オブジェクトにしておくのが楽です。</p>
+<p>　次にHierarchyでStageを選択した状態で、右クリックメニュー→3D
+Object→Cubeを選択してキューブを作成し、名前を「Floor」にします。生成したFloorを選択してInspectorで次のようにパラメータを設定します。</p>
 <p>　Position： -10, -3, -10<br />
 　Scale： 20, 4, 30</p>
 <p>　ここでCtrl+S（Macは⌘+S）でシーンをいったんセーブしましょう。シーン名は「model」としてScenesフォルダに保存します。</p>
-<div class="figure">
+<figure>
 <img src="img/025.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <p>　同様にStageを選択してCubeをあと2個作ります。名前はWall1、Wall2としてそれぞれ次のパラメータを設定します。</p>
 <p>　Wall1<br />
 　Position： 10, 3, 5<br />
@@ -100,10 +151,10 @@ https://www.youtube.com/watch?v=AcOAPCGrMmQ</p>
 　Metallic： 0.2<br />
 　Smoothness： 0.6</p>
 <p>　このマテリアルをFloor、Wall1、Wall2にそれぞれドラッグ&amp;ドロップで適用したらステージは完成です。</p>
-<div class="figure">
+<figure>
 <img src="img/026.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <h3 id="ペンギンモデルの作成">ペンギンモデルの作成</h3>
 <p>　続いてペンギンのモデルを作成していきます。ペンギンのマテリアルは白と黒の２種類、オブジェクトはすべてSphereを変形して組み合わせることで作成します。</p>
 <p>　先ほどと同様に新規マテリアルを作成してください。名前はそれぞれmatWhite、matBlackとします。</p>
@@ -115,15 +166,21 @@ https://www.youtube.com/watch?v=AcOAPCGrMmQ</p>
 　Albedo： R:28,G:28,B:28,A:255<br />
 　Metallic： 0.9<br />
 　Smoothness： 0.7</p>
-<p>　次にHierarchyで何も選択されていないことを確認し、右クリックメニュー→Create Emptyで空のオブジェクトを作成し、名前を「Penguin」と変更します。</p>
-<p>　今度はPenguinを選択して右クリックメニュー→Create Emptyで空のオブジェクトを作成し、名前を「Wrapper」と変更します。 次に、Wrapperを選択して空オブジェクトを2個作成し、名前をそれぞれ「Head」「Body」とします。さらにHeadを選択して空オブジェクトを作成し、名前を「Wrapper」にします。</p>
-<div class="figure">
+<p>　次にHierarchyで何も選択されていないことを確認し、右クリックメニュー→Create
+Emptyで空のオブジェクトを作成し、名前を「Penguin」と変更します。</p>
+<p>　今度はPenguinを選択して右クリックメニュー→Create
+Emptyで空のオブジェクトを作成し、名前を「Wrapper」と変更します。
+次に、Wrapperを選択して空オブジェクトを2個作成し、名前をそれぞれ「Head」「Body」とします。さらにHeadを選択して空オブジェクトを作成し、名前を「Wrapper」にします。</p>
+<figure>
 <img src="img/027.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <p>　このような構造にした理由を説明します。スクリプトを使ってPenguinをmainシーンに配置したとき、自分の意図した向きや大きさとは違っていたりするようなことがあります。以前も少し述べたように最上位のScaleは1であると扱いやすく、また最上位のRotationも0のときに適切な方向を向いている方が便利です。そのためWrapperというノードを一段かませて、配置するサイズや向きのデフォルト値をWrapperに設定する、というテクニックがよく使われます。Headは独立して回転させる予定なのでそこにも向きを調整しやすいようにWrapperを作っておきます。</p>
 <p>　今回作るペンギンモデルは、光の方向に追従して回転する顔のパーツと、何も動かない体のパーツから構成されます。そのためそれぞれをグループ化するためにHead、Bodyというノードを用意して、その下に実際のオブジェクトをぶら下げていきます。</p>
-<p>　それでは実際にオブジェクトを配置していきます。 まずはHeadの下のWrapperを選択し、右クリックメニュー→3D Object→Sphereとして、Sphereを生成します。同様にBodyを選択してもうひとつSphereを生成します。 それぞれのPositionとScaleなどを次のように設定します。</p>
+<p>　それでは実際にオブジェクトを配置していきます。
+まずはHeadの下のWrapperを選択し、右クリックメニュー→3D
+Object→Sphereとして、Sphereを生成します。同様にBodyを選択してもうひとつSphereを生成します。
+それぞれのPositionとScaleなどを次のように設定します。</p>
 <p>　Penguin<br />
 　Position： 0, 0, 0<br />
 　Rotation： 0, 180, 0<br />
@@ -146,270 +203,276 @@ https://www.youtube.com/watch?v=AcOAPCGrMmQ</p>
 <p>　Bodyの下のSphere<br />
 　Position： 0, 0.15, 0<br />
 　Scale： 1, 2, 1</p>
-<div class="figure">
+<figure>
 <img src="img/028.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <p>　同様にSphereを生成し、位置とスケールを調整して目やくちばし、羽などを作っていきます。顔のパーツはHeadの下に、体のパーツはBodyの下にぶら下げます。</p>
 <p>　生成したSphereにはmatWhiteまたはmatBlackをドラッグ&amp;ドロップで適用していきます。頭や胴体など白黒が途中で切り替わるようなパーツは同じ大きさか少しだけサイズの違う白と黒のパーツをわずかにずらして配置することで作ることができます。</p>
 <p>　目や足など同じ大きさのパーツを作るときは、オブジェクトを選択して右クリックメニュー→Dupulicateの操作で複製できるので効率的です。</p>
-<div class="figure">
+<figure>
 <img src="img/029.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <p>　こんな感じになればペンギンモデルの完成です。</p>
-<div class="figure">
+<figure>
 <img src="img/030.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <h3 id="モデルのプレハブ化">モデルのプレハブ化</h3>
 <p>　作成したモデルを別のシーンから使うためにはプレハブと呼ばれるアセットにする必要があります。方法は簡単で、HierarchyのオブジェクトをProjectウィンドウのAssetsにドラッグ&amp;ドロップするだけです。</p>
 <p>　StageとPenguinをプレハブ化してみましょう。</p>
-<div class="figure">
+<figure>
 <img src="img/031_2.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <p>　こんな表示になればプレハブ化できています。</p>
-<div class="figure">
+<figure>
 <img src="img/031.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <h2 id="メインシーン作成">メインシーン作成</h2>
-<p>　ここまではモデルデザイン用のシーンで作業していましたが、いよいよメインシーンを作成します。いったんmodelシーンをセーブして、FileメニューからNew Sceneを選択してください。</p>
-<p>　このシーンでも、先ほどと同じように環境光を調整します。Windowメニュー→Rendering→Lighting Settings Environment Lightingを開いて次のように設定してください。</p>
+<p>　ここまではモデルデザイン用のシーンで作業していましたが、いよいよメインシーンを作成します。いったんmodelシーンをセーブして、FileメニューからNew
+Sceneを選択してください。</p>
+<p>　このシーンでも、先ほどと同じように環境光を調整します。Windowメニュー→Rendering→Lighting、Environmentタブ選択
+Environment Lightingを次のように設定してください。</p>
 <p>　Source: Color<br />
-　Ambient Color: R:255,B:255,G:255</p>
+　Ambient Color: R:210,B:210,G:210</p>
 <p>　設定できたら、シーンを「main」の名前でセーブします。</p>
 <h3 id="ステージの配置">ステージの配置</h3>
-<p>　メインシーンにステージを配置します。先ほど作ったStageプレハブがAssetsにあるのでそれをHierarchyにドラッグ&amp;ドロップします。StageのInspectorを見てPositionが 0, 0, 0になっていなければすべてゼロにしてください。</p>
+<p>　メインシーンにステージを配置します。先ほど作ったStageプレハブがAssetsにあるのでそれをHierarchyにドラッグ&amp;ドロップします。StageのInspectorを見てPositionが
+0, 0, 0になっていなければすべてゼロにしてください。</p>
 <h3 id="水面の配置">水面の配置</h3>
 <p>　次はステージに水を張りましょう。</p>
-<p>　アセットストアでStandard Assetsを検索してください。Unity公式の標準アセットが見つかります。以前はUnity本体にバンドルされていた標準アセット集で、いまはアセットストアで提供するようになったようです。</p>
-<p>　Simple Water Shader URP に変更する 　https://assetstore.unity.com/packages/2d/textures-materials/water/simple-water-shader-urp-191449</p>
-<div class="figure">
+<p>　アセットストアでAQUAS Lite - Built-In Render
+Pipelineを検索してください。このアセットは無料でダウンロードできます。ダウンロードしたらImportをクリックしてインポートしてください。</p>
+<figure>
 <img src="img/032_2.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
-<p>　この標準アセットを使う場合に注意点がひとつあります。アセットが少し古いために最新版のUnityですべてのアセットをインポートするとエラーが出てしまうことがあります。ここではEnvironmentのみを選択してインポートするようにしてください。</p>
-<div class="figure">
-<img src="img/032_3.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
-<p>　標準アセットには水の表現用にいくつかのアセットが用意されています。今回は一番シンプルなWaterBasicDaytimeを使用します。Assets/Standard Assets/Environment/Water（Basic）/Prefabs/にWaterBasicDaytimeというアセットを探してください。アイコンが大きくてファイル名が見づらい場合は、ウィンドウ下部のスライダーで変更できます。</p>
-<div class="figure">
-<img src="img/033.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
-<p>　WaterBasicDaytimeをHierarchyにドラッグ&amp;ドロップ。パラメータは次のよう調整してください。</p>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　Assets/AQUAS-Lite/PrefasにあるWaterPlaneをHierarchyをHierarchyにドラッグ&amp;ドロップ。パラメータは次のよう調整してください。</p>
 <p>　Position： 0, -1.67, 0<br />
-　Scale： 60, 1, 60</p>
+　Scale： 10, 1, 10</p>
 <p>　円形の水面が配置されました。</p>
-<div class="figure">
+<figure>
 <img src="img/034.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <h3 id="構図の調整">構図の調整</h3>
-<p>　メインカメラの位置と角度を調整して構図を決めましょう。左側の方からステージを見るように次のようにMain Cameraのパラメータを設定します。</p>
+<p>　メインカメラの位置と角度を調整して構図を決めましょう。左側の方からステージを見るように次のようにMain
+Cameraのパラメータを設定します。</p>
 <p>　Position： -24, 5.5, -8<br />
 　Rotation： 15, 70, 0</p>
 <p>　前回のチュートリアルでも書きましたが、こういった斜めからの構図の場合、RotationのZは必ず0にして水平を正しくとるようにしましょう。</p>
 <p>　画角も調整しましょう。Field of Viewの値を40にします。</p>
-<div class="figure">
+<figure>
 <img src="img/035_2.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <p>　Gameビューが次のような絵になったら構図の調整は完了です。</p>
-<div class="figure">
+<figure>
 <img src="img/035.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <h3 id="ペンギンの生成">ペンギンの生成</h3>
-<p>　次にペンギンをランダムな位置に生成するスクリプトを作ります。ペンギンを生成するスクリプトはどこにアタッチするとよいでしょうか。これはわりと悩ましい問題です。Main Cameraにアタッチすることも多いですが、数が増えてくるとごちゃごちゃしてきます。複数カメラを配置するようなシーンのような場合、ちょっと見つけにくくなったりすることもあります。</p>
+<p>　次にペンギンをランダムな位置に生成するスクリプトを作ります。ペンギンを生成するスクリプトはどこにアタッチするとよいでしょうか。これはわりと悩ましい問題です。Main
+Cameraにアタッチすることも多いですが、数が増えてくるとごちゃごちゃしてきます。複数カメラを配置するようなシーンのような場合、ちょっと見つけにくくなったりすることもあります。</p>
 <p>　自分の場合、Gameという名前の空のオブジェクトをシーンにひとつ置いて、こういったゲームの環境を整えたり、ゲーム全体に関わる処理をするスクリプトを全部そこへアタッチするようにしています。</p>
-<div class="figure">
+<figure>
 <img src="img/036.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
-<p>　それでは、Gameオブジェクトを選択し、InspectorのAdd Component→New Scriptを選んで新規スクリプトを作成しましょう。スクリプト名はPenguinGeneratorとします。</p>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p>　それでは、Gameオブジェクトを選択し、InspectorのAdd Component→New
+Scriptを選んで新規スクリプトを作成しましょう。スクリプト名はPenguinGeneratorとします。</p>
 <p>PenguinGenerator.cs</p>
-<div class="sourceCode"><pre class="sourceCode cs"><code class="sourceCode cs"><span class="kw">using</span> UnityEngine;
-
-<span class="kw">public</span> <span class="kw">class</span> PenguinGenerator : MonoBehaviour {
-
-    <span class="kw">public</span> GameObject penguinPrefab;    <span class="co">// ペンギンのプレハブ</span>
-
-    <span class="dt">void</span> <span class="fu">Start</span> () {
-        <span class="co">// ゲーム開始時に10羽生成する</span>
-        <span class="kw">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; <span class="dv">10</span>; i++)
-        {
-            <span class="dt">float</span> x = Random.<span class="fu">Range</span>(-14f, 20f);      <span class="co">// 横方向の位置</span>
-            <span class="dt">float</span> y = <span class="dv">0</span>;    <span class="co">// 高さ方向の位置</span>
-            <span class="kw">if</span> (x &gt; <span class="dv">0</span>)      <span class="co">// ペンギンが画面右側のプールにいる場合少し位置を下げる</span>
-            {
-                y = -<span class="dv">1</span>;
-            }
-            <span class="dt">float</span> z = Random.<span class="fu">Range</span>(-10f, 2f);       <span class="co">// 奥行き方向の位置</span>
-            <span class="dt">float</span> angle = Random.<span class="fu">Range</span>(-45f, 45f);  <span class="co">// 体の向き</span>
-
-            <span class="co">// プレハブをもとにインスタンス化</span>
-            GameObject penguin = <span class="fu">Instantiate</span>(penguinPrefab, <span class="kw">new</span> <span class="fu">Vector3</span>(x, y, z), Quaternion.<span class="fu">identity</span>);
-
-            <span class="co">// ランダムな向きになるよう角度をつける</span>
-            penguin.<span class="fu">transform</span>.<span class="fu">eulerAngles</span> = <span class="kw">new</span> <span class="fu">Vector3</span>(<span class="dv">0</span>, angle, <span class="dv">0</span>);
-        }
-    }    
-}</code></pre></div>
-<p>　public変数でペンギンのプレハブをInspectorから設定できるようにしています。AssetsにあるPenguinプレハブをInspectorのPenguin Prefabにドラッグ&amp;ドロップしてください。</p>
-<p>　このスクリプトでは、for文のループを10回まわしてゲーム開始時にペンギンを10羽生成しています。 ペンギンの出現位置は変数xと変数zで指定していますが、これはRandom.Range関数を使って乱数を生成しているので毎回ランダムな位置に出現します。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> PenguinGenerator <span class="op">:</span> MonoBehaviour <span class="op">{</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> GameObject penguinPrefab<span class="op">;</span>    <span class="co">// ペンギンのプレハブ</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Start</span> <span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="co">// ゲーム開始時に10羽生成する</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="kw">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="dv">10</span><span class="op">;</span> i<span class="op">++)</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>            <span class="dt">float</span> x <span class="op">=</span> Random<span class="op">.</span><span class="fu">Range</span><span class="op">(-</span><span class="dv">14</span>f<span class="op">,</span> <span class="dv">20</span>f<span class="op">);</span>      <span class="co">// 横方向の位置</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>            <span class="dt">float</span> y <span class="op">=</span> <span class="dv">0</span><span class="op">;</span>    <span class="co">// 高さ方向の位置</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>            <span class="kw">if</span> <span class="op">(</span>x <span class="op">&gt;</span> <span class="dv">0</span><span class="op">)</span>      <span class="co">// ペンギンが画面右側のプールにいる場合少し位置を下げる</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>            <span class="op">{</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                y <span class="op">=</span> <span class="op">-</span><span class="dv">1</span><span class="op">;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>            <span class="dt">float</span> z <span class="op">=</span> Random<span class="op">.</span><span class="fu">Range</span><span class="op">(-</span><span class="dv">10</span>f<span class="op">,</span> <span class="dv">2</span>f<span class="op">);</span>       <span class="co">// 奥行き方向の位置</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>            <span class="dt">float</span> angle <span class="op">=</span> Random<span class="op">.</span><span class="fu">Range</span><span class="op">(-</span><span class="dv">45</span>f<span class="op">,</span> <span class="dv">45</span>f<span class="op">);</span>  <span class="co">// 体の向き</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>            <span class="co">// プレハブをもとにインスタンス化</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>            GameObject penguin <span class="op">=</span> <span class="fu">Instantiate</span><span class="op">(</span>penguinPrefab<span class="op">,</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span>x<span class="op">,</span> y<span class="op">,</span> z<span class="op">),</span> Quaternion<span class="op">.</span><span class="fu">identity</span><span class="op">);</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>            <span class="co">// ランダムな向きになるよう角度をつける</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>            penguin<span class="op">.</span><span class="fu">transform</span><span class="op">.</span><span class="fu">eulerAngles</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span><span class="dv">0</span><span class="op">,</span> angle<span class="op">,</span> <span class="dv">0</span><span class="op">);</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span>    </span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>　public変数でペンギンのプレハブをInspectorから設定できるようにしています。AssetsにあるPenguinプレハブをInspectorのPenguin
+Prefabにドラッグ&amp;ドロップしてください。</p>
+<p>　このスクリプトでは、for文のループを10回まわしてゲーム開始時にペンギンを10羽生成しています。
+ペンギンの出現位置は変数xと変数zで指定していますが、これはRandom.Range関数を使って乱数を生成しているので毎回ランダムな位置に出現します。</p>
 <p>　ここでちょっと型について解説します。C#言語では、数値の型によって書き方が異なります。10と書くとint、10.0はdouble、10fはfloatとなります。Unityでは、Position、Scale、Rotationなどの値はfloatで計算されるので、それらに設定する数字の後にはfをつけるのが正しい書き方です。通常はintの書き方で書いても自動的に変換されますが、doubleの書き方をするとエラーになります。スクリプト自体は一見正しいように見えるので注意してください。最初のうちはdoubleの型を使うことはほとんどないので、「小数点を含む数値には必ず末尾にfをつける」と覚えておきましょう。</p>
 <p>　Random.Range関数を使うときは型を意識する必要があります。なぜなら<code>Random.Range(intの数値, intの数値)</code>と書いたときと<code>Random.Range(floatの数値, floatの数値)</code>と書いたときでは挙動が異なるからです。たとえば<code>Random.Range(0, 5)</code>の場合、0、1、2、3、4のいずれかの整数が返ります。しかし<code>Random.Range(0f, 5f)</code>の場合、0.1fや2.71f、4.89f……といった無数にある実数の値がひとつ返ります。つまり、実数の乱数がほしい場合は、明示的に引数にfをつけて実数であることを示す必要があるということです。</p>
-<div class="sourceCode"><pre class="sourceCode cs"><code class="sourceCode cs"><span class="co">// プレハブをもとにインスタンス化</span>
-GameObject penguin = <span class="fu">Instantiate</span>(penguinPrefab, <span class="kw">new</span> <span class="fu">Vector3</span>(x, <span class="dv">0</span>, z), Quaternion.<span class="fu">identity</span>);</code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">// プレハブをもとにインスタンス化</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>GameObject penguin <span class="op">=</span> <span class="fu">Instantiate</span><span class="op">(</span>penguinPrefab<span class="op">,</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span>x<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> z<span class="op">),</span> Quaternion<span class="op">.</span><span class="fu">identity</span><span class="op">);</span></span></code></pre></div>
 <p>　ここでプレハブをもとにペンギンの実体を生成しています。プレハブはあくまでも設計図のようなもので、それをもとにシーンへ実体を生成することをインスタンス化と呼びます。ひとつの設計図から大量の製品を作り出すような様子をイメージしてください。</p>
 <p>　スタートボタンで実行すると次のようにペンギンが生成されます。乱数で生成しているので出現位置は毎回異なります。</p>
-<div class="figure">
+<figure>
 <img src="img/037.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <h3 id="ターゲットオブジェクトの配置">ターゲットオブジェクトの配置</h3>
-<p>　ペンギンが目で追いかける光を配置します。Hierarchyで何も選択されていないことを確認し、右クリックメニュー→Light→Point Lightで空のオブジェクトを作成し、名前を「Target」と変更します。</p>
+<p>　ペンギンが目で追いかける光を配置します。Hierarchyで何も選択されていないことを確認し、右クリックメニュー→Light→Point
+Lightで空のオブジェクトを作成し、名前を「Target」と変更します。</p>
 <p>　Inspectorからパラメータを設定。壁際ギリギリのところに配置します。<br />
 　Position： 0, 4, 4</p>
 <p>　小さく強い光にします。<br />
 　Range： 1<br />
 　Intensity： 3</p>
-<div class="figure">
+<figure>
 <img src="img/039.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <h2 id="ターゲットの方向を向く処理">ターゲットの方向を向く処理</h2>
 <p>　ペンギンにスクリプトを追加して光の方向を向くようにします。いったんmainシーンをセーブした後に、modelシーンを開いてください。</p>
-<p>　HIerarchyのペンギンモデルのHeadを選択してAdd Component→New Scriptとしてスクリプトを追加。名前はHeadRotatorとします。</p>
+<p>　HIerarchyのペンギンモデルのHeadを選択してAdd Component→New
+Scriptとしてスクリプトを追加。名前はHeadRotatorとします。</p>
 <p>HeadRotator.cs</p>
-<div class="sourceCode"><pre class="sourceCode cs"><code class="sourceCode cs"><span class="kw">using</span> UnityEngine;
-
-<span class="kw">public</span> <span class="kw">class</span> HeadRotator : MonoBehaviour {
-
-    GameObject target;
-
-    <span class="dt">void</span> <span class="fu">Start</span> () {
-        target = GameObject.<span class="fu">Find</span>(<span class="st">&quot;/Target&quot;</span>);        
-    }
-    
-    <span class="dt">void</span> <span class="fu">Update</span> () {
-        transform.<span class="fu">LookAt</span>(target.<span class="fu">transform</span>);
-    }
-}</code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> HeadRotator <span class="op">:</span> MonoBehaviour <span class="op">{</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    GameObject target<span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Start</span> <span class="op">()</span> <span class="op">{</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        target <span class="op">=</span> GameObject<span class="op">.</span><span class="fu">Find</span><span class="op">(</span><span class="st">&quot;/Target&quot;</span><span class="op">);</span>        </span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Update</span> <span class="op">()</span> <span class="op">{</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        transform<span class="op">.</span><span class="fu">LookAt</span><span class="op">(</span>target<span class="op">.</span><span class="fu">transform</span><span class="op">);</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p>　Start関数では、HierarchyのTargetというオブジェクトを探してtargetという変数に割り当てています。Update関数では毎フレームtargetの位置を取得してLookAt関数でその方向を向くようにしています。</p>
 <h3 id="プレハブの更新">プレハブの更新</h3>
 <p>　さて、シーン上のPenguinオブジェクトにスクリプトを追加しましたが、それだけではAssetsのPenguinプレハブにはまだ追加されておらず相違がある状態になっています。mainシーンで参照しているのはAssetsのプレハブの方ですので、こちらにも変更を反映する必要があります。</p>
-<p>　HierarchyのPenguinを選択し、Inspectorの右上３段目にあるOverridesメニューを開いてApply Allボタンを押します。これで変更がプレハブの方にも反映されてほかのシーンからも参照できます。</p>
-<div class="figure">
+<p>　HierarchyのPenguinを選択し、Inspectorの右上３段目にあるOverridesメニューを開いてApply
+Allボタンを押します。これで変更がプレハブの方にも反映されてほかのシーンからも参照できます。</p>
+<figure>
 <img src="img/040.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <p>　ここでmodelシーンをセーブしてmainシーンに戻ってください。</p>
 <p>　mainシーンでスタートボタンを押すと、出現したペンギンがそれぞれ光の方向を向いていたら成功です。今のところ光は動かないので、ペンギンも動かずに一点を見つめているだけです。</p>
 <h2 id="さまざまな動きのアルゴリズム">さまざまな動きのアルゴリズム</h2>
 <p>　最後にスクリプトを追加して光を動かします。何種類か異なるアルゴリズムのスクリプトを書いて動きの違いを見てみましょう。</p>
 <h3 id="シンプルな往復">シンプルな往復</h3>
-<p>　まずはシンプルな往復運動で実装してみます。HierarchyでTargetを選択してAdd Component→New Scriptでスクリプトを追加します。スクリプト名はLightMoverとします。</p>
+<p>　まずはシンプルな往復運動で実装してみます。HierarchyでTargetを選択してAdd
+Component→New
+Scriptでスクリプトを追加します。スクリプト名はLightMoverとします。</p>
 <p>LightMover.cs</p>
-<div class="sourceCode"><pre class="sourceCode cs"><code class="sourceCode cs"><span class="kw">using</span> UnityEngine;
-
-<span class="kw">public</span> <span class="kw">class</span> LightMover : MonoBehaviour
-{
-    <span class="dt">bool</span> flag = <span class="kw">true</span>;
-    <span class="dt">float</span> x = <span class="dv">0</span>;
-
-    <span class="dt">void</span> <span class="fu">Update</span>()
-    {
-        <span class="kw">if</span> (flag)
-            x += Time.<span class="fu">deltaTime</span> * <span class="dv">30</span>;
-        <span class="kw">else</span>
-            x -= Time.<span class="fu">deltaTime</span> * <span class="dv">30</span>;
-
-        <span class="kw">if</span> (Mathf.<span class="fu">Abs</span>(x) &gt; <span class="dv">12</span>)
-            flag = !flag;
-
-        transform.<span class="fu">position</span> = <span class="kw">new</span> <span class="fu">Vector3</span>(
-            x,
-            transform.<span class="fu">position</span>.<span class="fu">y</span>,
-            transform.<span class="fu">position</span>.<span class="fu">z</span>
-        );
-    }
-}</code></pre></div>
-<p>　このスクリプトでは、flagで移動方向を制御しています。flagがtrueのときは右へ移動、falseのときは左へ移動します。移動速度はTime.deltatime * 30、位置xの絶対値をとって位置が12以上あるいは-12以下となったらflagを反転させて移動方向を逆向きにしています。</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> LightMover <span class="op">:</span> MonoBehaviour</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">bool</span> flag <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> x <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Update</span><span class="op">()</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        <span class="kw">if</span> <span class="op">(</span>flag<span class="op">)</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>            x <span class="op">+=</span> Time<span class="op">.</span><span class="fu">deltaTime</span> <span class="op">*</span> <span class="dv">30</span><span class="op">;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        <span class="kw">else</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>            x <span class="op">-=</span> Time<span class="op">.</span><span class="fu">deltaTime</span> <span class="op">*</span> <span class="dv">30</span><span class="op">;</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>        <span class="kw">if</span> <span class="op">(</span>Mathf<span class="op">.</span><span class="fu">Abs</span><span class="op">(</span>x<span class="op">)</span> <span class="op">&gt;</span> <span class="dv">12</span><span class="op">)</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>            flag <span class="op">=</span> <span class="op">!</span>flag<span class="op">;</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>        transform<span class="op">.</span><span class="fu">position</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>            x<span class="op">,</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>            transform<span class="op">.</span><span class="fu">position</span><span class="op">.</span><span class="fu">y</span><span class="op">,</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>            transform<span class="op">.</span><span class="fu">position</span><span class="op">.</span><span class="fu">z</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>        <span class="op">);</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>　このスクリプトでは、flagで移動方向を制御しています。flagがtrueのときは右へ移動、falseのときは左へ移動します。移動速度はTime.deltatime
+*
+30、位置xの絶対値をとって位置が12以上あるいは-12以下となったらflagを反転させて移動方向を逆向きにしています。</p>
 <p>　往復運動は一応できましたが、移動方向の変化が急激すぎてペンギンが首を痛めそうです。</p>
 <h3 id="スムーズな往復">スムーズな往復</h3>
 <p>　次はペンギンの首の健康に考慮して、スムーズな速度変化の往復運動を考えてみます。こういった現実の物体のようななめらかな動きにすることをイージングと呼び、さまざまな手法が考案されています。今回はシンプルな三角関数で実装することにします。LightMover.csを次のように書き換えて実行してみてください。</p>
 <p>LightMover.cs</p>
-<div class="sourceCode"><pre class="sourceCode cs"><code class="sourceCode cs"><span class="kw">using</span> UnityEngine;
-
-<span class="kw">public</span> <span class="kw">class</span> LightMover : MonoBehaviour {
-
-    <span class="dt">float</span> angle = <span class="dv">0</span>;
-        
-    <span class="dt">void</span> <span class="fu">Update</span> () {
-        angle += Time.<span class="fu">deltaTime</span> * <span class="dv">2</span>;
-
-        transform.<span class="fu">position</span> = <span class="kw">new</span> <span class="fu">Vector3</span>(
-            Mathf.<span class="fu">Sin</span>(angle) * <span class="dv">12</span>,
-            transform.<span class="fu">position</span>.<span class="fu">y</span>,
-            transform.<span class="fu">position</span>.<span class="fu">z</span>
-        );
-    }
-}</code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> LightMover <span class="op">:</span> MonoBehaviour <span class="op">{</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> angle <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Update</span> <span class="op">()</span> <span class="op">{</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        angle <span class="op">+=</span> Time<span class="op">.</span><span class="fu">deltaTime</span> <span class="op">*</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        transform<span class="op">.</span><span class="fu">position</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>            Mathf<span class="op">.</span><span class="fu">Sin</span><span class="op">(</span>angle<span class="op">)</span> <span class="op">*</span> <span class="dv">12</span><span class="op">,</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>            transform<span class="op">.</span><span class="fu">position</span><span class="op">.</span><span class="fu">y</span><span class="op">,</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>            transform<span class="op">.</span><span class="fu">position</span><span class="op">.</span><span class="fu">z</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>        <span class="op">);</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p>　Sin関数を使うと回転運動を真横から見た動きになります。つまり動き自体は往復ですが、往復の端に近付くほど速度が遅くなるためスムーズな動きになりました。</p>
 <h3 id="楕円形の移動">楕円形の移動</h3>
 <p>　Sin関数の横方向の往復に加えて、同じタイミングで縦方向の動きも加えると楕円形の運動になります。</p>
 <p>LightMover.cs</p>
-<div class="sourceCode"><pre class="sourceCode cs"><code class="sourceCode cs"><span class="kw">using</span> UnityEngine;
-
-<span class="kw">public</span> <span class="kw">class</span> LightMover : MonoBehaviour
-{
-
-    <span class="dt">float</span> angle = <span class="dv">0</span>;
-
-    <span class="dt">void</span> <span class="fu">Update</span>()
-    {
-        angle += Time.<span class="fu">deltaTime</span> * <span class="dv">2</span>;
-
-        transform.<span class="fu">position</span> = <span class="kw">new</span> <span class="fu">Vector3</span>(
-            Mathf.<span class="fu">Sin</span>(angle) * <span class="dv">12</span>,
-            Mathf.<span class="fu">Cos</span>(angle) * <span class="dv">2</span> + <span class="dv">4</span>,
-            transform.<span class="fu">position</span>.<span class="fu">z</span>
-        );
-    }
-}</code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> LightMover <span class="op">:</span> MonoBehaviour</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> angle <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Update</span><span class="op">()</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        angle <span class="op">+=</span> Time<span class="op">.</span><span class="fu">deltaTime</span> <span class="op">*</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>        transform<span class="op">.</span><span class="fu">position</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>            Mathf<span class="op">.</span><span class="fu">Sin</span><span class="op">(</span>angle<span class="op">)</span> <span class="op">*</span> <span class="dv">12</span><span class="op">,</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>            Mathf<span class="op">.</span><span class="fu">Cos</span><span class="op">(</span>angle<span class="op">)</span> <span class="op">*</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">4</span><span class="op">,</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>            transform<span class="op">.</span><span class="fu">position</span><span class="op">.</span><span class="fu">z</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>        <span class="op">);</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p>　x方向はSin関数を使いy方向はCos関数を使うことで、xがゼロのときはyが最大、xが最大のときはyがゼロになる動きをします。つまりこれは円の運動です。x方向の移動距離を最大12、y方向の移動距離を最大2とすることで楕円にしています。y方向は往復の中心位置を4の高さにして壁の少し上の方で回転するようにしました。</p>
 <h3 id="の字の移動">８の字の移動</h3>
 <p>　前項のスクリプトを少し変えるだけで８の字の移動になります。</p>
 <p>LightMover.cs</p>
-<div class="sourceCode"><pre class="sourceCode cs"><code class="sourceCode cs"><span class="kw">using</span> UnityEngine;
-
-<span class="kw">public</span> <span class="kw">class</span> LightMover : MonoBehaviour
-{
-
-    <span class="dt">float</span> angle = <span class="dv">0</span>;
-
-    <span class="dt">void</span> <span class="fu">Update</span>()
-    {
-        angle += Time.<span class="fu">deltaTime</span> * <span class="dv">2</span>;
-
-        transform.<span class="fu">position</span> = <span class="kw">new</span> <span class="fu">Vector3</span>(
-            Mathf.<span class="fu">Sin</span>(angle) * <span class="dv">12</span>,
-            Mathf.<span class="fu">Sin</span>(angle * <span class="dv">2</span>) * <span class="dv">2</span> + <span class="dv">4</span>,
-            transform.<span class="fu">position</span>.<span class="fu">z</span>
-        );
-    }
-}</code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> LightMover <span class="op">:</span> MonoBehaviour</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> angle <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Update</span><span class="op">()</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>        angle <span class="op">+=</span> Time<span class="op">.</span><span class="fu">deltaTime</span> <span class="op">*</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>        transform<span class="op">.</span><span class="fu">position</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>            Mathf<span class="op">.</span><span class="fu">Sin</span><span class="op">(</span>angle<span class="op">)</span> <span class="op">*</span> <span class="dv">12</span><span class="op">,</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>            Mathf<span class="op">.</span><span class="fu">Sin</span><span class="op">(</span>angle <span class="op">*</span> <span class="dv">2</span><span class="op">)</span> <span class="op">*</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">4</span><span class="op">,</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>            transform<span class="op">.</span><span class="fu">position</span><span class="op">.</span><span class="fu">z</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        <span class="op">);</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p>　違いは<code>Cos(angle)</code>を<code>Sin(angle * 2)</code>にしただけです。y方向の往復を、x方向の往復の２倍のタイミングでおこなうことにより、８の字の動きをするようになりました。angleにかける値や、Sin、Cosどちらを使うかによってこれ以外にも複雑な動きをさせることができます。ぜひ試してみてください。</p>
 <p>　これでチュートリアル「Penguin」は終了です。短いプログラムでも工夫次第でゲーム的なおもしろい動きを演出できることが実感できたでしょうか。</p>
-<div class="figure">
+<figure>
 <img src="img/038.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
-<p><a href="4_trenchfighter.html">チュートリアル３「TrenchFighter」へ進む</a></p>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
+<p><a
+href="4_trenchfighter.html">チュートリアル３「TrenchFighter」へ進む</a></p>
 </body>
 </html>

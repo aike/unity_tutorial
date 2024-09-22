@@ -1,20 +1,37 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
-  <title></title>
-  <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="../styles/website.css" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>1_general</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../styles/website.css" />
 </head>
 <body>
 <h1 id="はじめに">はじめに</h1>
 <h2 id="このチュートリアルの目的">このチュートリアルの目的</h2>
 <p>　本テキストは、デザイナー、アーティスト、研究者といった非プログラマーの人が無理なくUnityの基本を身につけられるように作成しました。一般的なUnityのチュートリアルは簡単なゲームを1本作りきるスタイルが多いですが、非プログラマーが最初に触れるテキストとしては覚える内容とコーディング量が多くなってしまいます。</p>
-<p>　このチュートリアルでは全機能を網羅的に学ぶのではなく、まずは簡単な物体の動かし方と見た目の演出方法を学習し、動く絵（シーン）を比較的自由に作れるようになることを目指しました。プログラムは20～40行程度として、C#プログラミングの深い知識がなくても理解できる内容にしています。また、Unity内だけで完結するように、別のツールで作成したモデルを極力使用せずUnityで生成できる基本オブジェクトやAsset Storeの無料素材を利用するようにしています。</p>
+<p>　このチュートリアルでは全機能を網羅的に学ぶのではなく、まずは簡単な物体の動かし方と見た目の演出方法を学習し、動く絵（シーン）を比較的自由に作れるようになることを目指しました。プログラムは20～40行程度として、C#プログラミングの深い知識がなくても理解できる内容にしています。また、Unity内だけで完結するように、別のツールで作成したモデルを極力使用せずUnityで生成できる基本オブジェクトやAsset
+Storeの無料素材を利用するようにしています。</p>
 <p>　3つのチュートリアルはそれぞれ独立していますが、前のチュートリアルで解説した知識が前提になっているので順番におこなうことをお勧めします。</p>
-<h3 id="チュートリアルplanet">チュートリアル１　Planet</h3>
+<h3 id="チュートリアル１-planet">チュートリアル１　Planet</h3>
 <ul>
 <li>物体の移動と回転</li>
 <li>基本的なマテリアルとテクスチャ</li>
@@ -22,18 +39,21 @@
 <li>アセットストアとの付き合い方</li>
 <li>ポストプロセッシングで絵作りその１</li>
 </ul>
-<p><a href="https://www.youtube.com/watch?v=MLqGxgJo3tg"><img src="img/yt1.png" alt="screenshot" /></a><br />
+<p><a href="https://www.youtube.com/watch?v=MLqGxgJo3tg"><img
+src="img/yt1.png" alt="screenshot" /></a><br />
 https://www.youtube.com/watch?v=MLqGxgJo3tg</p>
-<h3 id="チュートリアルpenguin">チュートリアル２　Penguin</h3>
+<h3 id="チュートリアル２-penguin">チュートリアル２　Penguin</h3>
 <ul>
 <li>Unityだけで簡易的なモデルの作成</li>
 <li>水の表現</li>
 <li>ターゲットの方向を向く処理</li>
 <li>さまざまな動きのアルゴリズム</li>
 </ul>
-<p><a href="https://www.youtube.com/watch?v=AcOAPCGrMmQ"><img src="img/yt2.png" alt="screenshot" /></a><br />
+<p><a href="https://www.youtube.com/watch?v=AcOAPCGrMmQ"><img
+src="img/yt2.png" alt="screenshot" /></a><br />
 https://www.youtube.com/watch?v=AcOAPCGrMmQ</p>
-<h3 id="チュートリアルtrenchfighter">チュートリアル３　TrenchFighter</h3>
+<h3
+id="チュートリアル３-trenchfighter">チュートリアル３　TrenchFighter</h3>
 <ul>
 <li>プロシージャルなステージ生成</li>
 <li>簡単なサウンドの使い方</li>
@@ -41,7 +61,8 @@ https://www.youtube.com/watch?v=AcOAPCGrMmQ</p>
 <li>入力の処理</li>
 <li>ポストプロセッシングで絵作りその２</li>
 </ul>
-<p><a href="https://www.youtube.com/watch?v=0RFQhiBr58c"><img src="img/yt3.png" alt="screenshot" /></a><br />
+<p><a href="https://www.youtube.com/watch?v=0RFQhiBr58c"><img
+src="img/yt3.png" alt="screenshot" /></a><br />
 https://www.youtube.com/watch?v=0RFQhiBr58c</p>
 <h2 id="ここでは学ばないこと">ここでは学ばないこと</h2>
 <p>　本テキストでは、次の項目には触れていません。チュートリアルを終えてUnityの概要を理解したのちに、自分に必要な項目を選択的に学ぶことをお勧めします。</p>
@@ -81,46 +102,60 @@ https://www.youtube.com/watch?v=0RFQhiBr58c</p>
 <li>ホイールボタンドラッグ</li>
 <li>手のひらアイコンを選択して左ボタンドラッグ</li>
 </ul>
-<div class="figure">
+<figure>
 <img src="img/hand.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <p>　また、Hierarchyでオブジェクトをダブルクリックするとそのオブジェクトが画面の中心にきてズームされるので、Sceneビュー上でオブジェクトを見つけられないときなどに便利です。</p>
 <h4 id="オブジェクトの移動">オブジェクトの移動</h4>
 <ul>
 <li>十字矢印アイコンを選択、フォーカス中のオブジェクトが左ボタンドラッグで移動可能になる</li>
 </ul>
-<div class="figure">
+<figure>
 <img src="img/move.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <p>　移動はInspectorのTransform　Positionでも可能です。数値指定で正確な位置に移動させる場合はこちらを使用します。</p>
 <h4 id="レイアウト">レイアウト</h4>
-<p>　Unityの画面レイアウトは熟練者でも好みが分かれる点で、Defaultか2 by 3を使う人が多いようです。このチュートリアルではシーンビューとゲームビューが同時に表示されて状況が確認しやすいため2 by 3レイアウトで説明します。</p>
+<p>　Unityの画面レイアウトは熟練者でも好みが分かれる点で、Defaultか2 by
+3を使う人が多いようです。このチュートリアルではシーンビューとゲームビューが同時に表示されて状況が確認しやすいため2
+by 3レイアウトで説明します。</p>
 <p>Defaultレイアウト<br />
 <img src="img/layout1.png" alt="screenshot" /></p>
 <p>2 by 3レイアウト<br />
 <img src="img/layout2.png" alt="screenshot" /></p>
 <p>　レイアウトは、Window→Layoutsメニューからいつでも変更できます。</p>
-<div class="figure">
+<figure>
 <img src="img/layoutmenu.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <h2 id="開発言語">開発言語</h2>
 <p>　UnityではC#言語を使って開発します。もともとJavaScriptやBooといったほかの言語も使えましたが、バージョンアップにつれてC#に統一されました。</p>
 <p>　C#は、Unityのように多くのソースファイルを行き来する場合でも型が明確で理解しやすい言語です。一方でC++のような職人的なメモリ管理を自前ですることなく扱えるため、初心者にもやさしい言語になっています。</p>
 <h2 id="テキストエディタ">テキストエディタ</h2>
-<p>　テキストエディタは<a href="https://www.microsoft.com/ja-jp/dev/default.aspx">Visual Studio Community（個人向け無償）</a>を推奨します。</p>
-<p>　ゲーム開発では、多くのAPIやオブジェクトを利用するので、インテリセンスの入力支援機能が効率的な開発には必須になります。オールインワンのIDEよりもテキストエディタの軽さを重視する人にはVisual Studio Code( https://code.visualstudio.com/ )も人気があります。この場合、C#プラグイン、Debugger for Unityプラグインを導入してください。有償も含めるとRider( https://www.jetbrains.com )などもよいという話は聞きます。いずれにしても単なるエディタではなく、API名の入力補完やクラス構造の探索機能が充実しているものを使用するようにしてください。</p>
-<p>注　Visual Studio for Macは、以前は「_」（アンダースコア）が入力できなかったり、最新版でも日本語入力が若干見づらいという欠点があるようです。ただ、それを差し引いてもVisual Studio for Macを使うようにしてください。</p>
-<p>　UnityからVisual Studio for Macを起動できるように、次の手順で外部ツールを登録します。</p>
+<p>　テキストエディタは<a
+href="https://www.microsoft.com/ja-jp/dev/default.aspx">Visual Studio
+Community（個人向け無償）</a>を推奨します。</p>
+<p>　ゲーム開発では、多くのAPIやオブジェクトを利用するので、インテリセンスの入力支援機能が効率的な開発には必須になります。オールインワンのIDEよりもテキストエディタの軽さを重視する人にはVisual
+Studio Code( https://code.visualstudio.com/
+)も人気があります。この場合、C#プラグイン、Debugger for
+Unityプラグインを導入してください。有償も含めるとRider(
+https://www.jetbrains.com
+)などもよいという話は聞きます。いずれにしても単なるエディタではなく、API名の入力補完やクラス構造の探索機能が充実しているものを使用するようにしてください。</p>
+<p>注　Visual Studio for
+Macは、以前は「_」（アンダースコア）が入力できなかったり、最新版でも日本語入力が若干見づらいという欠点があるようです。ただ、それを差し引いてもVisual
+Studio for Macを使うようにしてください。</p>
+<p>　UnityからVisual Studio for
+Macを起動できるように、次の手順で外部ツールを登録します。</p>
 <ul>
-<li>Editメニュー（MacはUnityメニュー）→Preference→External Tools→External Script Editorで「Visual Studio」を選択。使用したいエディタが表示されない場合は「Browse...」から実行ファイルを選択してください。</li>
+<li>Editメニュー（MacはUnityメニュー）→Preference→External
+Tools→External Script Editorで「Visual
+Studio」を選択。使用したいエディタが表示されない場合は「Browse…」から実行ファイルを選択してください。</li>
 </ul>
-<div class="figure">
+<figure>
 <img src="img/059.png" alt="screenshot" />
-<p class="caption">screenshot</p>
-</div>
+<figcaption aria-hidden="true">screenshot</figcaption>
+</figure>
 <p><a href="2_planet.html">チュートリアル１「Planet」へ進む</a></p>
 </body>
 </html>
