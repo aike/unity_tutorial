@@ -1,95 +1,52 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>2_planet</title>
-  <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      {   }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-    code span.at { color: #7d9029; } /* Attribute */
-    code span.bn { color: #40a070; } /* BaseN */
-    code span.bu { color: #008000; } /* BuiltIn */
-    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #4070a0; } /* Char */
-    code span.cn { color: #880000; } /* Constant */
-    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-    code span.dt { color: #902000; } /* DataType */
-    code span.dv { color: #40a070; } /* DecVal */
-    code span.er { color: #ff0000; font-weight: bold; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #40a070; } /* Float */
-    code span.fu { color: #06287e; } /* Function */
-    code span.im { color: #008000; font-weight: bold; } /* Import */
-    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-    code span.op { color: #666666; } /* Operator */
-    code span.ot { color: #007020; } /* Other */
-    code span.pp { color: #bc7a00; } /* Preprocessor */
-    code span.sc { color: #4070a0; } /* SpecialChar */
-    code span.ss { color: #bb6688; } /* SpecialString */
-    code span.st { color: #4070a0; } /* String */
-    code span.va { color: #19177c; } /* Variable */
-    code span.vs { color: #4070a0; } /* VerbatimString */
-    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
   </style>
-  <link rel="stylesheet" href="../styles/website.css" />
+  <link rel="stylesheet" href="../styles/website.css" type="text/css" />
 </head>
 <body>
-<h1 id="チュートリアル１planet">チュートリアル１「Planet」</h1>
+<h1 id="チュートリアルplanet">チュートリアル１「Planet」</h1>
 <h2 id="このチュートリアルについて">このチュートリアルについて</h2>
 <p>　最初のチュートリアルです。球形のモデルだけを使用して宇宙空間の表現を学んでいきます。</p>
 <ul>
@@ -99,42 +56,37 @@
 <li>アセットストアとの付き合い方</li>
 <li>ポストプロセッシングで絵作りその１</li>
 </ul>
-<p><a href="https://www.youtube.com/watch?v=MLqGxgJo3tg"><img
-src="img/yt1.png" alt="screenshot" /></a><br />
+<p><a href="https://www.youtube.com/watch?v=MLqGxgJo3tg"><img src="img/yt1.png" /></a><br />
 https://www.youtube.com/watch?v=MLqGxgJo3tg</p>
 <h2 id="オブジェクトの基本操作">オブジェクトの基本操作</h2>
-<p>　「Planet」の名前で新規プロジェクトを作ってください。テンプレートは3D
-(Built-In Render Pipeline)を選択します。</p>
-<p>　プロジェクト作成直後はサンプルシーンが開いている状態ですので、File→New
-Scene→Basic (Built-in)を選んであらたなシーンを作ります。</p>
-<p>　まず、シーンに球体（Sphere）を生成します。Hierarchyで何も選択されていないことを確認します（重要）。Hierarchyウィンドウの空き領域を右クリック（トラックパッドでは二本指クリック）してコンテキストメニューから3D
-Object→Sphereを選びます。（GameObjectメニューやツールバーのCreateからも生成できますがコンテキストメニューからが早くて楽です）</p>
-<figure>
-<img src="img/002.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
+<p>　「Planet」の名前で新規プロジェクトを作ってください。テンプレートは3D (Built-In Render Pipeline)を選択します。</p>
+<p>　プロジェクト作成直後はサンプルシーンが開いている状態ですので、File→New Scene→Basic (Built-in)を選んであらたなシーンを作ります。</p>
+<p>　まず、シーンに球体（Sphere）を生成します。Hierarchyで何も選択されていないことを確認します（重要）。Hierarchyウィンドウの空き領域を右クリック（トラックパッドでは二本指クリック）してコンテキストメニューから3D Object→Sphereを選びます。（GameObjectメニューやツールバーのCreateからも生成できますがコンテキストメニューからが早くて楽です）</p>
+<div class="figure">
+<img src="img/002.png" />
+
+</div>
 <p>　生成したSphereをHierarchyで選択して、InspectorのPositionを<code>0,0,0</code>、Scaleを<code>3,3,3</code>に変更します。これで座標<code>(0,0,0)</code>に直径3の球体が作成できました。</p>
-<figure>
-<img src="img/003.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
+<div class="figure">
+<img src="img/003.png" />
+
+</div>
 <p>　同じようにもうひとつ球体を生成します。今度はPositionを<code>10,0,0</code>、Scaleを<code>1,1,1</code>にします。これで地球と月の原型ができました。わかりやすいようにそれぞれEarth、Moonと名前を変更しておきましょう。名前の変更は、Hierarchyでオブジェクトが選択されている状態でもう１回クリックするか、Inspectorの一番上の文字列を変更します。</p>
-<figure>
-<img src="img/004.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
-<p>　ここまで終わったら、File→Save
-As…でいったんシーンをセーブしておきましょう。名前はなんでもよいですが、お勧めは「main」です。Scenesというシーン保存用フォルダが用意されているのでその中に保存するとわかりやすいでしょう。Unityはセーブの概念がシーン単位のため慣れないうちは注意が必要です。Hierarchy上の変更は原則としてセーブしないと失われるのでこまめにセーブするようにしましょう。</p>
+<div class="figure">
+<img src="img/004.png" />
+
+</div>
+<p>　ここまで終わったら、File→Save As...でいったんシーンをセーブしておきましょう。名前はなんでもよいですが、お勧めは「main」です。Scenesというシーン保存用フォルダが用意されているのでその中に保存するとわかりやすいでしょう。Unityはセーブの概念がシーン単位のため慣れないうちは注意が必要です。Hierarchy上の変更は原則としてセーブしないと失われるのでこまめにセーブするようにしましょう。</p>
 <h2 id="マテリアルの作成">マテリアルの作成</h2>
 <p>　このままではまだ色が月や地球に見えないのでマテリアルを新規作成して設定します。</p>
 <p>　ProjectウィンドウでAssetsを選択し、次にAssetsペインで右クリックメニュー→Create→Materialを選択します。マテリアル名は「matMoon」としておきます。Unityは拡張子が表示されないので、接頭子として種別をつけておくと便利です。</p>
-<figure>
-<img src="img/005.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
+<div class="figure">
+<img src="img/005.png" />
+
+</div>
 <p>　matMoonを選択してInspectorでマテリアルの設定をしていきます。たくさんパラメータがありますが、最初はAlbedoで色またはテクスチャを指定、MetallicとSmoothnessで質感を指定、必要であればEmissionで光らせる、くらい覚えておけば十分です。</p>
 <p>matMoon</p>
-<p>　Albedo： R:233, G:230, B:160, A:255<br />
+<p>　Albedo： R:233 G:230 B:160 A:255<br />
 　Metallic：0.36<br />
 　Smoothness：0</p>
 <p>にします。</p>
@@ -142,21 +94,21 @@ As…でいったんシーンをセーブしておきましょう。名前はな
 <p>注　マテリアルをInspectorで変更した場合、例外的にセーブ操作をしなくても変更が永続的に残ります。シーンを保存せずに破棄してもマテリアルの変更は破棄されないので注意してください。</p>
 <h2 id="テクスチャの作成">テクスチャの作成</h2>
 <p>　次に地球にテクスチャを適用して陸地を作ってみましょう。サイズは512×512など縦横同じ2のn乗ピクセルにしたpngファイル、こんな雑な感じで大丈夫です。本テキストをWebで見ている場合、この画像を右クリックして保存すればそのままテクスチャ用画像として使用できます。</p>
-<figure>
-<img src="img/earth.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
+<div class="figure">
+<img src="img/earth.png" />
+
+</div>
 <p>　pngファイルをProjectウィンドウのAssetsペインにドラッグ&amp;ドロップしたらアセットとして取り込まれます。</p>
 <p>　テクスチャはそのままではモデルに貼れず、いったんマテリアルにする必要があります。あらたにmatEarthマテリアルを作成し、Albedoの左側の正方形にドラッグ&amp;ドロップするか、その隣の小さな円をクリックしてテクスチャ画像を選択します。</p>
 <p>matEarth</p>
-<p>　Albedo： 地球テクスチャを選択　R:255, G:255, B:255, A:255<br />
+<p>　Albedo： 地球テクスチャを選択　R:255 G:255 B:255 A:255<br />
 　Metallic：0.285<br />
 　Smoothness：0.47</p>
 <p>　マテリアルをHierarchyのEarthの上にドラッグ&amp;ドロップすると適用されます。</p>
-<figure>
-<img src="img/006.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
+<div class="figure">
+<img src="img/006.png" />
+
+</div>
 <h2 id="カメラと光の演出">カメラと光の演出</h2>
 <p>　Unityで光を表現するためには次の設定をする必要があります。</p>
 <ul>
@@ -171,404 +123,337 @@ As…でいったんシーンをセーブしておきましょう。名前はな
 <li>Bloom　発光物近辺の空気への影響</li>
 </ul>
 <p>　これらの各種光の設定が、それぞれ別の画面にあるところがUnityのわかりにくところでもあります。一度慣れてしまえば効率よく作業できるので、頑張って操作を覚えましょう。</p>
-<h3 id="directional-light-降り注ぐ光">Directional Light　降り注ぐ光</h3>
-<p>　Directional
-Lightはデフォルトで配置されています。通常はInspectorでRotation、Color、Intensityを調整するくらいです。今回はあとで太陽と差し替えるということもあり、そのままにしておきます。</p>
-<h3 id="environment-light-環境光">Environment Light　環境光</h3>
+<h3 id="directional-light降り注ぐ光">Directional Light　降り注ぐ光</h3>
+<p>　Directional Lightはデフォルトで配置されています。通常はInspectorでRotation、Color、Intensityを調整するくらいです。今回はあとで太陽と差し替えるということもあり、そのままにしておきます。</p>
+<h3 id="environment-light環境光">Environment Light　環境光</h3>
 <p>　今回は舞台が宇宙であり、光のあたらないところは真っ暗にしたいので環境光を暗くします。</p>
 <p>　Windowメニュー→Rendering→Lightingでダイアログを開きます。</p>
 <p>　上段のボタンで「Environment」が選択されていなければ選択してください。</p>
-<p>　Environment Lightingで、SourceをColor、Ambient
-ColorをR:0,B:0,G:0に設定します。</p>
-<figure>
-<img src="img/009.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
+<p>　Environment Lightingで、SourceをColor、Ambient ColorをR:0 G:0 B:0に設定します。</p>
+<div class="figure">
+<img src="img/009.png" />
+
+</div>
 <h3 id="skybox">Skybox</h3>
-<p>　Skyboxの設定はカメラのInspectorにあります。Main
-Cameraを選択してInspectorで、Clear FlagsをSolid
-Color、BackgroundをR:0,G:0,B:0に設定します。</p>
-<p>　ついでに、そのままだと月がちょっと見づらい位置にあるので、Main
-CameraのPositionを5,1,-10に変更します。</p>
+<p>　Skyboxの設定はカメラのInspectorにあります。Main Cameraを選択してInspectorで、Clear FlagsをSolid Color、BackgroundをR:0 G:0 B:0に設定します。</p>
+<p>　ついでに、そのままだと月がちょっと見づらい位置にあるので、Main CameraのPositionを5,1,-10に変更します。</p>
 <p>　Sceneビューはそのままですが、Gameビューの背景色が変わります。</p>
-<figure>
-<img src="img/010.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
-<figure>
-<img src="img/011.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
+<div class="figure">
+<img src="img/010.png" />
+
+</div>
+<div class="figure">
+<img src="img/011.png" />
+
+</div>
 <h2 id="オブジェクトの回転">オブジェクトの回転</h2>
 <h3 id="自転">自転</h3>
 <p>　次に、スクリプトを書いて地球を自転させましょう。</p>
-<p>　HierarchyでEarthを選択してInspectorの最下段のAdd
-Componentボタンを押します。New
-Scriptを選択してスクリプトを生成します。スクリプト名は任意ですが、ここでは「Spinner」としておきます。</p>
+<p>　HierarchyでEarthを選択してInspectorの最下段のAdd Componentボタンを押します。New Scriptを選択してスクリプトを生成します。スクリプト名は任意ですが、ここでは「Spinner」としておきます。</p>
 <p>Spinner.cs</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Spinner <span class="op">:</span> MonoBehaviour <span class="op">{</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> angle <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Start</span> <span class="op">()</span> <span class="op">{</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Update</span> <span class="op">()</span> <span class="op">{</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        angle <span class="op">=</span> Time<span class="op">.</span><span class="fu">deltaTime</span> <span class="op">*</span> <span class="dv">360</span><span class="op">;</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        transform<span class="op">.</span><span class="fu">Rotate</span><span class="op">(</span>Vector3<span class="op">.</span><span class="fu">up</span><span class="op">,</span> <span class="op">-</span>angle<span class="op">);</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cs"><code class="sourceCode cs"><span class="kw">using</span> UnityEngine;
+
+<span class="kw">public</span> <span class="kw">class</span> Spinner : MonoBehaviour {
+
+    <span class="dt">float</span> angle = <span class="dv">0</span>;
+
+    <span class="dt">void</span> <span class="fu">Start</span> () {
+        
+    }
+    
+    <span class="dt">void</span> <span class="fu">Update</span> () {
+        angle = Time.<span class="fu">deltaTime</span> * <span class="dv">360</span>;
+        transform.<span class="fu">Rotate</span>(Vector3.<span class="fu">up</span>, -angle);
+    }
+}</code></pre></div>
 <p>　Update関数で毎フレーム角度を計算して、このスクリプトがアタッチされたオブジェクトを回転します。</p>
 <pre><code>angle = Time.deltaTime * 360;</code></pre>
-<p>で角度を計算しています。Unityで移動や回転のスクリプトを書くときは、必ずTime.deltaTimeを使って速度を決めるようにしてください。これは1フレーム分の時間が格納されている変数で、たとえば30fpsの場合は、1÷30
-=
-0.03333……というような値が入っています。この値を毎回使うことで、CPUの遅いマシンや、重い処理でフレームレートが十分出ないときでも一定の速度で動かすことができます。逆にこの値を使わないと、高速なPCで実行したときに速すぎてゲームにならないこともあります。</p>
+<p>で角度を計算しています。Unityで移動や回転のスクリプトを書くときは、必ずTime.deltaTimeを使って速度を決めるようにしてください。これは1フレーム分の時間が格納されている変数で、たとえば30fpsの場合は、1÷30 = 0.03333……というような値が入っています。この値を毎回使うことで、CPUの遅いマシンや、重い処理でフレームレートが十分出ないときでも一定の速度で動かすことができます。逆にこの値を使わないと、高速なPCで実行したときに速すぎてゲームにならないこともあります。</p>
 <p>　ここでは、Time.deltaTimeに360（度）をかけているので、1秒あたり1回転することになります。つまり現実の1秒がこの宇宙での1日を表しています。</p>
 <p>　Rotate関数のVector3.upは真上に向いたベクトルで、回転運動の軸がy軸であることを指定しています。<code>new Vector3(0,1,0)</code>と書いても同じです。</p>
 <p>　-angleのようにマイナス符号をつけると反時計方向の回転となります。</p>
 <h3 id="実行確認">実行確認</h3>
 <p>　ここでスタートボタンを押して実行してみましょう。地球が1秒間に1回まわっていれば成功です。</p>
-<p>　実行にあたりお勧めの機能があります。Gameビューの再生モードをPlay
-Maxmizedにしておくと実行したときUnityエディタのサイズいっぱいに表示するので見やすくなります。もう一度クリックするとGameビューのサイズのまま実行するため、今度は動いている最中のHierarchyの状態を確認しやすくなります。実行中にサイズを変えたいときは、右上にある小さな点が縦に並んだようなメニューアイコンをクリックしてMaximizeを選択します。</p>
-<figure>
-<img src="img/007.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
-<figure>
-<img src="img/008.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
+<p>　実行にあたりお勧めの機能があります。Gameビューの再生モードをPlay Maxmizedにしておくと実行したときUnityエディタのサイズいっぱいに表示するので見やすくなります。もう一度クリックするとGameビューのサイズのまま実行するため、今度は動いている最中のHierarchyの状態を確認しやすくなります。実行中にサイズを変えたいときは、右上にある小さな点が縦に並んだようなメニューアイコンをクリックしてMaximizeを選択します。</p>
+<div class="figure">
+<img src="img/007.png" />
+
+</div>
+<div class="figure">
+<img src="img/008.png" />
+
+</div>
 <h3 id="公転">公転</h3>
-<p>　次に、月の公転を実装して地球の周りをまわしてみましょう。
-先ほどと同じようにMoonを選択してAdd Component→New
-Script、スクリプト名はOrbiterとします。</p>
+<p>　次に、月の公転を実装して地球の周りをまわしてみましょう。 先ほどと同じようにMoonを選択してAdd Component→New Script、スクリプト名はOrbiterとします。</p>
 <p>Orbiter.cs</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Orbiter <span class="op">:</span> MonoBehaviour <span class="op">{</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> radius <span class="op">=</span> <span class="dv">10</span><span class="op">;</span>  <span class="co">// 回転半径</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> cycle <span class="op">=</span> <span class="dv">27</span><span class="op">;</span>   <span class="co">// 回転周期 27秒</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> angle <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Start</span> <span class="op">()</span> <span class="op">{</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Update</span> <span class="op">()</span> <span class="op">{</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        angle <span class="op">-=</span> Time<span class="op">.</span><span class="fu">deltaTime</span> <span class="op">*</span> <span class="dv">2</span> <span class="op">*</span> Mathf<span class="op">.</span><span class="fu">PI</span> <span class="op">/</span> cycle<span class="op">;</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        <span class="dt">float</span> x <span class="op">=</span> Mathf<span class="op">.</span><span class="fu">Sin</span><span class="op">(</span>angle<span class="op">)</span> <span class="op">*</span> radius<span class="op">;</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>        <span class="dt">float</span> z <span class="op">=</span> Mathf<span class="op">.</span><span class="fu">Cos</span><span class="op">(</span>angle<span class="op">)</span> <span class="op">*</span> radius<span class="op">;</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>        transform<span class="op">.</span><span class="fu">position</span> <span class="op">=</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span>x<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> z<span class="op">);</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cs"><code class="sourceCode cs"><span class="kw">using</span> UnityEngine;
+
+<span class="kw">public</span> <span class="kw">class</span> Orbiter : MonoBehaviour {
+
+    <span class="dt">float</span> radius = <span class="dv">10</span>;  <span class="co">// 回転半径</span>
+    <span class="dt">float</span> cycle = <span class="dv">27</span>;   <span class="co">// 回転周期 27秒</span>
+    <span class="dt">float</span> angle = <span class="dv">0</span>;
+
+    <span class="dt">void</span> <span class="fu">Start</span> () {
+        
+    }
+    
+    <span class="dt">void</span> <span class="fu">Update</span> () {
+        angle -= Time.<span class="fu">deltaTime</span> * <span class="dv">2</span> * Mathf.<span class="fu">PI</span> / cycle;
+        <span class="dt">float</span> x = Mathf.<span class="fu">Sin</span>(angle) * radius;
+        <span class="dt">float</span> z = Mathf.<span class="fu">Cos</span>(angle) * radius;
+
+        transform.<span class="fu">position</span> = <span class="kw">new</span> <span class="fu">Vector3</span>(x, <span class="dv">0</span>, z);
+    }
+}</code></pre></div>
 <p>　ここでも、Time.deltaTimeを使って角度を計算しています。今回は度ではなく、ラジアンなので360の代わりに2πをかけています。使用する関数によって、同じ角度でも度で与えるものとラジアンのものがあるので混乱しないように注意してください。</p>
 <p>　計算した角度をSin関数とCos関数に渡して位置を計算します。サイン、コサインは通常、三角関数と呼ばれますが、これは本質的には回転と往復の関数だと考えた方がよいです。自然界で目にするような回転運動や往復運動のほとんどはサインとコサインで表現できるので、ぜひマスターするようにしましょう。ここではサインをx軸、コサインをz軸にしています。この場合は<code>(0,0,0)</code>を中心とした円運動になります。</p>
 <p>　cycleは回転周期です。月は27日かけて地球の周りを1回転するので27としています。1秒に1回転する回転速度をcycleで割り、回転速度を1/27にしています。</p>
-<p>　ここでまた実行確認してみてください。地球が自転して、その周りを月がゆっくり周回しているでしょうか。画面からはみでて見づらいようなら、Main
-Cameraの位置を少し動かして調整してみてください。</p>
+<p>　ここでまた実行確認してみてください。地球が自転して、その周りを月がゆっくり周回しているでしょうか。画面からはみでて見づらいようなら、Main Cameraの位置を少し動かして調整してみてください。</p>
 <h2 id="発光の表現">発光の表現</h2>
-<p>　今度は太陽を作って地球が太陽の周りをまわるようにしましょう。
-中心に太陽を置けるようにSceneビューで地球のPositionを<code>25,0,0</code>、月のPositionを<code>30,0,0</code>に動かして、HierarchyにSphereを追加してください。Positionは<code>0,0,0</code>、Scaleは<code>4,4,4</code>、名前はSunにします。</p>
+<p>　今度は太陽を作って地球が太陽の周りをまわるようにしましょう。 中心に太陽を置けるようにSceneビューで地球のPositionを<code>25,0,0</code>、月のPositionを<code>30,0,0</code>に動かして、HierarchyにSphereを追加してください。Positionは<code>0,0,0</code>、Scaleは<code>4,4,4</code>、名前はSunにします。</p>
 <p>※このサンプルで作成する太陽、地球、月の大きさや距離の比率は実際とは異なります。</p>
 <p>次に太陽のマテリアルmatSunを作成します。マテリアルのパラメータを次のように設定してください。<br />
-　Albedo ： R:255, G:0, B:0, A255<br />
+　Albedo ： R:255 G:0 B:0 A255<br />
 　Metallic： 0<br />
 　Smoothness： 0.5</p>
-<p>　これだけではまだ発光した感じになりません。Emissionにチェックを入れてGlobal
-IlluminationをRealtimeに、Colorをクリックして次のようにHDR
-Colorを設定します。(Intensityを入力するときはテキストボックスを編集すると真っ黒になるバグがあるようなので、「+1」ボタンを押して設定してください)<br />
-　R:191, G:60, B:60<br />
+<p>　これだけではまだ発光した感じになりません。Emissionにチェックを入れてGlobal IlluminationをRealtimeに、Colorをクリックして次のようにHDR Colorを設定します。(Intensityを入力するときはテキストボックスを編集すると真っ黒になるバグがあるようなので、「+1」ボタンを押して設定してください)<br />
+　R:191 G:60 B:60<br />
 　Intensity： 3</p>
 <p>　こうすることによりColorにHDRの文字が表示され、HDR対応ディスプレイの場合高輝度で表示されます。</p>
 <p>　しかし、まだ太陽はただの白い球体に見えます。これから光り輝く恒星にするためには、まだ次節以降の何段階かの手順を必要とします。</p>
-<figure>
-<img src="img/012.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
-<h3
-id="ポイントライトでほかのオブジェクトに影響を与える">ポイントライトでほかのオブジェクトに影響を与える</h3>
-<p>　以前、<a
-href="#カメラと光の演出">カメラと光の演出</a>の項の冒頭で次のように書きました。
-&gt;　シーンに発光する物体がある場合、上記に加えて次の設定をおこないます。<br />
-&gt; * マテリアルのEmission　マテリアル本体の明るさ &gt; * Point
-Light　発光物近辺のオブジェクトへの影響 &gt; *
-Bloom　発光物近辺の空気への影響</p>
+<div class="figure">
+<img src="img/012.png" />
+
+</div>
+<h3 id="ポイントライトでほかのオブジェクトに影響を与える">ポイントライトでほかのオブジェクトに影響を与える</h3>
+<p>　以前、<a href="#カメラと光の演出">カメラと光の演出</a>の項の冒頭で次のように書きました。 &gt;　シーンに発光する物体がある場合、上記に加えて次の設定をおこないます。<br />
+&gt; * マテリアルのEmission　マテリアル本体の明るさ &gt; * Point Light　発光物近辺のオブジェクトへの影響 &gt; * Bloom　発光物近辺の空気への影響</p>
 <p>　現在、太陽は上記のマテリアルの設定をしただけの状態です。続いてポイントライトを設定していきます。</p>
-<p>　HierarchyでSunを選択した状態で、右クリックからLight→Point
-Lightを選択してください。</p>
-<figure>
-<img src="img/013.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
-<p>　次にPoint
-LightのInspectorから、Range:100、Mode:Realtime、Intensity:3、Indirect
-Multiplier:0に設定します。
-これで距離100まで届く、明るい光となりました。Colorはデフォルトの白のままで大丈夫です。</p>
-<figure>
-<img src="img/013_2.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
-<p>　シーンにPoint Lightを置いたので、Directional
-Lightは不要になります。Hierarchyで選択して削除するか、Inspectorの一番上のチェックボックスを外して無効にします。</p>
+<p>　HierarchyでSunを選択した状態で、右クリックからLight→Point Lightを選択してください。</p>
+<div class="figure">
+<img src="img/013.png" />
+
+</div>
+<p>　次にPoint LightのInspectorから、Range:100、Mode:Realtime、Intensity:3、Indirect Multiplier:0に設定します。 これで距離100まで届く、明るい光となりました。Colorはデフォルトの白のままで大丈夫です。</p>
+<div class="figure">
+<img src="img/013_2.png" />
+
+</div>
+<p>　シーンにPoint Lightを置いたので、Directional Lightは不要になります。Hierarchyで選択して削除するか、Inspectorの一番上のチェックボックスを外して無効にします。</p>
 <p>　カメラのPositionをたとえば<code>12,1,-25</code>にしてGameビューにすべておさまるように調整してください、次のような表示になったでしょうか。太陽の光が月と地球の太陽側の面を照らしだしています。</p>
-<figure>
-<img src="img/014.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
+<div class="figure">
+<img src="img/014.png" />
+
+</div>
 <h3 id="ポストプロセッシング">ポストプロセッシング</h3>
 <p>　太陽の仕上げに、ポストプロセッシングでブルーム効果を付け加えます。Unityのポストプロセッシングは導入するのにちょっと手間がかかりますが、非常に強力な各種視覚効果の適用が可能で、美しい画面を作るのに必須なのでぜひマスターするようにしてください。</p>
-<p>　Unityのポストプロセスには、比較的新しいPost
-Processingというパッケージを使用します。以前はPost Processing
-Stackと呼ばれてアセットストアからインストールしましたが、最新版はパッケージマネージャーからインストールするようになりました。ネットを検索するとまだ旧バージョンの情報が出てくることが多く、バージョン2以降の最新版とは使い方やパラメータも異なるので注意してください。</p>
-<p>　Post
-Processingは非常に多機能ですので、ここでは今回必要になる機能と手順だけ説明します。</p>
+<p>　Unityのポストプロセスには、比較的新しいPost Processingというパッケージを使用します。以前はPost Processing Stackと呼ばれてアセットストアからインストールしましたが、最新版はパッケージマネージャーからインストールするようになりました。ネットを検索するとまだ旧バージョンの情報が出てくることが多く、バージョン2以降の最新版とは使い方やパラメータも異なるので注意してください。</p>
+<p>　Post Processingは非常に多機能ですので、ここでは今回必要になる機能と手順だけ説明します。</p>
 <h4 id="パッケージのインストール">パッケージのインストール</h4>
-<p>　Post
-Processingはデフォルトの機能ではないのでパッケージをインストールする必要があります。Windowメニュー→Package
-Managerを選択してパッケージマネージャーを開いてください。</p>
-<p>　パッケージマネージャーのPackagesでUnity Registryを選択し、Post
-Processingを選択してInstallボタンを押すとインストールされます。</p>
-<figure>
-<img src="img/014_2.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
+<p>　Post Processingはデフォルトの機能ではないのでパッケージをインストールする必要があります。Windowメニュー→Package Managerを選択してパッケージマネージャーを開いてください。</p>
+<p>　パッケージマネージャーのPackagesでUnity Registryを選択し、Post Processingを選択してInstallボタンを押すとインストールされます。</p>
+<div class="figure">
+<img src="img/014_2.png" />
+
+</div>
 <p>　インストールしたパッケージは、Packagesフォルダの下にパッケージ別のフォルダを作って格納されます。間違えてインストールしてしまったり、一度インストールしたパッケージが不要になったときはパッケージマネージャーから削除できます。</p>
 <h4 id="ポストプロセスの設定">ポストプロセスの設定</h4>
-<p>　Post
-Processingを利用するには、オブジェクト作成・設定と、メインカメラの設定が必要です。順を追って説明します。</p>
-<p>　まず、Hierarchyウィンドウの右クリックメニューからCreate
-Emptyを選んでシーンに空のオブジェクトを追加します。名前はなんでもかまいませんが、わかりやすいようにPostProcessingとしておきます。</p>
-<figure>
-<img src="img/015_1.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
-<p>　空オブジェクトのInspectorにあるLayerドロップダウンを開いてAdd
-Layer…を選択します。</p>
-<figure>
-<img src="img/015_2.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
+<p>　Post Processingを利用するには、オブジェクト作成・設定と、メインカメラの設定が必要です。順を追って説明します。</p>
+<p>　まず、Hierarchyウィンドウの右クリックメニューからCreate Emptyを選んでシーンに空のオブジェクトを追加します。名前はなんでもかまいませんが、わかりやすいようにPostProcessingとしておきます。</p>
+<div class="figure">
+<img src="img/015_1.png" />
+
+</div>
+<p>　空オブジェクトのInspectorにあるLayerドロップダウンを開いてAdd Layer...を選択します。</p>
+<div class="figure">
+<img src="img/015_2.png" />
+
+</div>
 <p>　レイヤ一覧が表示されるので、使用していないレイヤにPostProcessingと入力します。</p>
 <p>　視覚効果をかけたいだけなのに設定が少々複雑ですね。UnityのPostProcessingでは、同じシーン上のオブジェクトでも視覚効果をかける対象とかけない対象をレイヤで区別できるるようにしているため、このような手順が必要になっています。</p>
-<figure>
-<img src="img/015_3.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
+<div class="figure">
+<img src="img/015_3.png" />
+
+</div>
 <p>　追加しただけでは選択されません。再度HierarchyウィンドウからPostProcessingを選択、Layerドロップダウンで、いま追加したレイヤPostProcessingを選択します。</p>
-<p>　次にInspectorからAdd Component→Rendering→Post-process
-Volumeと選択していきます。</p>
-<figure>
-<img src="img/015_4.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
-<p>　空オブジェクトに追加されたPost-process VolumeコンポーネントのIs
-Globalにチェックを入れます。</p>
-<p>　そしてProfileのNewボタンを押します。この操作でプロファイルがAssets/Scenes/main_ProfilesフォルダにPostProcessing
-Profileという名前で作成されます。このプロファイルに後で設定する視覚効果のパラメータが書き込まれます。</p>
-<figure>
-<img src="img/015_5.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
-<p>　次にHierarchyウィンドウでMain Cameraを選択して、InspectorからAdd
-Component→Rendering→Post-process Layerと選択していきます。</p>
-<figure>
-<img src="img/016.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
-<p>　Post-processing
-LayerコンポーネントのLayer欄で、先ほど追加したレイヤ名PostProcessingを選択します。</p>
-<figure>
-<img src="img/016_2.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
+<p>　次にInspectorからAdd Component→Rendering→Post-process Volumeと選択していきます。</p>
+<div class="figure">
+<img src="img/015_4.png" />
+
+</div>
+<p>　空オブジェクトに追加されたPost-process VolumeコンポーネントのIs Globalにチェックを入れます。</p>
+<p>　そしてProfileのNewボタンを押します。この操作でプロファイルがAssets/Scenes/main_ProfilesフォルダにPostProcessing Profileという名前で作成されます。このプロファイルに後で設定する視覚効果のパラメータが書き込まれます。</p>
+<div class="figure">
+<img src="img/015_5.png" />
+
+</div>
+<p>　次にHierarchyウィンドウでMain Cameraを選択して、InspectorからAdd Component→Rendering→Post-process Layerと選択していきます。</p>
+<div class="figure">
+<img src="img/016.png" />
+
+</div>
+<p>　Post-processing LayerコンポーネントのLayer欄で、先ほど追加したレイヤ名PostProcessingを選択します。</p>
+<div class="figure">
+<img src="img/016_2.png" />
+
+</div>
 <p>　これでポストプロセスを利用する準備は完了です。</p>
-<p>　Hierarchyウィンドウで空オブジェクトPostProcessingを選択してInspectorのPost-process
-VolumeコンポーネントにあるAdd
-effect…メニュー→Unityを表示すると、さまざまな設定項目が見えますね。今回はBloomを使っていきます。</p>
-<figure>
-<img src="img/016_3.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
+<p>　Hierarchyウィンドウで空オブジェクトPostProcessingを選択してInspectorのPost-process VolumeコンポーネントにあるAdd effect...メニュー→Unityを表示すると、さまざまな設定項目が見えますね。今回はBloomを使っていきます。</p>
+<div class="figure">
+<img src="img/016_3.png" />
+
+</div>
 <p>Bloomをクリックして項目を開いてパラメータを次のように設定します。</p>
 <p>　Intensity：0.2<br />
 　Threshold ：0.5</p>
-<figure>
-<img src="img/017.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
+<div class="figure">
+<img src="img/017.png" />
+
+</div>
 <p>　これで太陽光の設定は完了です。ポストプロセスはこの後もさまざまな用途で使用するので少しずつおぼえていってください。</p>
-<figure>
-<img src="img/018.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
+<div class="figure">
+<img src="img/018.png" />
+
+</div>
 <h3 id="地球の公転">地球の公転</h3>
 <p>　いよいよ太陽の周りを地球が回転するようにスクリプトを設定します。先ほど書いたOrbiter.csを改造して地球の公転、月の公転の両方で使えるようにして見ましょう。</p>
 <p>Orbiter.cs</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Orbiter <span class="op">:</span> MonoBehaviour <span class="op">{</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> GameObject centerObject<span class="op">;</span> <span class="co">// 回転中心のオブジェクト</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">float</span> radius<span class="op">;</span>  <span class="co">// 回転半径</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">float</span> cycle<span class="op">;</span>   <span class="co">// 回転周期</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> angle <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Start</span> <span class="op">()</span> <span class="op">{</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Update</span> <span class="op">()</span> <span class="op">{</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        angle <span class="op">-=</span> Time<span class="op">.</span><span class="fu">deltaTime</span> <span class="op">*</span> <span class="dv">2</span> <span class="op">*</span> Mathf<span class="op">.</span><span class="fu">PI</span> <span class="op">/</span> cycle<span class="op">;</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>        <span class="dt">float</span> x <span class="op">=</span> Mathf<span class="op">.</span><span class="fu">Sin</span><span class="op">(</span>angle<span class="op">)</span> <span class="op">*</span> radius<span class="op">;</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>        <span class="dt">float</span> z <span class="op">=</span> Mathf<span class="op">.</span><span class="fu">Cos</span><span class="op">(</span>angle<span class="op">)</span> <span class="op">*</span> radius<span class="op">;</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>        Vector3 center <span class="op">=</span> centerObject<span class="op">.</span><span class="fu">transform</span><span class="op">.</span><span class="fu">position</span><span class="op">;</span></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>        transform<span class="op">.</span><span class="fu">position</span> <span class="op">=</span> center <span class="op">+</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span>x<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> z<span class="op">);</span></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cs"><code class="sourceCode cs"><span class="kw">using</span> UnityEngine;
+
+<span class="kw">public</span> <span class="kw">class</span> Orbiter : MonoBehaviour {
+
+    <span class="kw">public</span> GameObject centerObject; <span class="co">// 回転中心のオブジェクト</span>
+    <span class="kw">public</span> <span class="dt">float</span> radius;  <span class="co">// 回転半径</span>
+    <span class="kw">public</span> <span class="dt">float</span> cycle;   <span class="co">// 回転周期</span>
+
+    <span class="dt">float</span> angle = <span class="dv">0</span>;
+
+    <span class="dt">void</span> <span class="fu">Start</span> () {
+        
+    }
+    
+    <span class="dt">void</span> <span class="fu">Update</span> () {
+        angle -= Time.<span class="fu">deltaTime</span> * <span class="dv">2</span> * Mathf.<span class="fu">PI</span> / cycle;
+        <span class="dt">float</span> x = Mathf.<span class="fu">Sin</span>(angle) * radius;
+        <span class="dt">float</span> z = Mathf.<span class="fu">Cos</span>(angle) * radius;
+
+        Vector3 center = centerObject.<span class="fu">transform</span>.<span class="fu">position</span>;
+        transform.<span class="fu">position</span> = center + <span class="kw">new</span> <span class="fu">Vector3</span>(x, <span class="dv">0</span>, z);
+    }
+}</code></pre></div>
 <p>　回転半径と回転周期をpublic変数にしてInspectorで設定できるようにしました。また、centerObjectというpublic変数を用意して回転の中心を指定できるようにしています。つまり月の公転では回転中心は地球、地球の公転では回転中心は太陽となります。地球のように常に移動している回転中心もあるので、Update関数内で毎フレーム中心位置を取得しています。</p>
 <p>　HierarchyのEarthにOrbiterスクリプトをドラッグ&amp;ドロップしてアタッチしてください。アタッチできたらInspectorで次のように設定します。</p>
 <p>　Center Object：Sun<br />
 　Radius：50<br />
 　Cycle：365</p>
-<figure>
-<img src="img/019.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
+<div class="figure">
+<img src="img/019.png" />
+
+</div>
 <p>　月はすでにOrbiterスクリプトがアタッチされているはずなのでパラメータだけ次のように設定します。</p>
 <p>　Center Object：Earth<br />
 　Radius：10<br />
 　Cycle：27</p>
-<p>　全体が見やすい位置にMain Cameraを移動して実行してみましょう。Main
-Cameraの位置はたとえば次の設定がお勧めです。</p>
+<p>　全体が見やすい位置にMain Cameraを移動して実行してみましょう。Main Cameraの位置はたとえば次の設定がお勧めです。</p>
 <p>　Position：20, 10, -10<br />
 　Rotation：10, -50, 0</p>
 <p>　RotationのXを少し上げることで下を見下ろす感じになります。RotationのZを0以外にすると不自然に傾いた絵になるので必ず0にしておきます。</p>
 <p>　太陽の周囲を自転しながら地球が回り、さらに地球の周囲を月が回っているでしょうか。</p>
 <h2 id="外観のブラッシュアップ">外観のブラッシュアップ</h2>
 <h3 id="背景の変更">背景の変更</h3>
-<p>　背景が真っ黒だと少し味気ないので星空に変更しましょう。Windowメニュー→Asset
-Storeを選択すると、ウェブブラウザでアセットストアのウェブページが開きます。</p>
-<p>　もしウェブページが開かない場合、アセットストア画面の「Search
-Online」という青いボタンをクリックすると開きます。</p>
+<p>　背景が真っ黒だと少し味気ないので星空に変更しましょう。Windowメニュー→Asset Storeを選択すると、ウェブブラウザでアセットストアのウェブページが開きます。</p>
+<p>　もしウェブページが開かない場合、アセットストア画面の「Search Online」という青いボタンをクリックすると開きます。</p>
 <p>　アセットストアでSkyboxを検索するとさまざまな背景が見つかります。今回はシンプルな星空のこちらを使用することにします。アセットストアのアセットが目的に合うものか、使いやすいものかを見極めるのはなかなか難しいですが、今回は利用者の評価が高いアセットなので比較的安心して導入できます。</p>
-<p>　検索フォームに「Stellar
-Sky」と入力して検索して見つかったらDownloadボタンをクリックしてダウンロードしてください。</p>
-<figure>
-<img src="img/020.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
-<p>　ダウンロードが終わったら、UnityのPackage
-Managerが開いているのでImportボタンをクリックします。項目ひとつひとつに対してインポートするか選択できる画面が出てきますが、知識がないとここで必要性を判断するのは難しいので、最初のうちはすべて選択した状態でインポートしてください。余計なものをインポートしてしまっても、シーンに含まれないものはビルド後の実行ファイルには含まれないので問題ありません。</p>
+<p>　検索フォームに「Stellar Sky」と入力して検索して見つかったらDownloadボタンをクリックしてダウンロードしてください。</p>
+<div class="figure">
+<img src="img/020.png" />
+
+</div>
+<p>　ダウンロードが終わったら、UnityのPackage Managerが開いているのでImportボタンをクリックします。項目ひとつひとつに対してインポートするか選択できる画面が出てきますが、知識がないとここで必要性を判断するのは難しいので、最初のうちはすべて選択した状態でインポートしてください。余計なものをインポートしてしまっても、シーンに含まれないものはビルド後の実行ファイルには含まれないので問題ありません。</p>
 <p>　アセットはプロジェクト内に直接ダウンロードされるのではなく、ディスクの専用の場所にマスターとしてダウンロードされています。それをプロジェクトにインポートするとマスターの複製がプロジェクトフォルダへコピーされるしくみになっています。</p>
 <p>　インポートしたアセットは、Assetsフォルダの下にアセット別のフォルダを作って格納されます。もし、あるアセットをインポートした後に設計変更などで不要になった場合、そのフォルダごと削除すればインポートを取り消すことができます。その場合でもダウンロードしたマスターは残っているので、後からまた別のプロジェクトにインポートしたりすることも可能です。</p>
-<figure>
-<img src="img/020_2.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
-<p>　インポートしたらフォルダの中身をざっくり確認します。Stellar
-Sky/Skyboxesフォルダの下に512、1024、2048とフォルダがあり、SS_512、SS_1024、SS_2048と3種類のSkyboxが含まれているようです。</p>
-<p>　Skyboxの設定はLightingウィンドウとMain
-Cameraの２ヵ所でおこないます。まず、Windowメニュー→Rendering→Lightingでウィンドウを開きEnvironmentタブを選択します。一番上のSkybox
-Materialに先ほどインポートしたSS_2048をドラッグ&amp;ドロップしてください。Skybox
-Materialの右側の小さな丸をクリックして一覧から選択することもできます。Sun
-SourceはNoneとしておきます。</p>
-<figure>
-<img src="img/061.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
-<p>　次にMain CameraのInspectorでCameraコンポーネントのClear
-FlagsをSkyboxに変更します。これでSkyboxが表示されるようになりました。</p>
-<figure>
-<img src="img/063.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
+<div class="figure">
+<img src="img/020_2.png" />
+
+</div>
+<p>　インポートしたらフォルダの中身をざっくり確認します。Stellar Sky/Skyboxesフォルダの下に512、1024、2048とフォルダがあり、SS_512、SS_1024、SS_2048と3種類のSkyboxが含まれているようです。</p>
+<p>　Skyboxの設定はLightingウィンドウとMain Cameraの２ヵ所でおこないます。まず、Windowメニュー→Rendering→Lightingでウィンドウを開きEnvironmentタブを選択します。一番上のSkybox Materialに先ほどインポートしたSS_2048をドラッグ&amp;ドロップしてください。Skybox Materialの右側の小さな丸をクリックして一覧から選択することもできます。Sun SourceはNoneとしておきます。</p>
+<div class="figure">
+<img src="img/061.png" />
+
+</div>
+<p>　次にMain CameraのInspectorでCameraコンポーネントのClear FlagsをSkyboxに変更します。これでSkyboxが表示されるようになりました。</p>
+<div class="figure">
+<img src="img/063.png" />
+
+</div>
 <p>　SceneビューでSkyboxが表示されていないときは、次の場所にある表示切替ボタンを押してください。</p>
-<figure>
-<img src="img/062.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
+<div class="figure">
+<img src="img/062.png" />
+
+</div>
 <p>　SceneビューとGameビューの両方とも星空の画面が表示されます。</p>
-<figure>
-<img src="img/021.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
+<div class="figure">
+<img src="img/021.png" />
+
+</div>
 <h3 id="地球モデルの差し替え">地球モデルの差し替え</h3>
 <p>　これまで雑に作ったテクスチャーで地球を表現していましたが、さすがにもうちょっと格好良くしたくなります。クオリティの高い地球のモデルがアセットストアに何種類もあるので、それに差し替えてみましょう。</p>
-<figure>
-<img src="img/022.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
-<p>　アセットストアで「Planet Earth
-Free」を検索、ダウンロード、インポートします。</p>
-<p>　インポートしたら、またざっくり中身を確認。Assets/Planet Earth
-Free/Prefabsの下にEarthHigh、EarthLow、EarthMediumの３種類のモデルが入っているようです。EarthHighをHierarchyにドラッグ&amp;ドロップして配置します。</p>
+<div class="figure">
+<img src="img/022.png" />
+
+</div>
+<p>　アセットストアで「Planet Earth Free」を検索、ダウンロード、インポートします。</p>
+<p>　インポートしたら、またざっくり中身を確認。Assets/Planet Earth Free/Prefabsの下にEarthHigh、EarthLow、EarthMediumの３種類のモデルが入っているようです。EarthHighをHierarchyにドラッグ&amp;ドロップして配置します。</p>
 <p>　しかしながら、予想に反して巨大な青い球体が表示されました。HierarchyのEarthHighを見ると、子オブジェクトとしてPlanet16128TrisとEarthGlowの2個のオブジェクトがぶら下がっています。このEarthGlowが怪しいので、Inspectorで表示して一番上のチェックを外して非表示にしてしまいましょう。</p>
 <p>　巨大な青い球はなくなったものの、まだサイズ的に大きいようです。Planet16128Trisを選択して、Scaleを0.07,0.07,0.07に変更します。このとき、親のEarthHighのScaleではなく、子のPlanet16128TrisのScaleを変更するのがコツです。トップレベルのオブジェクトはスケールが1になっている方が何かと楽です。</p>
 <p>　適度なサイズになったらEarthHighを選択してPositionを12,0,10など少し移動させて太陽と重ならないようにしましょう。</p>
-<p>　続いてコンポーネントを設定します。EarthHighのInspectorを見るとSpin
-Freeという自転用コンポーネントが最初からアタッチされています。これは不要なのでコンポーネント右上のメニューからRemove
-Componentで削除します。</p>
-<figure>
-<img src="img/064.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
+<p>　続いてコンポーネントを設定します。EarthHighのInspectorを見るとSpin Freeという自転用コンポーネントが最初からアタッチされています。これは不要なのでコンポーネント右上のメニューからRemove Componentで削除します。</p>
+<div class="figure">
+<img src="img/064.png" />
+
+</div>
 <p>　代わりに自作のSpinnerとOrbiterをドラッグ&amp;ドロップでアタッチします。OrbiterのパラメータをEarthと同じく次のように設定します。</p>
 <p>　Center Object： Sun<br />
 　Radius： 50<br />
 　Cycle： 365</p>
-<p>　次にHierarchyでMoonを選択、OrbiterコンポーネントのCenter
-ObjectをEarthからEarthHighに変更します。最後に、もともとあったEarthはもう不要なのでInspector最上段のチェックボックスを外して非表示にします。これで地球の見た目がぐっと良くなりました。</p>
+<p>　次にHierarchyでMoonを選択、OrbiterコンポーネントのCenter ObjectをEarthからEarthHighに変更します。最後に、もともとあったEarthはもう不要なのでInspector最上段のチェックボックスを外して非表示にします。これで地球の見た目がぐっと良くなりました。</p>
 <p>　実行して、宇宙空間に浮かんだ地球と月が太陽に向いた面を照らされながらゆっくり回転する様子を確認してください。</p>
-<figure>
-<img src="img/023.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
+<div class="figure">
+<img src="img/023.png" />
+
+</div>
 <p>　これでこのシーンは完成です。チュートリアルとしてはここで終了してもよいのですが、せっかくなので次項でこのシーンをもとにして雰囲気の異なる別視点のシーンを作ってみます。</p>
 <h2 id="別視点の演出">別視点の演出</h2>
-<p>　今度はMain
-Cameraを移動して地球から宇宙を見た風景を作っていきましょう。</p>
+<p>　今度はMain Cameraを移動して地球から宇宙を見た風景を作っていきましょう。</p>
 <p>　その前に現在のシーンをmainとしてセーブしておきます。</p>
-<p>　次にFileメニュー→Save Scene
-Asで別名保存します。シーン名は「EarthView」とします。</p>
-<p>　Hierarchy内でMain
-CameraをドラッグしてEarthHighの子オブジェクトにします。次にカメラの座標を地表に近く、地表と地平線と同じ向きになるように、次のようにパラメータを設定します。</p>
+<p>　次にFileメニュー→Save Scene Asで別名保存します。シーン名は「EarthView」とします。</p>
+<p>　Hierarchy内でMain CameraをドラッグしてEarthHighの子オブジェクトにします。次にカメラの座標を地表に近く、地表と地平線と同じ向きになるように、次のようにパラメータを設定します。</p>
 <p>　Position：-1.8, 0, 1.7<br />
 　Rotation： 0, 180, -90</p>
-<p>　それから地球の大きさを演出するためにカメラの画角を調整します。Main
-CameraのCameraコンポーネントにあるField of
-Viewは初期値が60になっているので、これを40に変更します。</p>
-<p>　実行してみると、あまりにも高速回転して目が回りそうになってしまいます。少し自転と公転の回転速度を調整した方が良さそうです。Spinner.csとOrbiter.csのUpdate関数のそれぞれ1行目に「
-/ 50 」を書き加えて、回転速度を1/50に落とします。</p>
+<p>　それから地球の大きさを演出するためにカメラの画角を調整します。Main CameraのCameraコンポーネントにあるField of Viewは初期値が60になっているので、これを40に変更します。</p>
+<p>　実行してみると、あまりにも高速回転して目が回りそうになってしまいます。少し自転と公転の回転速度を調整した方が良さそうです。Spinner.csとOrbiter.csのUpdate関数のそれぞれ1行目に「 / 50 」を書き加えて、回転速度を1/50に落とします。</p>
 <p>Spinner.cs</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Update</span> <span class="op">()</span> <span class="op">{</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>        angle <span class="op">=</span> Time<span class="op">.</span><span class="fu">deltaTime</span> <span class="op">*</span> <span class="dv">360</span> <span class="op">/</span> <span class="dv">50</span><span class="op">;</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        transform<span class="op">.</span><span class="fu">Rotate</span><span class="op">(</span>Vector3<span class="op">.</span><span class="fu">up</span><span class="op">,</span> <span class="op">-</span>angle<span class="op">);</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cs"><code class="sourceCode cs">    <span class="dt">void</span> <span class="fu">Update</span> () {
+        angle = Time.<span class="fu">deltaTime</span> * <span class="dv">360</span> / <span class="dv">50</span>;
+        transform.<span class="fu">Rotate</span>(Vector3.<span class="fu">up</span>, -angle);
+    }</code></pre></div>
 <p>Orbiter.cs</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode cs"><code class="sourceCode cs"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Update</span> <span class="op">()</span> <span class="op">{</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>        angle <span class="op">-=</span> Time<span class="op">.</span><span class="fu">deltaTime</span> <span class="op">*</span> <span class="dv">2</span> <span class="op">*</span> Mathf<span class="op">.</span><span class="fu">PI</span> <span class="op">/</span> cycle <span class="op">/</span> <span class="dv">50</span><span class="op">;</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">float</span> x <span class="op">=</span> Mathf<span class="op">.</span><span class="fu">Sin</span><span class="op">(</span>angle<span class="op">)</span> <span class="op">*</span> radius<span class="op">;</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">float</span> z <span class="op">=</span> Mathf<span class="op">.</span><span class="fu">Cos</span><span class="op">(</span>angle<span class="op">)</span> <span class="op">*</span> radius<span class="op">;</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        Vector3 center <span class="op">=</span> centerObject<span class="op">.</span><span class="fu">transform</span><span class="op">.</span><span class="fu">position</span><span class="op">;</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        transform<span class="op">.</span><span class="fu">position</span> <span class="op">=</span> center <span class="op">+</span> <span class="kw">new</span> <span class="fu">Vector3</span><span class="op">(</span>x<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> z<span class="op">);</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode cs"><code class="sourceCode cs">    <span class="dt">void</span> <span class="fu">Update</span> () {
+        angle -= Time.<span class="fu">deltaTime</span> * <span class="dv">2</span> * Mathf.<span class="fu">PI</span> / cycle / <span class="dv">50</span>;
+        <span class="dt">float</span> x = Mathf.<span class="fu">Sin</span>(angle) * radius;
+        <span class="dt">float</span> z = Mathf.<span class="fu">Cos</span>(angle) * radius;
+
+        Vector3 center = centerObject.<span class="fu">transform</span>.<span class="fu">position</span>;
+        transform.<span class="fu">position</span> = center + <span class="kw">new</span> <span class="fu">Vector3</span>(x, <span class="dv">0</span>, z);
+    }</code></pre></div>
 <p>　これでチュートリアル「Planet」は終了です。</p>
-<p>　この先は、ポストプロセッシングのパラメータを調整して、さらに高品質な絵を追求していくこともできます。空オブジェクトPostProcessingのエフェクトにColor
-Grading、Vignetteあたりを追加して調整してみてください。Main
-CameraのPost-process
-LayerコンポーネントのAnti-aliasingもお勧めです。</p>
-<figure>
-<img src="img/024.png" alt="screenshot" />
-<figcaption aria-hidden="true">screenshot</figcaption>
-</figure>
+<p>　この先は、ポストプロセッシングのパラメータを調整して、さらに高品質な絵を追求していくこともできます。空オブジェクトPostProcessingのエフェクトにColor Grading、Vignetteあたりを追加して調整してみてください。Main CameraのPost-process LayerコンポーネントのAnti-aliasingもお勧めです。</p>
+<div class="figure">
+<img src="img/024.png" />
+
+</div>
 <p><a href="3_penguin.html">チュートリアル２「Penguin」へ進む</a></p>
 </body>
 </html>
